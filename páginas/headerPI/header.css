@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+  --amareloFundo: #FFC716;
+  --azulEscuro: #003B57;
+
+}
+
+.cabeçalho {
+    width: 100%;
+    height: 9vh;
+    background-color: var(--azulEscuro);
+    margin-bottom: 100%;
+}
+
+.logoAmarelo {
+    height: 9vh;
+    width: 5vw;
+}
+
+.links {
+    margin:3vh 14vh 3vh 14vh;
+}
+
+.links a {
+  margin-left: 2vw;
+}
+

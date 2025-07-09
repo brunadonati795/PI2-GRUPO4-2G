@@ -1,0 +1,76 @@
+/* App.css */
+
+
+body, html, #root {
+  height: 100%;
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+  background: url('../public/imagens/manutenção.png') no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.formulario {
+  background: #003b57f0;
+  padding: 2rem;
+  border-radius: 1rem;
+  color: #ffd54f;
+  width: 320px;
+}
+
+.formulario h2 {
+  margin-top: 0;
+  text-align: center;
+}
+
+.formulario label {
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.formulario input {
+  width: 100%;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  margin-top: 0.25rem;
+}
+
+.cep-wrapper {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.btn-cep {
+  padding: 0 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  background-color: #28a745;
+  color: #fff;
+}
+
+.btn-submit {
+  width: 100%;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  background-color: #28a745;
+  color: #fff;
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+
+.erro {
+  color: #ff6b6b;
+  font-size: 0.875rem;
+  display: block;
+  margin-top: 0.25rem;
+}

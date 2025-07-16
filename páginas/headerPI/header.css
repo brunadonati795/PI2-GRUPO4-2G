@@ -61,7 +61,7 @@ body {
 }
 
 .menu-com-submenu:hover > a {
-    color: var(--amareloFundo); /* Destaque ao passar o mouse no título */
+    color: var(--amareloFundo); 
 }
 
 .submenu {

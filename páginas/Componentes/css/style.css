@@ -1,0 +1,72 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #003B57; /* azul escuro */
+  color: white;
+}
+
+.container {
+  max-width: 800px;
+  margin: auto;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+  color: #d0f0ff;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: center;
+}
+
+.item{
+  display: flex;
+  justify-content: right;
+  gap: 20px;
+}
+
+#Fotovoltaicos{
+  height: 200px;
+  width: 400px;
+}
+
+.item img {
+  width: 200px;
+  height: auto;
+  border-radius: 30px;
+}
+
+.text {
+  background-color: #FFCB25;
+  border-radius: 40px;
+  padding: 20px;
+  gap: 20px;
+  color: white;
+  max-width: 700px;
+  text-align:left ;
+  width: 800px;
+}
+
+h1 {
+  font-size: 60px;
+}
+
+.subtitle {
+    font-size: 40px;
+}
+
+#Controlador-de-Carga {
+  height: 200px;
+  width: 350px;
+}
+
+#String-Box {
+  height: 200px;
+  width: 250px;
+}

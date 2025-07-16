@@ -1,32 +1,237 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+}
 
-.título {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 2.5rem;
-  font-weight: 600;
+:root {
+  --amareloFundo: #FFC716;
+  --azulEscuro: #003B57;
+
+}
+
+.cabeçalho {
+    width: 100%;
+    height: 9vh;
+    background-color: var(--amareloFundo);
+    margin-bottom: 100%;
+}
+
+.logoAmarelo {
+    height: 9vh;
+    width: 5vw;
+}
+
+.links {
+    margin:3vh 14vh 3vh 14vh;
+}
+
+.links a {
+  margin-left: 2vw;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #fff;
   color: #333;
+}
+
+.topo {
+  background: #ffc400;
+  border-bottom: 1px solid #ccc;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px; 
+  height: 80px; 
+  background-color: #ffc400;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  padding: 0;
+  margin: 0;
+  color: #fff;
+}
+
+.perfil {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.logo {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+  cursor: pointer;
+}
+
+.menu li {
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.intro {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.intro img {
+  width: 80%;
+  max-width: 600px;
+  margin: 20px 0;
+}
+
+.intro p {
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.secao-amarela {
+  background: #ffc400;
+  padding: 60px 30px; 
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.bloco-texto {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px; 
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.bloco-texto img {
+  width: 250px;
+  max-width: 40%;
+}
+
+.bloco-texto p {
+  max-width: 400px;
+  line-height: 1.6;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  font-size: 1.05rem;
+}
+
+.objetivo {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  background: #f4f4f4;
+}
+
+.box-ods {
+  background: none; 
+  padding: 0;
+  border-radius: 0;
   text-align: center;
 }
 
-.expliPlacas {
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   gap: 40px;
-   text-align: center;
-   max-width: 1000px;
-   margin: auto;
+.box-ods img {
+  width: 320px;   
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
 }
 
- .painel-solar img {
-    width: 150px;
-    height: auto;
+.box-ods h2 {
+  margin: 0;
+  font-size: 24px;
 }
 
- .painel-solar p{
-    max-width: 400px;
-    font-size: 20px;
-    color: #333;
-    line-height: 1.6;
-    font-style: italic;
+.icone-sol {
+  font-size: 40px;
+  margin-top: 10px;
+}
+
+.texto-ods {
+  max-width: 400px;
+  margin: 10px;
+  text-align: left;
+}
+
+.texto-ods button {
+  background: #004466;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+footer {
+  background: #003049;
+  color: white;
+  padding: 30px 20px;
+}
+
+.footer-info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: space-between;
+}
+
+.footer-info ul {
+  list-style: none;
+  padding: 0;
+}
+
+.redes {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.intro {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.intro h1 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+.intro-conteudo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.intro-conteudo img {
+  width: 300px;
+  max-width: 30%;
+  height: auto;
+}
+
+.intro-conteudo p {
+  flex: 1;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  max-width: 400px;
+  text-align: justify;
 }

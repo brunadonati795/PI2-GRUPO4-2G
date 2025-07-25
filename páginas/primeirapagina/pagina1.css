@@ -1,0 +1,227 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #222;
+}
+
+/* ===== NAVBAR ===== */
+nav {
+  background-color: #003049;
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 24px;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.menu li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+.user-icon {
+  font-size: 20px;
+}
+
+/* ===== BANNER ===== */
+.banner {
+  background-image: url('img/fundoNossaEmpresa.png'); /* Caminho da imagem */
+  background-size: cover;
+  background-position: center;
+  padding: 30px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  position: relative;
+}
+
+/* Sobreposição amarelada (opcional) */
+.banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
+.banner-content {
+  position: relative;
+  z-index: 2; /* coloca o conteúdo acima do fundo */
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+
+.text-banner h1 {
+  font-size: 32px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.text-banner p {
+  max-width: 500px;
+  color: #444;
+}
+
+/* ===== PRODUTOS ===== */
+.produtos {
+  background-color: #003049;
+  color: white;
+  padding: 100px 20px ;
+  text-align: center;
+}
+
+.produto div{
+    background-color: white;
+    border-radius: 50px;
+    width: 30px;
+}
+
+.produtos h2 {
+
+  font-size: 28px;
+  margin-bottom: 30px;
+}
+
+.produtos-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.produto {
+  text-align: center;
+}
+
+.produto img {
+  width: 200px;
+  height: auto;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+.descricao-produto {
+  background-color: #ffc72c;
+  color: #222;
+  padding: 20px;
+  margin: 30px auto 10px;
+  max-width: 700px;
+  border-radius: 10px;
+}
+
+.link-ajuda {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.link-ajuda a {
+  color: #ccc;
+  text-decoration: underline;
+}
+
+/* ===== VANTAGENS ===== */
+.vantagens {
+  background-color: white;
+  padding: 150px 20px;
+  text-align: center;
+}
+
+.vantagens h2 {
+  font-size: 28px;
+  margin-bottom: 30px;
+  color: #003049;
+}
+
+.vantagens-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.vantagem {
+  background: linear-gradient(to top, #ff9900, #fff6ad);
+  border-radius: 12px;
+  padding: 20px;
+  max-width: 200px;
+  color: #222;
+}
+
+.vantagem img {
+  width: 100px;
+  margin: 10px 0;
+}
+
+/* ===== ATENDIMENTO ===== */
+.atendimento {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  background-color: #003049;
+  padding: 150px 20px;
+  gap: 40px;
+  color: white;
+}
+
+.casa-img img {
+  width: 300px;
+  border-radius: 12px;
+}
+
+/* NOVO bloco arredondado */
+.bloco-texto {
+  max-width: 400px;
+  flex: 1;
+}
+
+.fundo-arredondado {
+  background-color: #fff;
+  color: #003049;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.fundo-arredondado p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.btn-atendimento {
+  display: inline-block;
+  background-color: #ffc72c;
+  color: #003049;
+  padding: 12px 20px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 10px;
+  transition: background 0.3s ease;
+}
+
+.btn-atendimento:hover {
+  background-color: #e6b800;
+}

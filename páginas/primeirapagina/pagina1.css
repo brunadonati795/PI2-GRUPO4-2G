@@ -75,33 +75,29 @@ nav {
 
 
 .text-banner h1 {
-  font-size: 32px;
-  color: #333;
+  font-size: 50px;
+  color: #000000;
   margin-bottom: 10px;
 }
 
 .text-banner p {
   max-width: 500px;
-  color: #444;
+  color: #000000;
 }
 
 /* ===== PRODUTOS ===== */
 .produtos {
   background-color: #003049;
   color: white;
-  padding: 100px 20px ;
+  padding: 40vh  ;
   text-align: center;
+ 
 }
 
-.produto div{
-    background-color: white;
-    border-radius: 50px;
-    width: 30px;
-}
+
 
 .produtos h2 {
-
-  font-size: 28px;
+  font-size: 50px;
   margin-bottom: 30px;
 }
 
@@ -145,12 +141,12 @@ nav {
 /* ===== VANTAGENS ===== */
 .vantagens {
   background-color: white;
-  padding: 150px 20px;
+  padding: 40vh;
   text-align: center;
 }
 
 .vantagens h2 {
-  font-size: 28px;
+  font-size: 50px;
   margin-bottom: 30px;
   color: #003049;
 }
@@ -182,19 +178,19 @@ nav {
   align-items: center;
   justify-content: center;
   background-color: #003049;
-  padding: 150px 20px;
+  padding: 40vh;
   gap: 40px;
   color: white;
 }
 
 .casa-img img {
-  width: 300px;
+  width: 500px;
   border-radius: 12px;
 }
 
 /* NOVO bloco arredondado */
 .bloco-texto {
-  max-width: 400px;
+  width: 400px;
   flex: 1;
 }
 

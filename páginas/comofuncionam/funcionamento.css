@@ -16,6 +16,10 @@ body {
   color: #333;
 }
 
+section {
+  height: 90vh;
+}
+
 .intro {
   text-align: center;
   padding: 40px 20px;
@@ -38,7 +42,8 @@ body {
   padding: 60px 30px; 
   display: flex;
   flex-direction: column;
-  gap: 60px;
+  gap: 40vh;
+  height: 190vh;
 }
 
 .bloco-texto {
@@ -53,8 +58,9 @@ body {
 }
 
 .bloco-texto img {
-  width: 250px;
+  width: 40vw;
   max-width: 40%;
+  margin-left: 5vw;
 }
 
 .bloco-texto p {

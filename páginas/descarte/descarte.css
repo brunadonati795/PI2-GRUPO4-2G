@@ -2,7 +2,7 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #ffc700;
+  background-color: var(--amareloFundo);
   color: #000;
 }
 
@@ -69,7 +69,7 @@ body {
 }
 
 .btn-formulario:hover {
-  background-color: #005766;
+  background-color:  #005766;
 }
 
 @media (max-width: 700px) {

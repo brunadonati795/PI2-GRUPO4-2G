@@ -1,11 +1,22 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Montserrat", sans-serif;
   margin: 0;
   padding: 0;
   background-color: var(--amareloFundo);
   color: #000;
 }
+.montserrat-title {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
 
+:root {
+  --amareloFundo: #FFC716;
+  --azulEscuro: #003B57;
+
+}
 .container {
   display: flex;
   flex-direction: column;

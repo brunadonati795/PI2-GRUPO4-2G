@@ -1,6 +1,6 @@
 
     body {
-      font-family: Arial, sans-serif;
+     font-family: "Montserrat", sans-serif;
       margin: 0;
       padding: 0;
       background-image: url("suporte.png");
@@ -58,14 +58,14 @@
       border-color: white transparent;
     }
     .qr-code {
-      width: 200px;
-      height: 200px;
-      margin: 40px auto 20px;
-      display: block;
-      background: white;
-      padding: 15px;
-      border-radius: 15px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    }
-    
+  width: 80px;          
+  height: auto;         
+  display: block;
+  margin: 20px auto;
+  padding: 8px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
   

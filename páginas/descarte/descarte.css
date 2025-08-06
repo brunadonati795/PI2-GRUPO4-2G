@@ -1,11 +1,22 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Montserrat", sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #ffc700;
+  background-color: var(--amareloFundo);
   color: #000;
 }
+.montserrat-title {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
 
+:root {
+  --amareloFundo: #FFC716;
+  --azulEscuro: #003B57;
+
+}
 .container {
   display: flex;
   flex-direction: column;
@@ -69,7 +80,7 @@ body {
 }
 
 .btn-formulario:hover {
-  background-color: #005766;
+  background-color:  #005766;
 }
 
 @media (max-width: 700px) {

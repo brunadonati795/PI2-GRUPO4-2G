@@ -17,10 +17,12 @@ const App = () => {
             </p>
           </div>
 
-          <img
-           img src="../imagens/qr code.avif"
-            alt="QR Code de Suporte"
-            className="qr-code"
+           <img
+  src="../suporte/qr-code.png"
+  alt="QR Code de Suporte"
+  className="qr-code"
+/>
+
           />
         </section>
       </div>

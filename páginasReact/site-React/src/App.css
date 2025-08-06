@@ -378,3 +378,45 @@ body {
 .btn-atendimento:hover {
   background-color: #f7c500;
 }
+
+/* confirmação de pagamento */
+
+.pagamento-bloco {
+  background-color: #fff;
+  padding: 2vh 2vw;
+  margin-bottom: 2vh;
+  border-radius: 1vh;
+}
+
+.opcao-entrega {
+  display: flex;
+  justify-content: space-between;
+  border: 0.1vh solid #222;
+  padding: 1vh 1vw;
+  margin-top: 1vh;
+  border-radius: 0.5vh;
+}
+
+.valor-preco {
+  color: green;
+  font-weight: bold;
+}
+
+.valor-gratis {
+  color: green;
+  font-style: italic;
+}
+
+select {
+  width: 100%;
+  padding: 1vh 1vw;
+  font-size: 2vh;
+  margin-top: 1vh;
+}
+
+.secao-chave-pix .pix-detalhes {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1vh;
+}

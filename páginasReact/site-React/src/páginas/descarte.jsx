@@ -1,7 +1,9 @@
+import Header from "../componentes/header";
 
-const App = () => {
+const Descarte = () => {
   return (
     <div className="Descarte">
+      <Header/>
       <h1 className="titulo">Descarte de Placas Solares</h1>
 
       <div className="info-container">
@@ -28,4 +30,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default Descarte;

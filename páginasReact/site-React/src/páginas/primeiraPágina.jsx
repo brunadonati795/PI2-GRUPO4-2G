@@ -1,8 +1,9 @@
-import React from "react";
+import Header from "../componentes/header";
 
 export default function Home() {
   return (
     <>
+      <Header/>
       <section className="banner">
         <div className="banner-content">
           <div className="fundoBrancoLogo">

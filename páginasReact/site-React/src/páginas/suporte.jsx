@@ -1,8 +1,9 @@
+import Header from "../componentes/header";
 
-
-const App = () => {
+const Suporte = () => {
   return (
-    <div className="App">
+    <div className="suporteBox">
+      <Header/>
       <header>
         <h1>Suporte Renassol</h1>
       </header>
@@ -18,16 +19,13 @@ const App = () => {
           </div>
 
            <img
-  src="../suporte/qr-code.png"
-  alt="QR Code de Suporte"
-  className="qr-code"
-/>
-
-          />
+            src="../suporte/qr-code.png"
+            alt="QR Code de Suporte"
+            className="qr-code" />
         </section>
       </div>
     </div>
   );
 };
 
-export default App;
+export default Suporte;

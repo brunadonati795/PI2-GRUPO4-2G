@@ -1,5 +1,8 @@
 import Header from "../componentes/header";
 
+let diaEntrega = "00/00/0000";
+let valor = 0.0;
+
 function ConfirmacaodePagamento() {
   return (
     <main>
@@ -13,11 +16,11 @@ function ConfirmacaodePagamento() {
       <section className="pagamento-bloco">
         <p><strong>Escolha quando sua compra chegará:</strong></p>
         <div className="opcao-entrega">
-          <span><strong><em>FULL:</em></strong> Segunda-feira</span>
-          <span className="valor-preco">R$15,99</span>
+          <span><strong><em>FULL:</em></strong> {diaEntrega}</span>
+          <span className="valor-preco">{valor}</span>
         </div>
         <div className="opcao-entrega">
-          <span><strong><em>NORMAL:</em></strong> Sexta-feira</span>
+          <span><strong><em>NORMAL:</em></strong> {diaEntrega}</span>
           <span className="valor-gratis">GRÁTIS</span>
         </div>
       </section>

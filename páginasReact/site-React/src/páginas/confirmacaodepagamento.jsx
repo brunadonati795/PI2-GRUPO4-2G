@@ -1,7 +1,9 @@
+import Header from "../componentes/header";
 
-function confirmacaodepagamento() {
+function ConfirmacaodePagamento() {
   return (
     <main>
+      <Header/>
       <section className="pagamento-bloco">
         <p><strong>Endereço:</strong><br />
         Rua: Valdir Staggmeier 224-casa 89680-000 Irani SC</p>
@@ -50,4 +52,4 @@ function confirmacaodepagamento() {
   );
 }
 
-export default confirmacaodepagamento;
+export default ConfirmacaodePagamento;

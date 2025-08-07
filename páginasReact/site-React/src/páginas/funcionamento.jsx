@@ -1,6 +1,5 @@
 import { useEffect, useRef } from "react";
 import Header from "../componentes/header";
-import "./App.css";
 
 export default function Funcionamento() {
   const placaEsqRef = useRef(null);

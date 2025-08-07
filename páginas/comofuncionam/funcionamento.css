@@ -20,7 +20,7 @@ section {
 }
 
 .intro h1 {
-  font-size: 2rem;
+  font-size: 2.4vh;
   margin-bottom: 2vh;
   margin-top: 10vh;
 }
@@ -83,48 +83,81 @@ section {
   text-align: justify;
 }
 
-.secao-amarela {
-  background: var(--amareloFundo);
-  padding: 13vh 3vw;
+.banner-solar-container {
+  background-color: var(--amareloFundo);
+  margin: 0;
+  padding: 2vh 2vw;
   display: flex;
   flex-direction: column;
-  gap: 40vh;
-  height: 180vh;
+  gap: 10vh;
+  height: 100vh;
 }
 
-.bloco-texto {
+.banner-solar-card {
+  background-color: white;
+  border-radius: 1.5vh;
+  padding: 4vh 4vw;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 5vw;
-  flex-wrap: wrap;
-  margin-bottom: vh;
-  margin-left: 10%;
-  margin-right: 10%;
-}
-
-.bloco-texto img {
+  align-items: flex-start;
+  gap: 1vw;
   width: 40vw;
-  max-width: 40%;
-  margin-left: 5vw;
+  margin: 3vh 10vh 10vh 4vh;
+  box-shadow: 0 0.5vh 1vh rgba(0, 0, 0, 0.1);
 }
 
-.bloco-texto p {
-  max-width: 22vw;
-  line-height: 1.6;
-  background: #fff;
-  padding: 2vh;
-  border-radius: 1vh;
-  font-size: 1.05rem;
+.banner-solar-icon {
+  font-size: 2.4vh;
+  background-color: #e0d4ff;
+  padding: 1vh;
+  border-radius: 50%;
+  flex-shrink: 0;
 }
 
-.objetivo {
+.solarcardEimg {
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  padding: 3vh 2vh;
-  background: #f4f4f4;
+  max-height: 40vh;
+
+  margin-top: 2vh;
+}
+
+.banner-solar-card p,
+.banner-solar-card strong {
+  margin: 0;
+  font-size: 2.4vh;
+  color: #333;
+}
+
+.placaSustentavel {
+  width: 40vw;
+}
+
+.banner-solar-highlight-card {
+  background-color: white;
+  border-radius: 1.5vh;
+  padding: 2vh 2vw;
+  display: flex;
+  align-items: flex-start;
+  gap: 1vw;
+  clear: both;
+  width: 80vw;
+  border-top: 0.8vh solid var(--azulEscuro);
+  box-shadow: 0 0.5vh 1vh rgba(0, 0, 0, 0.1);
+}
+
+.banner-solar-highlight-card strong {
+  font-weight: bold;
+}
+
+.banner-solar-text-highlight {
+  color: black;
+  font-weight: bold;
+}
+
+.banner-solar-check-icon {
+  font-size: 2.4vh;
+  background-color: #e0d4ff;
+  padding: 1vh;
+  border-radius: 50%;
 }
 
 .box-ods {

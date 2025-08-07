@@ -1,4 +1,6 @@
 import Header from "../componentes/header";
+import logocolorida from "../assets/imagens/logoAzul.png";
+
 
 export default function Home() {
   return (
@@ -8,7 +10,7 @@ export default function Home() {
         <div className="banner-content">
           <div className="fundoBrancoLogo">
             <img
-              src="img/logoColorida.png"
+              src= {logocolorida}
               alt="Ícone painel"
               className="icone-banner"
             />

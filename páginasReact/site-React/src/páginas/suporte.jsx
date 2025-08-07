@@ -1,4 +1,5 @@
 import Header from "../componentes/header";
+import qrcode from "../assets/imagens/suporte-qrcode.jpg";
 
 const Suporte = () => {
   return (
@@ -19,7 +20,7 @@ const Suporte = () => {
           </div>
 
            <img
-            src="../suporte/qr-code.png"
+            src={qrcode}
             alt="QR Code de Suporte"
             className="qr-code" />
         </section>

@@ -1,4 +1,5 @@
 import Header from "../componentes/header";
+import descarte from '../assets/imagens/descarte-imagem.png';
 
 const Descarte = () => {
   return (
@@ -17,7 +18,7 @@ const Descarte = () => {
 
         <div className="imagem">
           <img
-            src="../imagens/descarte.png"
+            src={descarte}
             alt="descarte"
           />
         </div>

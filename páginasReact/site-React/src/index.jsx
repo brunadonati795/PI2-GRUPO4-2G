@@ -1,7 +1,7 @@
-import Header from "../componentes/header";
+import Header from "./componentes/header";
 import logoColorida from "../assets/imagens/logoAzul.png"
 
-export default function Home() {
+export default function PrimeiraPagina() {
   return (
     <>
       <Header/>

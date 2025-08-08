@@ -8,4 +8,10 @@ das páginas propostas, faltam 3 ser feitas por conta de que seria mais fácil f
     (estas serão feitas até quarta 13/08 ) então a da loja e suas subsequentes. Fora essas, as outras estão prontas mas com o css não finalizado ainda, também finalizado, se 
     possível, até a próxima aula (problemas ocorridos por muito conta da passagem pro react e tal). 
 
-Para executar: com o arquivo baixado, entrar na pasta siteReact e dar npm run dev, a princípio, é para a página Nossa Empresa ser a primeira a aparecer. As outras páginas podem ser acessadas pelo head.
+ Como Executar
+. Faça o download do projeto.
+
+. Acesse a pasta do projeto: cd PáginasReact/site-React
+Instale as dependências: npm install
+Inicie o servidor de desenvolvimento: npm run dev
+Por padrão, a página "Nossa Empresa" será exibida ao iniciar o projeto. As demais páginas podem ser acessadas através do menu de navegação (head).

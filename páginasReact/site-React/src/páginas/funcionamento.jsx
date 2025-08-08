@@ -1,5 +1,4 @@
 import { useEffect, useRef } from "react";
-import Header from "../componentes/header";
 
 export default function Funcionamento() {
   const placaEsqRef = useRef(null);
@@ -27,7 +26,6 @@ export default function Funcionamento() {
 
   return (
     <div>
-        <Header/>
       <section className="intro">
         <h1>O que são placas solares?</h1>
         <div className="intro-conteudo">

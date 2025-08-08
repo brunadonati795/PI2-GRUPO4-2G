@@ -1,4 +1,3 @@
-import Header from "../componentes/header";
 
 let diaEntrega = "00/00/0000";
 let valor = 0.0;
@@ -6,7 +5,6 @@ let valor = 0.0;
 function ConfirmacaodePagamento() {
   return (
     <main>
-      <Header/>
       <section className="pagamento-bloco">
         <p><strong>Endereço:</strong><br />
         Rua: Valdir Staggmeier 224-casa 89680-000 Irani SC</p>

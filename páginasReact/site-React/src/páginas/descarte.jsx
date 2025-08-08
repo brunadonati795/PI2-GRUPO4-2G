@@ -1,14 +1,12 @@
-import Header from "../componentes/header";
 import descarte from '../assets/imagens/descarte-imagem.png';
 
 const Descarte = () => {
   return (
     <div className="Descarte">
-      <Header/>
-      <h1 className="titulo">Descarte de Placas Solares</h1>
+      <h1 className="tituloDescarte">Descarte de Placas Solares</h1>
 
       <div className="info-container">
-        <div className="texto">
+        <div className="textoDescarte">
           <p>
             Nós, da Renassol, ajudamos você a descartar suas placas solares e realizamos sua reciclagem,
             garantindo o destino correto para elas.<br /><br />
@@ -16,7 +14,7 @@ const Descarte = () => {
           </p>
         </div>
 
-        <div className="imagem">
+        <div className="imagemDescarte">
           <img
             src={descarte}
             alt="descarte"

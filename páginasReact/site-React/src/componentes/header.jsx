@@ -1,5 +1,13 @@
 import { Link } from "react-router-dom";
 import "../App.css";
+import logoAmarela from '../assets/imagens/logoAmarela.png'
+// import PrimeiraPagina from "./index.jsx";
+import Funcionamento from "../páginas/funcionamento";
+import Suporte from "../páginas/suporte";
+import Descarte from "../páginas/descarte";
+import Opcoes from "../páginas/opcoes.jsx";
+// import Componentes from "../páginas/componentes.jsx";
+import usuariosImg from "../assets/imagens/usuário.png";
 
 export default function Header() {
   return (
@@ -7,30 +15,31 @@ export default function Header() {
       <Link to="/">
         <img
           className="logoAmarela"
-          src="imagens/logoAmarela.png"
+          src={logoAmarela}
           alt="logoAmarela"
         />
       </Link>
 
       <div className="links">
         <Link to="/">Nossa Empresa</Link>
-
+        <Link to="/opcoes">Opções</Link>
         <div className="menu-com-submenu">
           <Link to="#">Informativo</Link>
           <div className="submenu">
-            <Link to="#">Como funcionam?</Link>
-            <Link to="#">Componentes</Link>
+            <Link to="/funcionamento">Como funcionam?</Link>
+            {/* <Link to="/componentes">Componentes</Link> */}
           </div>
         </div>
 
-        <Link to="/api">Cálculo</Link>
+        {/* <Link to="/api">Cálculo</Link> */}
         <Link to="/loja">Loja</Link>
         <Link to="/suporte">Suporte</Link>
         <Link to="/descarte">Descarte</Link>
       </div>
 
       <div className="usuário">
-        <img src="imagens/usuário.png" alt="Usuário" />
+        <img src={usuariosImg}
+        alt="Usuário" />
       </div>
     </div>
   );

@@ -1,5 +1,8 @@
 import Header from "./componentes/header";
-import logoColorida from "../assets/imagens/logoAzul.png"
+import logoColorida from "../src/assets/imagens/logoAzul.png";
+import casaPlaca from "../src/assets/imagens/primeirapg-casa.png";
+import { Link } from "react-router-dom";
+import Opcoes from "./páginas/opcoes";
 
 export default function PrimeiraPagina() {
   return (
@@ -110,7 +113,7 @@ export default function PrimeiraPagina() {
 
       <section className="atendimento">
         <div className="casa-img">
-          <img src="img/casa.png" alt="Casa com painel solar" />
+          <img src={casaPlaca} alt="Casa com painel solar" />
         </div>
         <div className="bloco-texto">
           <div className="fundo-arredondado">
@@ -120,9 +123,9 @@ export default function PrimeiraPagina() {
               para fazer o descarte das suas placas.{" "}
               <strong>Sim, nós cuidamos de todo o processo!</strong>
             </p>
-            <a className="btn-atendimento" href="#">
+            <Link className="btn-atendimento" to={Opcoes}>
               Opções de atendimento
-            </a>
+            </Link>
           </div>
         </div>
       </section>

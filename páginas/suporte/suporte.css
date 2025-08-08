@@ -9,16 +9,7 @@
       background-attachment: fixed;
       color: #003B57;
     }
-    header {
-      background-color: #1c2b3c (28, 43, 60, 0.8);
-      padding: 20px;
-      text-align: center;
-      backdrop-filter: blur(5px);
-    }
-    header h1 {
-      margin: 0;
-    }
-    .container {
+    .Suporte {
       max-width: 1200px;
       margin: 0 auto;
       padding: 20px;
@@ -68,46 +59,3 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-@keyframes slideFromLeft {
-  0% {
-    transform: translateX(-20vw);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-@keyframes slideFromRight {
-  0% {
-    transform: translateX(20vw);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-.intro-conteudo img:first-of-type {
-  transform: translateX(-20vw);
-  opacity: 0;
-}
-
-.intro-conteudo img:last-of-type {
-  transform: translateX(20vw);
-  opacity: 0;
-}
-
-.animate-left {
-  animation: slideFromLeft 1s ease-out forwards;
-}
-
-.animate-right {
-  animation: slideFromRight 1s ease-out forwards;
-}
-
-.objetivo p {
-  text-shadow: 0.3vh 0.3vh 0.5vh rgba(0, 0, 0, 0.25);
-}

@@ -35,7 +35,7 @@ export default function Funcionamento() {
             alt="Placa solar esquerda"
           />
           <p>
-            As placas solares, ou módulos fotovoltaicos, são a tecnologia que
+            As placas solares, ou módulos fotovoltaicos, são uma tecnologia que
             permite converter a luz solar em energia elétrica por efeito
             fotovoltaico, que consiste no surgimento de uma corrente elétrica
             dentro da estrutura de um material semicondutor quando este é

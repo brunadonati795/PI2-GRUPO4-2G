@@ -9,6 +9,7 @@ import Funcionamento from "./páginas/funcionamento";
 import Suporte from "./páginas/suporte";
 import Opcoes from "./páginas/opcoes.jsx";
 import Cadastro from "./páginas/cadastro.jsx";
+import Componentes from "./páginas/componentes.jsx";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route path="/suporte" element={<Suporte />} />
         <Route path="/opcoes" element={<Opcoes />} />
         <Route path="/cadastro" element={<Cadastro />} />
+        <Route path="/componentes" element={<Componentes />} />
 
       </Routes>
       {/* <Footer /> */}

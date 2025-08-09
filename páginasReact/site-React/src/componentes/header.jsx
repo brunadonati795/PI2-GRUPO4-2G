@@ -6,7 +6,7 @@ import Suporte from "../páginas/suporte";
 import Descarte from "../páginas/descarte";
 import Opcoes from "../páginas/opcoes.jsx";
 import Cadastro from "../páginas/cadastro.jsx";
-// import Componentes from "../páginas/componentes.jsx";
+import Componentes from "../páginas/componentes.jsx";
 import usuariosImg from "../assets/imagens/usuário.png";
 
 export default function Header() {
@@ -27,7 +27,7 @@ export default function Header() {
           <Link to="#">Informativo</Link>
           <div className="submenu">
             <Link to="/funcionamento">Como funcionam?</Link>
-            {/* <Link to="/componentes">Componentes</Link> */}
+            <Link to="/componentes">Componentes</Link>
           </div>
         </div>
 

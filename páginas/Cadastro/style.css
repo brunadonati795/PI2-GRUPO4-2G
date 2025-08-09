@@ -9,72 +9,69 @@ body, html {
   font-family: Arial, sans-serif;
 }
 
-/* Container do formulário */
 .form-container {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100%;
-  background-image: url('fondo.png'); /* Imagem de fundo */
+  background-image: url('fondo.png'); 
   background-size: cover;
   background-position: center;
 }
 
 .form-box {
-  background-color: #003B57; /* Fundo escuro transparente */
+  background-color: #003B57; 
   color: white;
   padding: 30px 40px;
   border-radius: 15px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-  max-width: 500px;
+  max-width: 40vw;
   width: 100%;
   text-align: center;
+  margin: 10vh;
 }
 
-h2 {
-  font-size: 2em;
+.form-box h2 {
+  font-size: 5vh;
   margin-bottom: 20px;
+  color: #fdd244;
 }
 
-form {
+.form-box form {
   display: flex;
   flex-direction: column;
 }
 
-label {
+.form-box label {
   text-align: left;
-  margin-bottom: 5px;
+  margin-bottom: 1.5vh;
   font-size: 1em;
   font-weight: bold;
+  color: #fdd244;
 }
 
-input {
+.form-box input {
   padding: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 2vh;
   border: none;
-  border-radius: 5px;
+  border-radius: 2vh;
   font-size: 1em;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+
 }
 
-button {
+.form-box button {
   background-color: #10B328;
   color: white;
   padding: 12px 20px;
   font-size: 1.1em;
   border: none;
-  border-radius: 8px;
+  border-radius: 2vh;
   cursor: pointer;
   transition: background-color 0.3s;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 button:hover {
-  background-color: #005174;
-}
-
-.form-box label {
-    color: yellow;
-}
-
-.form-box h2{
-    color: yellow;
+  background-color: #0b881e;
 }

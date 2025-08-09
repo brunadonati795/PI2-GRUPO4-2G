@@ -12,13 +12,12 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="elementos1">
-        <h3>Renassol</h3>
-        <img src={logoAmarela}/>
+        <h3>RENASSOL</h3>
+        <img src={logoAmarela} className='footerimg'/>
       </div>
 
       <div className="coluna1">
         <Link to="/nossa-empresa">Nossa empresa</Link>
-        <Link to="/importancia">Importância</Link>
         <Link to="/opcoes">Opções</Link>
         <Link to="/componentes">Componentes</Link>
         <Link to="/descarte">Descarte</Link>
@@ -28,7 +27,6 @@ const Footer = () => {
         <Link to="/cadastro">Cadastro</Link>
         <Link to="/loja">Loja</Link>
         <Link to="/carrinho">Carrinho</Link>
-        <Link to="/finalizar-compra">Finalizar compra</Link>
         <Link to="/api">API</Link>
       </div>
     </footer>

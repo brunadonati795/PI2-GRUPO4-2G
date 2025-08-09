@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
 import "../App.css";
 import logoAmarela from '../assets/imagens/logoAmarela.png'
-// import PrimeiraPagina from "./index.jsx";
 import Funcionamento from "../páginas/funcionamento";
 import Suporte from "../páginas/suporte";
 import Descarte from "../páginas/descarte";
 import Opcoes from "../páginas/opcoes.jsx";
+import Cadastro from "../páginas/cadastro.jsx";
 // import Componentes from "../páginas/componentes.jsx";
 import usuariosImg from "../assets/imagens/usuário.png";
 
@@ -38,8 +38,9 @@ export default function Header() {
       </div>
 
       <div className="usuário">
+        <Link to="/cadastro">
         <img src={usuariosImg}
-        alt="Usuário" />
+        alt="Usuário" /></Link>
       </div>
     </div>
   );

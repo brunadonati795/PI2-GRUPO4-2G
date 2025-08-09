@@ -3,6 +3,7 @@ import logoColorida from "../src/assets/imagens/logoAzul.png";
 import casaPlaca from "../src/assets/imagens/primeirapg-casa.png";
 import { Link } from "react-router-dom";
 import Opcoes from "./páginas/opcoes";
+import Funcionamento from "./páginas/funcionamento";
 
 export default function PrimeiraPagina() {
   return (
@@ -63,7 +64,7 @@ export default function PrimeiraPagina() {
         </div>
         <p className="link-ajuda">
           Não sabe nada sobre o assunto?{" "}
-          <a href="#"><i>Clique aqui!</i></a>
+          <Link to="/funcionamento"><i>Clique aqui!</i></Link>
         </p>
       </section>
 
@@ -123,7 +124,7 @@ export default function PrimeiraPagina() {
               para fazer o descarte das suas placas.{" "}
               <strong>Sim, nós cuidamos de todo o processo!</strong>
             </p>
-            <Link className="btn-atendimento" to={Opcoes}>
+            <Link className="btn-atendimento" to="/opcoes">
               Opções de atendimento
             </Link>
           </div>

@@ -1,17 +1,19 @@
 import { Link } from 'react-router-dom';
-
-import whatsappIcon from '../assets/imagens/rodapewhats.png';
-import linkedinIcon from '../assets/imagens/rodapelinkedin.png';
+import "../App.css";
+import logoAmarela from '../assets/imagens/logoAmarela.png'
+// import PrimeiraPagina from "./index.jsx";
+import Funcionamento from "../páginas/funcionamento";
+import Suporte from "../páginas/suporte";
+import Descarte from "../páginas/descarte";
+import Opcoes from "../páginas/opcoes.jsx";
+// import Componentes from "../páginas/componentes.jsx";
 
 const Footer = () => {
   return (
     <footer className="footer">
       <div className="elementos1">
         <h3>Renassol</h3>
-        <div className="icones">
-          <img src={whatsappIcon} alt="whatsapp" />
-          <img src={linkedinIcon} alt="linkedin" />
-        </div>
+        <img src={logoAmarela}/>
       </div>
 
       <div className="coluna1">

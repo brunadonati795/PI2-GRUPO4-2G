@@ -421,3 +421,90 @@ select {
   align-items: center;
   margin-top: 1vh;
 }
+
+.itens-mostruario-principal {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.produto-card {
+  width: 120px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+}
+
+.produto-card img {
+  width: 100%;
+  height: auto;
+}
+
+.produto-card p {
+  font-size: 0.9rem;
+  margin: 5px 0;
+}
+
+.preco {
+  background-color: #e6fbe6;
+  padding: 5px;
+  color: green;
+  font-weight: bold;
+}
+
+.botao-add {
+  background-color: green;
+  color: white;
+  border: none;
+  padding: 3px 5px;
+  cursor: pointer;
+}
+
+/* ==== PRODUTO DETALHE ==== */
+.produto-detalhe-container {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+}
+
+.produto-detalhe-imagem img {
+  width: 200px;
+}
+
+.produto-detalhe-info h2 {
+  margin: 0;
+}
+
+.produto-detalhe-info .preco {
+  font-size: 1.2rem;
+}
+
+.botao-comprar {
+  background-color: green;
+  color: white;
+  padding: 8px 12px;
+  margin-top: 10px;
+  display: inline-block;
+  cursor: pointer;
+}
+
+/* ==== CHECKOUT ==== */
+.checkout-container {
+  padding: 20px;
+}
+
+.checkout-box {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 15px;
+}
+
+.checkout-precos {
+  margin-top: 10px;
+}
+
+.pix-box {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  word-break: break-all;
+}

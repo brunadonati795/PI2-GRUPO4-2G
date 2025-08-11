@@ -10,6 +10,7 @@ import Suporte from "./páginas/suporte";
 import Opcoes from "./páginas/opcoes.jsx";
 import Cadastro from "./páginas/cadastro.jsx";
 import Componentes from "./páginas/componentes.jsx";
+import Loja from "./páginas/loja/loja.jsx"
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
         <Route path="/opcoes" element={<Opcoes />} />
         <Route path="/cadastro" element={<Cadastro />} />
         <Route path="/componentes" element={<Componentes />} />
+        <Route path="/loja" element={<Loja />} />
 
       </Routes>
       {/* <Footer /> */}

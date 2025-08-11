@@ -5,22 +5,24 @@ html, body {
 }
 
 footer {
-    position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
     background-color: #003B57;
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
-    padding: 20px 50px;
+    align-items: center;
+    padding: 3vh 4vh;
     box-sizing: border-box;
-    gap: 40px;
+    gap: 4vh;
+    margin-top: 100%;
+    height: 30vh;
 }
 
 .elememtos1, .coluna1, .coluna2 {
     color: white;
     display: flex;
+    justify-content: center;
     flex-direction: column;
     gap: 10px;
     margin: 0;
@@ -33,7 +35,7 @@ footer {
 }
 .coluna1 {
     text-align: left;
-    margin-left: 60%; /* Depois podemos ajustar */
+    margin-left: 60%;
 }
 
 a {
@@ -41,6 +43,10 @@ a {
 }
 
 img {
-    width: 30px;
-    height: 30px;
+    width: 2.5vw;
+    margin: 0.4vh;
+}
+
+footer h3 {
+    font-size: 3vh;
 }

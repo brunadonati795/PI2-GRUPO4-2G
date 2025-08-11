@@ -1,0 +1,15 @@
+export const storeItems = [
+  { id: 1, name: "Acessório para fixação vertical", category: "loja", image: "fixacao.png" },
+  { id: 2, name: "Barra de estrutura", category: "loja", image: "barra.png" },
+  { id: 3, name: "Estrutura para solo", category: "loja", image: "solo.png" },
+  { id: 4, name: "Fixador de grampo", category: "loja", image: "grampo.png" },
+  { id: 5, name: "Conector em grampo", category: "loja", image: "conector.png" },
+  { id: 6, name: "Junção", category: "loja", image: "juncao.png" },
+  { id: 7, name: "Junção em U", category: "loja", image: "juncaoU.png" },
+  { id: 8, name: "Placas para piscina", category: "loja", image: "piscina.png" },
+  { id: 9, name: "Suporte central", category: "loja", image: "suporte.png" },
+  { id: 10, name: "Braçadeira", category: "loja", image: "bracadeira.png" },
+  { id: 11, name: "Organicos", category: "placas", image: "organicos.png" },
+  { id: 12, name: "Perovskita", category: "placas", image: "perovskita.png" },
+  { id: 13, name: "Dssc", category: "placas", image: "dssc.png" },
+];

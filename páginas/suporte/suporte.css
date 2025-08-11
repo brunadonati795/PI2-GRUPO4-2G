@@ -9,23 +9,14 @@
       background-attachment: fixed;
       color: #003B57;
     }
-    header {
-      background-color: #1c2b3c (28, 43, 60, 0.8);
-      padding: 20px;
-      text-align: center;
-      backdrop-filter: blur(5px);
-    }
-    header h1 {
-      margin: 0;
-    }
-    .container {
-      max-width: 1200px;
+    .Suporte {
+      max-width: 100vw;
       margin: 0 auto;
-      padding: 20px;
+      padding: 3vh;
     }
     .support-section {
       text-align: center;
-      padding: 40px;
+      padding: 3.5vh;
     }
     .support-section h2 {
       font-size: 2.8rem;
@@ -38,12 +29,12 @@
       font-size: 1.3rem;
       margin-bottom: 30px;
       line-height: 1.6;
-      max-width: 600px;
+      max-width: 40vw;
       margin-left: auto;
       margin-right: auto;
       background-color: white;
-      padding: 20px;
-      border-radius: 20px;
+      padding: 2vh;
+      border-radius: 2vh;
       position: relative;
       box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     }
@@ -58,7 +49,7 @@
       border-color: white transparent;
     }
     .qr-code {
-  width: 80px;          
+  width: 15vh;          
   height: auto;         
   display: block;
   margin: 20px auto;
@@ -68,46 +59,3 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-@keyframes slideFromLeft {
-  0% {
-    transform: translateX(-20vw);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-@keyframes slideFromRight {
-  0% {
-    transform: translateX(20vw);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-.intro-conteudo img:first-of-type {
-  transform: translateX(-20vw);
-  opacity: 0;
-}
-
-.intro-conteudo img:last-of-type {
-  transform: translateX(20vw);
-  opacity: 0;
-}
-
-.animate-left {
-  animation: slideFromLeft 1s ease-out forwards;
-}
-
-.animate-right {
-  animation: slideFromRight 1s ease-out forwards;
-}
-
-.objetivo p {
-  text-shadow: 0.3vh 0.3vh 0.5vh rgba(0, 0, 0, 0.25);
-}

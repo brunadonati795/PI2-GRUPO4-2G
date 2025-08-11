@@ -1,29 +1,37 @@
-import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Header from "./componentes/header";
 import Footer from "./componentes/footer";
-import PrimeiraPagina from "./páginas/primeiraPagina";
+
+import PrimeiraPagina from "./index.jsx";
 import ConfirmacaodePagamento from "./páginas/confirmacaodepagamento";
 import Descarte from "./páginas/descarte";
 import Funcionamento from "./páginas/funcionamento";
 import Suporte from "./páginas/suporte";
+import Opcoes from "./páginas/opcoes.jsx";
+import Cadastro from "./páginas/cadastro.jsx";
+import Componentes from "./páginas/componentes.jsx";
+import Loja from "./páginas/loja/loja.jsx"
 
 function App() {
   return (
-    <Router>
+    <>
       <Header />
 
       <Routes>
-        <Route path="/" element={<Navigate to="/primeiraPagina" replace />} />
-
+        <Route path="/" element={<PrimeiraPagina />} />
         <Route path="/primeiraPagina" element={<PrimeiraPagina />} />
         <Route path="/confirmacaodepagamento" element={<ConfirmacaodePagamento />} />
         <Route path="/descarte" element={<Descarte />} />
         <Route path="/funcionamento" element={<Funcionamento />} />
         <Route path="/suporte" element={<Suporte />} />
-      </Routes>
+        <Route path="/opcoes" element={<Opcoes />} />
+        <Route path="/cadastro" element={<Cadastro />} />
+        <Route path="/componentes" element={<Componentes />} />
+        <Route path="/loja" element={<Loja />} />
 
-      <Footer />
-    </Router>
+      </Routes>
+      {/* <Footer /> */}
+    </>
   );
 }
 

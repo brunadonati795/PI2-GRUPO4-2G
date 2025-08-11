@@ -1,16 +1,11 @@
-import Header from "../componentes/header";
 import qrcode from "../assets/imagens/suporte-qrcode.jpg";
 
 const Suporte = () => {
   return (
-    <div className="suporteBox">
-      <Header/>
-      <header>
-        <h1>Suporte Renassol</h1>
-      </header>
-
-      <div className="container">
+    <div className="Suporte">
+      <div className="containerSuporte">
         <section className="support-section">
+          <h1 className="titulo">SUPORTE RENASSOL</h1>
           <h2>Estamos aqui para ajudar você!</h2>
 
           <div className="support-message">

@@ -12,7 +12,7 @@ body {
 }
 
 section {
-  height: 92vh;
+  height: 100vh;
 }
 
 .intro {
@@ -20,9 +20,10 @@ section {
 }
 
 .intro h1 {
-  font-size: 2.4vh;
-  margin-bottom: 2vh;
-  margin-top: 10vh;
+  font-size: 5vh;
+  margin-bottom: -5vh;
+  margin-top: 20vh;
+  color: var(--azulEscuro);
 }
 
 .intro-conteudo {
@@ -86,11 +87,15 @@ section {
 .banner-solar-container {
   background-color: var(--amareloFundo);
   margin: 0;
-  padding: 2vh 2vw;
+  padding: 5vh 10vh;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   gap: 10vh;
   height: 100vh;
+  border-top-left-radius: 10vh;
+  border-bottom-right-radius: 10vh;
 }
 
 .banner-solar-card {
@@ -100,9 +105,10 @@ section {
   display: flex;
   align-items: flex-start;
   gap: 1vw;
-  width: 40vw;
-  margin: 3vh 10vh 10vh 4vh;
+  width: 35vw;
+  margin: 0 10vh 10vh -5vh;
   box-shadow: 0 0.5vh 1vh rgba(0, 0, 0, 0.1);
+  border-top: 1.2vh solid var(--azulEscuro);
 }
 
 .banner-solar-icon {
@@ -116,7 +122,7 @@ section {
 .solarcardEimg {
   display: flex;
   max-height: 40vh;
-
+  width: auto;
   margin-top: 2vh;
 }
 
@@ -129,6 +135,20 @@ section {
 
 .placaSustentavel {
   width: 40vw;
+  height: auto;
+  animation: slideFromLeft 1s ease-out forwards;
+  margin-top: -10vh;
+}
+
+@keyframes slideFromRight {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 
 .banner-solar-highlight-card {
@@ -136,20 +156,26 @@ section {
   border-radius: 1.5vh;
   padding: 2vh 2vw;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 1vw;
   clear: both;
-  width: 80vw;
+  width: 65vw;
+  height: 15vh;
   border-top: 0.8vh solid var(--azulEscuro);
   box-shadow: 0 0.5vh 1vh rgba(0, 0, 0, 0.1);
+  margin-top: 2vh;
 }
 
 .banner-solar-highlight-card strong {
   font-weight: bold;
 }
+.banner-solar-highlight-card p {
+  font-size: 2.4vh;
+  color: #333;
+}
 
 .banner-solar-text-highlight {
-  color: black;
+  color: #333;
   font-weight: bold;
 }
 
@@ -160,24 +186,37 @@ section {
   border-radius: 50%;
 }
 
+@keyframes slideFromLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.objetivo {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 5vh;
+  width: 100vw;
+}
+
 .box-ods {
   background: none;
   padding: 0;
   border-radius: 0;
-  text-align: center;
+  position: relative;
 }
 
 .box-ods img {
-  width: 30vw;  
-  max-width: 100%;
+  width: 40vw;  
   height: auto;
-  display: block;
-  margin: 0 auto;
-}
-
-.box-ods h2 {
-  margin: 0;
-  font-size: 24px;
+  margin-left: -30vh;
 }
 
 .icone-sol {
@@ -186,21 +225,23 @@ section {
 }
 
 .texto-ods {
-  max-width: 30vh;
+  max-width: 50vh;
   margin: 1vh;
   text-align: left;
 }
 
 .texto-ods p {
-  text-shadow: 0.3vh 0.3vh 0.5vh rgba(0, 0, 0, 0.2);
+  font-size: 3.5vh;
+  width: 40vw;
 }
 
 .texto-ods button {
   background: var(--azulEscuro);
   color: white;
   border: none;
-  padding: 1vh 2vh;
+  padding: 2vh 3vh;
   margin-top: 1vh;
+  font-size: 3.5vh;
   border-radius: 1vh;
   cursor: pointer;
 }

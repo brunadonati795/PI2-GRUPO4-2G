@@ -1,9 +1,17 @@
 # PI2-GRUPO4-2G
+O projeto utilizará react para o framework, com a estilização sendo feito em um único documento (App.css)
+O projeto em si está na pasta PáginasReact\site-React, com as outras pastas sendo ou do banco de dados ou das páginas no html e css normal,
+    em que depois foram passadas para o jsx.
+A comunicação entre as páginas está sendo feita por meio de react-router-dom
 
-**Como rodar o código**
+das páginas propostas, faltam 3 ser feitas por conta de que seria mais fácil fazê-las com o banco de dados feito 
+    (estas serão feitas até quarta 13/08 ) então a da loja e suas subsequentes. Fora essas, as outras estão prontas mas com o css não finalizado ainda, também finalizado, se 
+    possível, até a próxima aula (problemas ocorridos por muito conta da passagem pro react e tal). 
 
-Para rodar o código ainda é preciso navegar de página em pagina pelo vscode, (ou a IDE que você usa) pois ainda não em os links em todas as páginas.
+ Como Executar
+. Faça o download do projeto.
 
-Tem algumas páginas que podem estar em react e outras que estão ainda em HTML, mas é para isso ser consertado o mais rápido possivel, e depois será só rodar o react na pasta indicada (npm install | | npm run dev páginasReact) e será possivel rodar em react.
-
-O CSS unificado ainda não está pronto, então tem bastantes páginas com CSS próprio, isso também é esperado estar pronto até quarta feira (13/08/25)
+. Acesse a pasta do projeto: cd PáginasReact/site-React
+Instale as dependências: npm install
+Inicie o servidor de desenvolvimento: npm run dev
+Por padrão, a página "Nossa Empresa" será exibida ao iniciar o projeto. As demais páginas podem ser acessadas através do menu de navegação (head).

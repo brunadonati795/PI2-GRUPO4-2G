@@ -17,11 +17,11 @@ body {
   --azulEscuro: #003B57;
 
 }
-.container {
+.Descarte {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 60px 20px;
+  padding: 10vh 5vh;
   min-height: 100vh;
   box-sizing: border-box;
 }
@@ -41,24 +41,24 @@ body {
   padding: 30px;
   border-radius: 20px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-  max-width: 800px;
-  margin-bottom: 30px;
+  max-width: 40vw;
+  margin-bottom: 5vh;
   flex-wrap: wrap;
 }
 
 .texto {
-  font-size: 18px;
+  font-size: 1.5vh;
   line-height: 1.6;
-  max-width: 400px;
+  max-width: 30vw;
   color: #000;
 }
 
 .imagem {
-  margin-left: 30px;
+  margin-left: 4vw;
 }
 
 .imagem img {
-  width: 250px;
+  width: 25vw;
   height: auto;
 }
 
@@ -70,9 +70,9 @@ body {
   background-color: #003B49;
   color: white;
   padding: 15px 50px;
-  font-size: 20px;
+  font-size: 2vh;
   border: none;
-  border-radius: 10px;
+  border-radius: 1vh;
   text-decoration: none;
   cursor: pointer;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);

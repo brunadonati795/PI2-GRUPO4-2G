@@ -1,22 +1,23 @@
 import { Link } from 'react-router-dom';
-
-import whatsappIcon from '../img/whatsapp.png';
-import linkedinIcon from '../img/linkedin.png';
+import "../App.css";
+import logoAmarela from '../assets/imagens/logoAmarela.png'
+// import PrimeiraPagina from "./index.jsx";
+import Funcionamento from "../páginas/funcionamento";
+import Suporte from "../páginas/suporte";
+import Descarte from "../páginas/descarte";
+import Opcoes from "../páginas/opcoes.jsx";
+// import Componentes from "../páginas/componentes.jsx";
 
 const Footer = () => {
   return (
     <footer className="footer">
       <div className="elementos1">
-        <h3>Renassol</h3>
-        <div className="icones">
-          <img src={whatsappIcon} alt="whatsapp" />
-          <img src={linkedinIcon} alt="linkedin" />
-        </div>
+        <h3>RENASSOL</h3>
+        <img src={logoAmarela} className='footerimg'/>
       </div>
 
       <div className="coluna1">
         <Link to="/nossa-empresa">Nossa empresa</Link>
-        <Link to="/importancia">Importância</Link>
         <Link to="/opcoes">Opções</Link>
         <Link to="/componentes">Componentes</Link>
         <Link to="/descarte">Descarte</Link>
@@ -26,7 +27,6 @@ const Footer = () => {
         <Link to="/cadastro">Cadastro</Link>
         <Link to="/loja">Loja</Link>
         <Link to="/carrinho">Carrinho</Link>
-        <Link to="/finalizar-compra">Finalizar compra</Link>
         <Link to="/api">API</Link>
       </div>
     </footer>

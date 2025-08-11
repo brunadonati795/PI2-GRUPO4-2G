@@ -1,7 +1,11 @@
-import Header from "../componentes/header";
-import logoColorida from "../assets/imagens/logoAzul.png"
+import Header from "./componentes/header";
+import logoColorida from "../src/assets/imagens/logoAzul.png";
+import casaPlaca from "../src/assets/imagens/primeirapg-casa.png";
+import { Link } from "react-router-dom";
+import Opcoes from "./páginas/opcoes";
+import Funcionamento from "./páginas/funcionamento";
 
-export default function Home() {
+export default function PrimeiraPagina() {
   return (
     <>
       <Header/>
@@ -60,7 +64,7 @@ export default function Home() {
         </div>
         <p className="link-ajuda">
           Não sabe nada sobre o assunto?{" "}
-          <a href="#"><i>Clique aqui!</i></a>
+          <Link to="/funcionamento"><i>Clique aqui!</i></Link>
         </p>
       </section>
 
@@ -110,7 +114,7 @@ export default function Home() {
 
       <section className="atendimento">
         <div className="casa-img">
-          <img src="img/casa.png" alt="Casa com painel solar" />
+          <img src={casaPlaca} alt="Casa com painel solar" />
         </div>
         <div className="bloco-texto">
           <div className="fundo-arredondado">
@@ -120,9 +124,9 @@ export default function Home() {
               para fazer o descarte das suas placas.{" "}
               <strong>Sim, nós cuidamos de todo o processo!</strong>
             </p>
-            <a className="btn-atendimento" href="#">
+            <Link className="btn-atendimento" to="/opcoes">
               Opções de atendimento
-            </a>
+            </Link>
           </div>
         </div>
       </section>

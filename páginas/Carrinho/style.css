@@ -9,7 +9,6 @@ body {
   top: 20px;
   right: 20px;
   padding: 10px 15px;
-  background-color: #4CAF50;
   color: white;
   border: none;
   cursor: pointer;
@@ -21,8 +20,8 @@ body {
 #carrinho {
   position: fixed;
   top: 0;
-  right: -50vw; /* Inicialmente escondido */
-  width: 50vw; /* Ocupa metade da tela */
+  right: -60vw; /* Inicialmente escondido */
+  width: 30vw; /* Ocupa metade da tela */
   height: 100vh;
   background-color: #f1f1f1;
   box-shadow: -3px 0 5px rgba(0,0,0,0.2);
@@ -34,8 +33,7 @@ body {
 /* Botão fechar carrinho */
 #fecharCarrinho {
   padding: 10px 15px;
-  background-color: #f44336;
-  color: white;
+  color: black;
   border: none;
   cursor: pointer;
   border-radius: 5px;
@@ -55,4 +53,23 @@ body {
   margin: 10px 0;
   padding: 5px;
  
+}
+#carrinho {
+  position: fixed;
+  top: 0;
+  right: -50vw;
+  width: 50vw;
+  height: 100vh;
+  background-color: #f1f1f1;
+  
+  /* Fundo com imagem centralizada e pequena */
+  background-image: url('carrinho-iconedocarrinho.png'); /* coloque o caminho da sua imagem */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100px auto; /* largura da imagem pequena, altura proporcional */
+  
+  box-shadow: -3px 0 5px rgba(0,0,0,0.2);
+  padding: 20px;
+  transition: right 0.3s ease;
+  z-index: 1000;
 }

@@ -1,6 +1,4 @@
-import React from "react";
-
-export default function Profile() {
+export default function Usuario() {
   const [name, setName] = useState("Nome do Usuário");
   const [email, setEmail] = useState("usuario@email.com");
   const [location, setLocation] = useState("Cidade, Estado");

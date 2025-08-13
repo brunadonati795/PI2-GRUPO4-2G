@@ -116,7 +116,7 @@ export default function Cadastro() {
             onChange={handleChange}
           />
 
-          <button onClick={() => handleClick("/Usuario")} /*type="submit"*/>Cadastrar-se</button>
+         <button onClick={() => handleClick("/Usuario")}>Cadastra-se</button>
         </form>
       </div>
     </section>

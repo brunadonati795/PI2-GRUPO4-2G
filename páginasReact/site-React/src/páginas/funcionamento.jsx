@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-// import placaLado1 from "../assets/imagens/"
+//import placaLado1 from "../assets/imagens/"
 
 export default function Funcionamento() {
   const placaEsqRef = useRef(null);

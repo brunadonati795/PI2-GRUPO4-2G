@@ -1,5 +1,8 @@
 import { useEffect, useRef } from "react";
-//import placaLado1 from "../assets/imagens/"
+import comofuncionamplacaLado1 from "../assets/imagens/comofuncionamplacaLado1.png"
+import comofuncionamplacaLado2 from "../assets/imagens/comofuncionamplacaLado2.png"
+import comofuncionamplacaSustentavel from "../assets/imagens/comofuncionamplacaSustentavel.png"
+import comofuncionamtodasasplacas from "../assets/imagens/comofuncionamtodasasplacas.png"
 
 export default function Funcionamento() {
   const placaEsqRef = useRef(null);
@@ -31,7 +34,7 @@ export default function Funcionamento() {
         <h1>O QUE SÃO AS PLACAS SOLARES?</h1>
         <div className="intro-conteudo">
           <img
-            src="./imagens/placaLado1.png"
+            src={comofuncionamplacaLado1}
             alt="Placa solar esquerda"
           />
           <p>
@@ -44,7 +47,7 @@ export default function Funcionamento() {
           </p>
           <img
           ref={placaDirRef}
-            src="./imagens/placaLado2.png"
+            src={comofuncionamplacaLado2}
             alt="Placa solar direita"
           />
         </div>
@@ -69,7 +72,7 @@ export default function Funcionamento() {
           </div>
           <img
             ref={placaEsqRef}
-            src="img/placaSustentavel.png"
+            src={comofuncionamplacaSustentavel}
             className="placaSustentavel"
             style={{ width: "min-content" }}
             alt="Placa sustentável"
@@ -96,7 +99,7 @@ export default function Funcionamento() {
       <section className="objetivo">
         <div className="box-ods">
           <img
-            src="./imagens/imagem_2025-07-14_212946519-removebg-preview.png"
+            src={comofuncionamtodasasplacas}
             alt="ODS 7 - Energia Acessível e Limpa"
           />
         </div>

@@ -1,4 +1,10 @@
 import "../App.css"; 
+import componentesFotovoltaicos from '../assets/imagens/componentesFotovoltaicos.png'
+import componentesBidirecional from '../assets/imagens/componentesBidirecional.png'
+import componentesDsjuntor from '../assets/imagens/componentesDsjuntor.png'
+import componentesControladordeCarga from '../assets/imagens/componentesControladordeCarga.png'
+import componentesBaterias from '../assets/imagens/componentesBaterias.png'
+import componentesStringBox from '../assets/imagens/componentesStringBox.png'
 
 export default function Componentes() {
   return (
@@ -18,7 +24,7 @@ export default function Componentes() {
             </p>
           </div>
           <img
-            src="../img/Fotovoltaicos.png"
+            src={componentesFotovoltaicos}
             alt="Painéis solares"
             id="Fotovoltaicos"
           />
@@ -26,7 +32,7 @@ export default function Componentes() {
 
         <div className="item">
           <img
-            src="../img/Bidirecional.png"
+            src={componentesBidirecional}
             alt="Medidor de energia"
           />
           <div className="text">
@@ -54,7 +60,7 @@ export default function Componentes() {
             </p>
           </div>
           <img
-            src="../img/Dsjuntor.png"
+            src={componentesDsjuntor}
             alt="Painéis solares"
             id="Fotovoltaicos"
           />
@@ -62,7 +68,7 @@ export default function Componentes() {
 
         <div className="item">
           <img
-            src="../img/Controlador de Carga.png"
+            src={componentesControladordeCarga}
             alt="Medidor de energia"
             id="Controlador-de-Carga"
           />
@@ -90,7 +96,7 @@ export default function Componentes() {
             </p>
           </div>
           <img
-            src="../img/Baterias.png"
+            src={componentesBaterias}
             alt="Painéis solares"
             id="Fotovoltaicos"
           />
@@ -98,7 +104,7 @@ export default function Componentes() {
 
         <div className="item">
           <img
-            src="../img/String Box.png"
+            src={componentesStringBox}
             alt="Medidor de energia"
             id="String-Box"
           />

@@ -1,5 +1,6 @@
 import React from "react";
 import "./All.css";
+import iconedoCarrinho from '../assets/imagens/carrinho-iconedoCarrinho'
 
 export default function Loja() {
   const produtos = [
@@ -22,6 +23,14 @@ export default function Loja() {
   ];
 
   return (
+    <img 
+  src={iconedoCarrinho} 
+  alt="Abrir Carrinho" 
+  width="40" 
+  className="imagem-botao"
+  onClick={() => console.log("Imagem clicada!")} 
+/>
+
     <div className="section-container">
       <h1>LOJA</h1>
       <div className="itens-mostruario-principal">

@@ -85,3 +85,5 @@ const Loja = () => {
 };
 
 export default Loja;
+
+

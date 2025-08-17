@@ -1,19 +1,30 @@
 import React from "react";
 import "./All.css";
-import iconedoCarrinho from '../assets/imagens/carrinho-iconedoCarrinho'
+
+import iconedocarrinho from "../assets/imagens/iconedocarrinho.png";
+import lojaacessorioparafixacaovertical from "../assets/imagens/lojaacessorioparafixacaovertical.jpg";
+import lojabarraestrutura from "../assets/imagens/lojabarraestrutura.webp";
+import lojabracadeira from "../assets/imagens/lojabracadeira.jpg";
+import lojaestruturasolo from "../assets/imagens/lojaestruturasolo.webp";
+import lojafixadorgrampo from "../assets/imagens/lojafixadorgrampo.webp";
+import lojagrampoplaca from "../assets/imagens/lojagrampoplaca.webp";
+import lojajuncao from "../assets/imagens/lojajuncao.webp";
+import lojajuncaoemu from "../assets/imagens/lojajuncaoemu.webp";
+import lojaplacasparapiscina from "../assets/imagens/lojaplacasparapiscina.webp";
+import lojasuportecentral from "../assets/imagens/lojasuportecentral.webp";
 
 export default function Loja() {
   const produtos = [
-    { nome: "Acessório para fixação vertical", img: "link-da-imagem" },
-    { nome: "Barra de estrutura", img: "link-da-imagem" },
-    { nome: "Estrutura para solo", img: "link-da-imagem" },
-    { nome: "Fixador de grampo", img: "link-da-imagem" },
-    { nome: "Conector em grampos", img: "link-da-imagem" },
-    { nome: "Junção", img: "link-da-imagem" },
-    { nome: "Junção em U", img: "link-da-imagem" },
-    { nome: "Placas para piscina", img: "link-da-imagem" },
-    { nome: "Suporte central", img: "link-da-imagem" },
-    { nome: "Braceadeira", img: "link-da-imagem" },
+    { nome: "Acessório para fixação vertical", img: lojaacessorioparafixacaovertical },
+    { nome: "Barra de estrutura", img: lojabarraestrutura },
+    { nome: "Estrutura para solo", img: lojaestruturasolo },
+    { nome: "Fixador de grampo", img: lojafixadorgrampo },
+    { nome: "Conector em grampos", img: lojagrampoplaca },
+    { nome: "Junção", img: lojajuncao },
+    { nome: "Junção em U", img: lojajuncaoemu },
+    { nome: "Placas para piscina", img: lojaplacasparapiscina },
+    { nome: "Suporte central", img: lojasuportecentral },
+    { nome: "Braceadeira", img: lojabracadeira },
   ];
 
   const placas = [
@@ -23,38 +34,40 @@ export default function Loja() {
   ];
 
   return (
-    <img 
-  src={iconedoCarrinho} 
-  alt="Abrir Carrinho" 
-  width="40" 
-  className="imagem-botao"
-  onClick={() => console.log("Imagem clicada!")} 
-/>
+    <>
+      <img
+        src={iconedocarrinho}
+        alt="Abrir Carrinho"
+        width="40"
+        className="imagem-botao"
+        onClick={() => console.log("Imagem clicada!")}
+      />
 
-    <div className="section-container">
-      <h1>LOJA</h1>
-      <div className="itens-mostruario-principal">
-        {produtos.map((item, index) => (
-          <div key={index} className="produto-card">
-            <img src={item.img} alt={item.nome} />
-            <p>{item.nome}</p>
-            <div className="preco">R$ XX,XX</div>
-            <button className="botao-add">+</button>
-          </div>
-        ))}
-      </div>
+      <div className="section-container">
+        <h1>LOJA</h1>
+        <div className="itens-mostruario-principal">
+          {produtos.map((item, index) => (
+            <div key={index} className="produto-card">
+              <img src={item.img} alt={item.nome} />
+              <p>{item.nome}</p>
+              <div className="preco">R$ XX,XX</div>
+              <button className="botao-add">+</button>
+            </div>
+          ))}
+        </div>
 
-      <h1>PLACAS SOLARES</h1>
-      <div className="itens-mostruario-principal">
-        {placas.map((item, index) => (
-          <div key={index} className="produto-card">
-            <img src={item.img} alt={item.nome} />
-            <p>{item.nome}</p>
-            <div className="preco">R$ XX,XX</div>
-            <button className="botao-add">+</button>
-          </div>
-        ))}
+        <h1>PLACAS SOLARES</h1>
+        <div className="itens-mostruario-principal">
+          {placas.map((item, index) => (
+            <div key={index} className="produto-card">
+              <img src={item.img} alt={item.nome} />
+              <p>{item.nome}</p>
+              <div className="preco">R$ XX,XX</div>
+              <button className="botao-add">+</button>
+            </div>
+          ))}
+        </div>
       </div>
-    </div>
+    </>
   );
 }

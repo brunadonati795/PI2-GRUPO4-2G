@@ -1,0 +1,75 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+}
+
+/* Botão abrir carrinho */
+#abrirCarrinho {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 10px 15px;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  z-index: 1001;
+}
+
+/* Carrinho lateral */
+#carrinho {
+  position: fixed;
+  top: 0;
+  right: -60vw; /* Inicialmente escondido */
+  width: 30vw; /* Ocupa metade da tela */
+  height: 100vh;
+  background-color: #f1f1f1;
+  box-shadow: -3px 0 5px rgba(0,0,0,0.2);
+  padding: 20px;
+  transition: right 0.3s ease;
+  z-index: 1000;
+}
+
+/* Botão fechar carrinho */
+#fecharCarrinho {
+  padding: 10px 15px;
+  color: black;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* Conteúdo do carrinho */
+#carrinho h2 {
+  margin-top: 0;
+}
+
+#carrinho ul {
+  list-style: none;
+  padding: 0;
+}
+
+#carrinho li {
+  margin: 10px 0;
+  padding: 5px;
+ 
+}
+#carrinho {
+  position: fixed;
+  top: 0;
+  right: -50vw;
+  width: 50vw;
+  height: 100vh;
+  background-color: #f1f1f1;
+  
+  /* Fundo com imagem centralizada e pequena */
+  background-image: url('carrinho-iconedocarrinho.png'); /* coloque o caminho da sua imagem */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100px auto; /* largura da imagem pequena, altura proporcional */
+  
+  box-shadow: -3px 0 5px rgba(0,0,0,0.2);
+  padding: 20px;
+  transition: right 0.3s ease;
+  z-index: 1000;
+}

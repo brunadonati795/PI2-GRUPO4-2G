@@ -10,7 +10,8 @@ import Suporte from "./páginas/suporte";
 import Opcoes from "./páginas/opcoes.jsx";
 import Cadastro from "./páginas/cadastro.jsx";
 import Componentes from "./páginas/componentes.jsx";
-import Loja from "./páginas/loja/loja.jsx"
+import Loja from "./páginas/loja/loja.jsx";
+import Usuario from "./páginas/Usuario.jsx"
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
         <Route path="/cadastro" element={<Cadastro />} />
         <Route path="/componentes" element={<Componentes />} />
         <Route path="/loja" element={<Loja />} />
+         <Route path="/usuario" element={<Usuario />} />
 
       </Routes>
       {/* <Footer /> */}

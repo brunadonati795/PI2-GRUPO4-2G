@@ -136,3 +136,46 @@
   font-weight: bold;
   font-size: 1vw;
 }
+/*botaocarrinho*/
+.imagem-botao {
+  position: fixed;
+  top: 10px;
+  right: 20px;
+  width: 40px;
+  cursor: pointer;
+  z-index: 1001;
+  transition: transform 0.2s ease;
+}
+
+.imagem-botao:hover {
+  transform: scale(1.1);
+}
+
+/* Carrinho lateral */
+.carrinho {
+  position: fixed;
+  top: 5vh; /* ficou 5% da altura da tela mais pra baixo */
+  right: 0;
+  width: 50vw; /* metade da tela */
+  height: 95vh; /* ocupa o resto da altura */
+  background-color: #f1f1f1;
+  padding: 20px;
+  box-shadow: -3px 0 5px rgba(0,0,0,0.2);
+  z-index: 1000;
+  flex-direction: column; /* empilha elementos verticalmente */
+  justify-content: center; /* centraliza verticalmente */
+  align-items: center; /* centraliza horizontalmente */
+  text-align: center; /* centraliza o texto do h2 e p */
+}
+
+
+.fechar-carrinho {
+  position: absolute; /* deixa o botão no canto */
+  padding: 10px 15px;
+  background-color: #003B57;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}

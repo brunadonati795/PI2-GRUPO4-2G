@@ -1,5 +1,4 @@
-import React from "react";
-import "./All.css";
+import "../App.css";
 
 export default function Loja() {
   const produtos = [
@@ -16,9 +15,9 @@ export default function Loja() {
   ];
 
   const placas = [
-    { nome: "Orgânicos", img: "link-da-imagem" },
-    { nome: "Perovskita", img: "link-da-imagem" },
-    { nome: "Disci", img: "link-da-imagem" },
+    { nome: "Placa Orgânica", img: "link-da-imagem" },
+    { nome: "Placa de Perovskita", img: "link-da-imagem" },
+    { nome: "Placa Disci", img: "link-da-imagem" },
   ];
 
   return (

@@ -1,5 +1,4 @@
-import React from "react";
-import "./All.css";
+import "../App.css";
 
 export default function Checkout() {
   return (

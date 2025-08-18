@@ -1,6 +1,6 @@
 
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 import "../App.css";
 
 export default function Cadastro() {
@@ -116,7 +116,7 @@ export default function Cadastro() {
             onChange={handleChange}
           />
 
-         <button onClick={() => handleClick("/Usuario")}>Cadastra-se</button>
+         <button onClick={() => handleChange("/Usuario")}>Cadastra-se</button>
         </form>
       </div>
     </section>

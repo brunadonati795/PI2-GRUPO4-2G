@@ -1,20 +1,41 @@
 import "./style.css";
 
-const ProductCard = ({ product, onClick }) => {
+const ProductCard = ({ product, onClick, adicionarAoCarrinho, removerDoCarrinho }) => {
   return (
-    <div className="store-card" onClick={() => onClick(product)}>
-      <img src={`images/${product.image}`} alt={product.name} className="store-card-img" />
-      <p className="store-card-name">{product.name}</p>
-      <p className="store-card-price">R$ XX,XX</p>
+    <div className="store-card" onClick={() => onClick && onClick(product)}>
+      <img
+        src={product.image ? `images/${product.image}` : ""}
+        alt={product.name || "Produto"}
+        className="store-card-img"
+      />
+      <p className="store-card-name">{product.name || "Sem nome"}</p>
+      <p className="store-card-price">
+        R$ {product.preco !== undefined ? product.preco.toFixed(2) : "0.00"}
+      </p>
+
       <div className="store-card-controls">
-        <button className="store-btn">-</button>
-        <div className="store-progress-bar">
-          <div className="store-fill"></div>
-        </div>
-        <button className="store-btn">+</button>
+        <button
+          className="store-btn store-btn-left"
+          onClick={(e) => {
+            e.stopPropagation();
+            removerDoCarrinho && removerDoCarrinho(product.id);
+          }}
+        >
+          -
+        </button>
+        <button
+          className="store-btn store-btn-right"
+          onClick={(e) => {
+            e.stopPropagation();
+            adicionarAoCarrinho && adicionarAoCarrinho(product);
+          }}
+        >
+          +
+        </button>
       </div>
     </div>
   );
 };
 
 export default ProductCard;
+

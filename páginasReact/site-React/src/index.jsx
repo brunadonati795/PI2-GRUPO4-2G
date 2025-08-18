@@ -2,8 +2,6 @@ import Header from "./componentes/header";
 import logoColorida from "../src/assets/imagens/logoAzul.png";
 import casaPlaca from "../src/assets/imagens/primeirapg-casa.png";
 import { Link } from "react-router-dom";
-import Opcoes from "./páginas/opcoes";
-import Funcionamento from "./páginas/funcionamento";
 
 export default function PrimeiraPagina() {
   return (

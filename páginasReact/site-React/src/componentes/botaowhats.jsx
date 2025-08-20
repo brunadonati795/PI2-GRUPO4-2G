@@ -1,9 +1,10 @@
 import React from "react";
+import { AiOutlineWhatsApp } from "react-icons/ai"; 
 
 const WhatsAppButton = () => {
   return (
     <a
-      href="https://wa.me/55 (49) 9 2901-2009" 
+      href="https://wa.me/554929012009" 
       target="_blank"
       rel="noopener noreferrer"
       style={{
@@ -23,10 +24,12 @@ const WhatsAppButton = () => {
         textDecoration: "none",
         zIndex: "1000",
       }}
+      aria-label="Fale conosco pelo WhatsApp" 
     >
-      💬
+      <AiOutlineWhatsApp size={30} /> 
     </a>
   );
 };
 
 export default WhatsAppButton;
+

@@ -2,6 +2,7 @@ import { Routes, Route } from "react-router-dom";
 import { useEffect } from "react";
 import Header from "./componentes/header";
 import Footer from "./componentes/footer";
+import WhatsAppButton from "./botãowhat"; 
 
 import PrimeiraPagina from "./index.jsx";
 import ConfirmacaodePagamento from "./páginas/confirmacaodepagamento";
@@ -18,9 +19,9 @@ function App() {
   useEffect(() => {
     document.title = "Renassol";
   }, []);
+
   return (
     <>
-    
       <Header />
 
       <Routes>
@@ -34,9 +35,13 @@ function App() {
         <Route path="/cadastro" element={<Cadastro />} />
         <Route path="/componentes" element={<Componentes />} />
         <Route path="/loja" element={<Loja />} />
-         <Route path="/usuario" element={<Usuario />} />
-
+        <Route path="/usuario" element={<Usuario />} />
       </Routes>
+
+      <Footer />
+
+     
+      <WhatsAppButton />
     </>
   );
 }

@@ -1,9 +1,11 @@
 
 import { useState } from "react";
-// import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import "../App.css";
 
 export default function Cadastro() {
+const navigate = useNavigate();
+  
   const [formData, setFormData] = useState({
     nome: "",
     cep: "",
@@ -48,6 +50,9 @@ export default function Cadastro() {
     e.preventDefault();
     console.log("Dados enviados:", formData);
     // Aqui vai a integração com API ou backend
+
+    //Rediciona apos cadastro 
+     navigate("/Usuario");
   };
 
   return (
@@ -116,7 +121,7 @@ export default function Cadastro() {
             onChange={handleChange}
           />
 
-         <button onClick={() => handleChange("/Usuario")}>Cadastra-se</button>
+          <button type="submit">Cadastrar-se</button>
         </form>
       </div>
     </section>

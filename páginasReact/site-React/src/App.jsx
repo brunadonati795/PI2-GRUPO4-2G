@@ -34,7 +34,7 @@ function App() {
         <Route path="/cadastro" element={<Cadastro />} />
         <Route path="/componentes" element={<Componentes />} />
         <Route path="/loja" element={<Loja />} />
-         <Route path="/usuario" element={<Usuario />} />
+         <Route path="/Usuario" element={<Usuario />} />
 
       </Routes>
     </>

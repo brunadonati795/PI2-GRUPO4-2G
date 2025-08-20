@@ -1,5 +1,4 @@
-import React from "react";
-import { AiOutlineWhatsApp } from "react-icons/ai"; 
+// import { AiOutlineWhatsApp } from "react-icons/ai"; 
 
 const WhatsAppButton = () => {
   return (
@@ -26,7 +25,7 @@ const WhatsAppButton = () => {
       }}
       aria-label="Fale conosco pelo WhatsApp" 
     >
-      <AiOutlineWhatsApp size={30} /> 
+      {/* <AiOutlineWhatsApp size={30} />  */}
     </a>
   );
 };

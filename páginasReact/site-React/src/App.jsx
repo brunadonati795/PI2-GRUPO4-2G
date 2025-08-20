@@ -2,7 +2,7 @@ import { Routes, Route } from "react-router-dom";
 import { useEffect } from "react";
 import Header from "./componentes/header";
 import Footer from "./componentes/footer";
-import WhatsAppButton from "./componentes/botãowhats.jsx"; 
+import WhatsAppButton from "./componentes/botaowhats.jsx"; 
 
 import PrimeiraPagina from "./index.jsx";
 import ConfirmacaodePagamento from "./páginas/confirmacaodepagamento";

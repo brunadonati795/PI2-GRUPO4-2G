@@ -1221,15 +1221,16 @@ body {
 }
 
 .container {
-  width: 90vw;
-  margin: 2vh auto;
+  min-height: calc(100vh - 10vh - 15vh); /* 10vh header + 15vh footer (ajuste conforme a altura real) */
+  margin: 0 auto;
+  padding-top: 10vh; /* se header fixo */
 }
 
 .profile-card {
   background: var(--card);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
-  padding: 2vh 2vw;
+ 
 }
 
 .profile-top {
@@ -1237,7 +1238,8 @@ body {
   gap: 2vw;
   align-items: center;
   border-bottom: 0.2vh solid #eef2f6;
- 
+  padding-bottom: 2vh;
+  margin-bottom: 2vh;
 }
 
 .avatar-wrap {

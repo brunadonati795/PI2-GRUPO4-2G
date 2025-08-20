@@ -1,8 +1,10 @@
 import { useEffect, useRef } from "react";
-import comofuncionamplacaLado1 from "../assets/imagens/comofuncionamplacaLado1.png"
-import comofuncionamplacaLado2 from "../assets/imagens/comofuncionamplacaLado2.png"
-import comofuncionamplacaSustentavel from "../assets/imagens/comofuncionamplacaSustentavel.png"
-import comofuncionamtodasasplacas from "../assets/imagens/comofuncionamtodasasplacas.png"
+import comofuncionamplacaLado1 from "../assets/imagens/comofuncionamplacaLado1.png";
+import comofuncionamplacaLado2 from "../assets/imagens/comofuncionamplacaLado2.png";
+import comofuncionamplacaSustentavel from "../assets/imagens/comofuncionamplacaSustentavel.png";
+import comofuncionamODS from "../assets/imagens/comofuncionamcard7.png";
+import Footer from "../componentes/footer";
+import { Link } from "react-router-dom";
 
 export default function Funcionamento() {
   const placaEsqRef = useRef(null);
@@ -99,7 +101,7 @@ export default function Funcionamento() {
       <section className="objetivo">
         <div className="box-ods">
           <img
-            src={comofuncionamtodasasplacas}
+            src={comofuncionamODS}
             alt="ODS 7 - Energia Acessível e Limpa"
           />
         </div>
@@ -109,9 +111,10 @@ export default function Funcionamento() {
             Objetivos de Desenvolvimento Sustentável, sendo um passo importante
             para ajudar o mundo.
           </p>
-          <button>Saiba do que precisa</button>
+          <button><Link to="/componentes">Saiba do que precisa</Link></button>
         </div>
       </section>
+      <Footer></Footer>
     </div>
   );
 }

@@ -7,6 +7,11 @@
   font-style: normal;
 }
 
+:root {
+  --amareloFundo: #fdd244;
+  --azulEscuro: #003B57;
+}
+
 .store-container {
   font-family: "Montserrat", sans-serif;
   margin: 0;
@@ -162,7 +167,7 @@
   right: 0;
   width: 30vw;        
   max-width: 90vw;    
-  height: 100vh;      
+  height: 100vh; 
   background-color: #fff;
   box-shadow: -0.5vw 0 2vw rgba(0, 0, 0, 0.2);
   transform: translateX(100%); 
@@ -170,6 +175,13 @@
   padding: 2vh 2vw;
   z-index: 999;
   overflow-y: auto;
+}
+
+.imagem-carrinho {
+  margin:13vh 0 0;
+  position: fixed;
+  top: 0;
+  right: 0;
 }
 
 .carrinho.ativo {
@@ -183,6 +195,13 @@
   cursor: pointer;
   margin-left: auto;
   color: #333;
+  background-color: var(--amareloFundo);
+  border-radius: 50%;
+  margin-bottom: 2vh;
+}
+
+.fechar-carrinho:hover {
+  background-color: #d6b138;
 }
 
 .carrinho h2 {
@@ -266,6 +285,7 @@
   margin-top: 1.5vh;
   cursor: pointer;
   transition: background 0.2s;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .finalizar-btn:hover {

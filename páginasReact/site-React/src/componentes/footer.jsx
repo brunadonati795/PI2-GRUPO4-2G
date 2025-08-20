@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom';
 import "../App.css";
 import logoAmarela from '../assets/imagens/logoAmarela.png'
-// import PrimeiraPagina from "./index.jsx";
 import Funcionamento from "../páginas/funcionamento";
 import Suporte from "../páginas/suporte";
 import Descarte from "../páginas/descarte";
@@ -12,7 +11,7 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="elementos1">
-        <h3>RENASSOL</h3>
+        <h3 className='footer-titulo'>RENASSOL</h3>
         <img src={logoAmarela} className='footerimg'/>
       </div>
 

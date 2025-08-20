@@ -1,4 +1,5 @@
 import "../App.css"; 
+import Footer from "../componentes/footer";
 import componentesFotovoltaicos from '../assets/imagens/componentesFotovoltaicos.png'
 import componentesBidirecional from '../assets/imagens/componentesBidirecional.png'
 import componentesDsjuntor from '../assets/imagens/componentesDsjuntor.png'
@@ -8,7 +9,8 @@ import componentesStringBox from '../assets/imagens/componentesStringBox.png'
 
 export default function Componentes() {
   return (
-    <section className="componentes">
+    <>
+      <section className="componentes">
       <h1>O QUE É NECESSÁRIO</h1>
       <p className="subtitle">Para pôr em casa?</p>
 
@@ -82,9 +84,6 @@ export default function Componentes() {
             </p>
           </div>
         </div>
-      </div>
-
-      <div className="box">
         <div className="item">
           <div className="text">
             <h2>Baterias</h2>
@@ -117,8 +116,10 @@ export default function Componentes() {
               <strong>Importância:</strong> Facilita manutenção e aumenta a segurança do sistema.
             </p>
           </div>
-        </div>
+        </div> 
       </div>
     </section>
+    <Footer></Footer>
+    </>
   );
 }

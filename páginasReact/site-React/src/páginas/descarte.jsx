@@ -1,4 +1,5 @@
 import descarte from '../assets/imagens/descarte-imagem.png';
+import Footer from '../componentes/footer';
 
 const Descarte = () => {
   return (
@@ -25,6 +26,7 @@ const Descarte = () => {
       <div className="botao-formulario">
         <button className="btn-formulario">Acessar Formulário</button>
       </div>
+    <Footer></Footer>
     </div>
   );
 };

@@ -1,4 +1,5 @@
 import { Routes, Route } from "react-router-dom";
+import { useEffect } from "react";
 import Header from "./componentes/header";
 import Footer from "./componentes/footer";
 
@@ -14,8 +15,12 @@ import Loja from "./páginas/loja/loja.jsx";
 import Usuario from "./páginas/Usuario.jsx"
 
 function App() {
+  useEffect(() => {
+    document.title = "Renassol";
+  }, []);
   return (
     <>
+    
       <Header />
 
       <Routes>
@@ -32,7 +37,6 @@ function App() {
          <Route path="/usuario" element={<Usuario />} />
 
       </Routes>
-      {/* <Footer /> */}
     </>
   );
 }

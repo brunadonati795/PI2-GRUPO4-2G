@@ -10,7 +10,6 @@
 :root {
   --amareloFundo: #fdd244;
   --azulEscuro: #003B57;
-
 }
 
 body {
@@ -536,10 +535,11 @@ select {
 
 
 /* ===FOOTER==== */
-footer {
-    position: fixed;
+.footer {
+  margin-top: 5vh;
     bottom: 0;
     left: 0;
+    /* margin-bottom: -10vh; */
     width: 100%;
     background-color: #003B57;
     display: flex;
@@ -559,6 +559,10 @@ footer {
     padding: 0;
 }
 
+.footer-titulo {
+  color: var(--amareloFundo);
+}
+
 .coluna1, .coluna2 {
     width: 30%;
     text-align: left;
@@ -568,9 +572,14 @@ footer {
     margin-left: 60%; 
 }
 
-.footera {
+.coluna1 a, .coluna2 a {
     color: white;
+    text-decoration: none;
 }
+
+.coluna1 a:hover, .coluna2 a:hover {
+  color: var(--amareloFundo);
+} 
 
 .footerimg {
     width: 5vw;
@@ -703,13 +712,11 @@ footer {
     .Suporte {
       max-width: 100vw;
       margin: 0 auto;
-      padding: 3vh;
       background-image: url(./assets/imagens/fundoRenassol.png);
     }
     .support-section {
       text-align: center;
       padding: 3.5vh;
-      margin-top: 7vh;
     }
     .support-section h2 {
       font-size: 2.8rem;
@@ -740,6 +747,10 @@ footer {
       border-width: 15px 15px 0;
       border-style: solid;
       border-color: white transparent;
+    }
+  
+    .support-section .titulo{
+      margin-top: 15vh ;
     }
 .qr-code {
   width: 25vh;          
@@ -793,6 +804,7 @@ footer {
 /* ===== COMO FUNCIONAM? ===== */
 .Funcionamento {
   overflow-x: hidden;
+  overflow-y: auto;
 }
 
 .intro {
@@ -1032,6 +1044,12 @@ section {
   cursor: pointer;
   font-family: "Montserrat", sans-serif;
   box-shadow: 0 0.5vh 1vh rgba(0, 0, 0, 0.278);
+  text-decoration: none;
+}
+
+.texto-ods button Link {
+  text-decoration: none;
+  color: white;
 }
 
 .texto-ods button:hover {
@@ -1115,6 +1133,7 @@ button:hover {
   text-align: center;
   background-color: var(--azulEscuro);
   height: 100%;
+  margin-bottom: -5vh;
 }
 
 .subtitle {
@@ -1162,6 +1181,7 @@ button:hover {
 
 .componentes h1 {
   font-size: 4vh;
+  color: white;
 }
 
 .subtitle {

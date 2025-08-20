@@ -1,4 +1,5 @@
 import qrcode from "../assets/imagens/suporte-qrcode.jpg";
+import Footer from "../componentes/footer";
 
 const Suporte = () => {
   return (
@@ -20,6 +21,7 @@ const Suporte = () => {
             className="qr-code" />
         </section>
       </div>
+      <Footer></Footer>
     </div>
   );
 };

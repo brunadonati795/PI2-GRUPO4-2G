@@ -1,4 +1,4 @@
-export const storeItems = [
+const storeData = [
   { id: 1, name: "Acessório para fixação vertical", category: "loja", image: "fixacao.png", preco: 25.0 },
   { id: 2, name: "Barra de estrutura", category: "loja", image: "barra.png", preco: 30.0 },
   { id: 3, name: "Estrutura para solo", category: "loja", image: "solo.png", preco: 45.0 },
@@ -13,3 +13,5 @@ export const storeItems = [
   { id: 12, name: "Perovskita", category: "placas", image: "perovskita.png", preco: 150.0 },
   { id: 13, name: "DSSC", category: "placas", image: "dssc.png", preco: 130.0 },
 ];
+
+export default storeData;

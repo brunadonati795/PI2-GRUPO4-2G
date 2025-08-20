@@ -18,7 +18,7 @@ const ProductCard = ({ product, onClick, adicionarAoCarrinho, removerDoCarrinho 
           className="store-btn store-btn-left"
           onClick={(e) => {
             e.stopPropagation();
-            removerDoCarrinho && removerDoCarrinho(product.id);
+            removerDoCarrinho && removerDoCarrinho();
           }}
         >
           -
@@ -27,7 +27,7 @@ const ProductCard = ({ product, onClick, adicionarAoCarrinho, removerDoCarrinho 
           className="store-btn store-btn-right"
           onClick={(e) => {
             e.stopPropagation();
-            adicionarAoCarrinho && adicionarAoCarrinho(product);
+            adicionarAoCarrinho && adicionarAoCarrinho();
           }}
         >
           +

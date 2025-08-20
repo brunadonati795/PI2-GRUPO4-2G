@@ -1,3 +1,6 @@
+import {useState} from 'react';
+import Footer from '../componentes/footer';
+
 export default function Usuario() {
   const [name, setName] = useState("Nome do Usuário");
   const [email, setEmail] = useState("usuario@email.com");
@@ -96,6 +99,7 @@ export default function Usuario() {
           </ul>
         </section>
       </section>
+     <Footer></Footer>
     </main>
   );
 }

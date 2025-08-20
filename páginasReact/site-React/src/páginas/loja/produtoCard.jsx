@@ -1,6 +1,6 @@
 import "./style.css";
 
-const ProductCard = ({ product, onClick, adicionarAoCarrinho, removerDoCarrinho }) => {
+const ProductCard = ({ product, onClick, adicionarAoCarrinho, removerDoCarrinho}) => {
   return (
     <div className="store-card" onClick={() => onClick && onClick(product)}>
       <img

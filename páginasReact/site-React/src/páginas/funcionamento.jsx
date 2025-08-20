@@ -32,6 +32,12 @@ export default function Funcionamento() {
 
   return (
     <div className="Funcionamento">
+
+    
+      <Link to="/primeiraPagina" className="botao-voltar">
+        ⬅️ Voltar
+      </Link>
+
       <section className="intro">
         <h1>O QUE SÃO AS PLACAS SOLARES?</h1>
         <div className="intro-conteudo">
@@ -48,7 +54,7 @@ export default function Funcionamento() {
             (luz).
           </p>
           <img
-          ref={placaDirRef}
+            ref={placaDirRef}
             src={comofuncionamplacaLado2}
             alt="Placa solar direita"
           />
@@ -58,7 +64,7 @@ export default function Funcionamento() {
       <section className="banner-solar-container">
         <div className="solarcardEimg">
           <div className="banner-solar-card">
-            <div className="banner-solar-icon">☀️</div>
+            <div className="banner-solar-icon"></div>
             <div>
               <p>
                 <strong>Como sua fonte de energia é o Sol,</strong>
@@ -82,7 +88,7 @@ export default function Funcionamento() {
         </div>
 
         <div className="banner-solar-highlight-card">
-          <div className="banner-solar-check-icon">✔️</div>
+          <div className="banner-solar-check-icon"></div>
           <div>
             <p>
               <strong>As placas que oferecemos</strong> têm esses desafios

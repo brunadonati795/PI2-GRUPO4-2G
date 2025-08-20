@@ -4,13 +4,10 @@ O projeto em si está na pasta PáginasReact\site-React, com as outras pastas se
     em que depois foram passadas para o jsx.
 A comunicação entre as páginas está sendo feita por meio de react-router-dom
 
-das páginas propostas, faltam 3 ser feitas por conta de que seria mais fácil fazê-las com o banco de dados feito 
-    (estas serão feitas até quarta 13/08 ) então a da loja e suas subsequentes. Fora essas, as outras estão prontas mas com o css não finalizado ainda, também finalizado, se 
-    possível, até a próxima aula (problemas ocorridos por muito conta da passagem pro react e tal). 
+Em desenvolvimento: comunicação com o banco de dados, página de login, página do usuário
 
  Como Executar
 . Faça o download do projeto.
-
 . Acesse a pasta do projeto: cd PáginasReact/site-React
 Instale as dependências: npm install
 Inicie o servidor de desenvolvimento: npm run dev

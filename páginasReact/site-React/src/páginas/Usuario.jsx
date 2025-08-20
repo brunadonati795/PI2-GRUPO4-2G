@@ -1,10 +1,18 @@
-import {useState} from 'react';
-import Footer from '../componentes/footer';
+import { useState } from "react";
+import { useLocation } from "react-router-dom";
 
 export default function Usuario() {
-  const [name, setName] = useState("Nome do Usuário");
-  const [email, setEmail] = useState("usuario@email.com");
-  const [location, setLocation] = useState("Cidade, Estado");
+  const location = useLocation();
+  const cadastroData = location.state || {}; // dados enviados do cadastro
+
+  // estados para os campos do usuário
+  const [nome, setNome] = useState(cadastroData.nome || "Nome Completo");
+  const [cep, setCep] = useState(cadastroData.cep || "");
+  const [bairro, setBairro] = useState(cadastroData.bairro || "");
+  const [rua, setRua] = useState(cadastroData.rua || "");
+  const [numero, setNumero] = useState(cadastroData.numero || "");
+  const [complemento, setComplemento] = useState(cadastroData.complemento || "");
+
   const [isEditing, setIsEditing] = useState(false);
 
   const [orders] = useState([
@@ -14,6 +22,7 @@ export default function Usuario() {
 
   const handleSave = () => {
     setIsEditing(false);
+    // aqui você pode salvar no backend ou localStorage
   };
 
   return (
@@ -33,18 +42,39 @@ export default function Usuario() {
               <>
                 <input
                   type="text"
-                  value={name}
-                  onChange={(e) => setName(e.target.value)}
-                />
-                <input
-                  type="email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
+                  value={nome}
+                  onChange={(e) => setNome(e.target.value)}
+                  placeholder="Nome Completo"
                 />
                 <input
                   type="text"
-                  value={location}
-                  onChange={(e) => setLocation(e.target.value)}
+                  value={cep}
+                  onChange={(e) => setCep(e.target.value)}
+                  placeholder="CEP"
+                />
+                <input
+                  type="text"
+                  value={bairro}
+                  onChange={(e) => setBairro(e.target.value)}
+                  placeholder="Bairro"
+                />
+                <input
+                  type="text"
+                  value={rua}
+                  onChange={(e) => setRua(e.target.value)}
+                  placeholder="Rua"
+                />
+                <input
+                  type="text"
+                  value={numero}
+                  onChange={(e) => setNumero(e.target.value)}
+                  placeholder="Número"
+                />
+                <input
+                  type="text"
+                  value={complemento}
+                  onChange={(e) => setComplemento(e.target.value)}
+                  placeholder="Complemento"
                 />
                 <button className="btn-small" onClick={handleSave}>
                   Salvar
@@ -52,13 +82,12 @@ export default function Usuario() {
               </>
             ) : (
               <>
-                <h1 className="name">{name}</h1>
-                <p className="highlight">
-                  <strong>E-mail:</strong> {email}
-                </p>
-                <p className="highlight">
-                  <strong>Localização:</strong> {location}
-                </p>
+                <h1 className="name">{nome}</h1>
+                <p className="highlight"><strong>CEP:</strong> {cep}</p>
+                <p className="highlight"><strong>Bairro:</strong> {bairro}</p>
+                <p className="highlight"><strong>Rua:</strong> {rua}</p>
+                <p className="highlight"><strong>Número:</strong> {numero}</p>
+                <p className="highlight"><strong>Complemento:</strong> {complemento}</p>
                 <button
                   className="btn-small"
                   onClick={() => setIsEditing(true)}
@@ -99,7 +128,7 @@ export default function Usuario() {
           </ul>
         </section>
       </section>
-     <Footer></Footer>
+    
     </main>
   );
 }

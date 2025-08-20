@@ -1,9 +1,10 @@
-
 import { useState } from "react";
-// import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import "../App.css";
 
 export default function Cadastro() {
+  const navigate = useNavigate();
+  
   const [formData, setFormData] = useState({
     nome: "",
     cep: "",
@@ -37,7 +38,6 @@ export default function Cadastro() {
         } else {
           alert("CEP não encontrado.");
         }
-      // eslint-disable-next-line no-unused-vars
       } catch (error) {
         alert("Erro ao buscar o CEP.");
       }
@@ -47,7 +47,9 @@ export default function Cadastro() {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Dados enviados:", formData);
-    // Aqui vai a integração com API ou backend
+    
+    // Redireciona e envia os dados para a página de usuário
+    navigate("/usuario", { state: formData });
   };
 
   return (
@@ -116,7 +118,7 @@ export default function Cadastro() {
             onChange={handleChange}
           />
 
-         <button onClick={() => handleChange("/Usuario")}>Cadastra-se</button>
+          <button type="submit">Cadastrar-se</button>
         </form>
       </div>
     </section>

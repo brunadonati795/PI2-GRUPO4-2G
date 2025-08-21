@@ -7,7 +7,7 @@ import componentesControladordeCarga from '../assets/imagens/componentesControla
 import componentesBaterias from '../assets/imagens/componentesBaterias.png';
 import componentesStringBox from '../assets/imagens/componentesStringBox.png';
 
-import BotaoVoltar from '../components/BotaoVoltar';
+import BotaoVoltar from '../componentes/botaovoltar.jsx';
 
 export default function Componentes() {
   return (

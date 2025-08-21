@@ -5,7 +5,7 @@ import comofuncionamplacaSustentavel from "../assets/imagens/comofuncionamplacaS
 import comofuncionamODS from "../assets/imagens/comofuncionamcard7.png";
 import Footer from "../componentes/footer";
 
-import BotaoVoltar from '../components/BotaoVoltar';
+import BotaoVoltar from '../componentes/botaovoltar.jsx';
 
 
 const backArrowImage = '/images/back_arrow.png';

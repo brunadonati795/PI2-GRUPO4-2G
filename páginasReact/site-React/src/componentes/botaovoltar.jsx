@@ -1,11 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const BotaoVoltar = ({ to, imageSrc }) => {
+const BotaoVoltar = ({ to }) => {
   return (
     <Link to={to}>
       <button>
-        <img src={imageSrc} alt="Voltar" style={{ width: '24px', height: '24px' }} />
+        ⬅️ Voltar
       </button>
     </Link>
   );

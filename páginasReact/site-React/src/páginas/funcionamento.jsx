@@ -4,7 +4,11 @@ import comofuncionamplacaLado2 from "../assets/imagens/comofuncionamplacaLado2.p
 import comofuncionamplacaSustentavel from "../assets/imagens/comofuncionamplacaSustentavel.png";
 import comofuncionamODS from "../assets/imagens/comofuncionamcard7.png";
 import Footer from "../componentes/footer";
-import { Link } from "react-router-dom";
+
+import BotaoVoltar from '../components/BotaoVoltar';
+
+
+const backArrowImage = '/images/back_arrow.png';
 
 export default function Funcionamento() {
   const placaEsqRef = useRef(null);
@@ -33,10 +37,7 @@ export default function Funcionamento() {
   return (
     <div className="Funcionamento">
 
-    
-      <Link to="/primeiraPagina" className="botao-voltar">
-        ⬅️ Voltar
-      </Link>
+      <BotaoVoltar to="/" imageSrc={backArrowImage} />
 
       <section className="intro">
         <h1>O QUE SÃO AS PLACAS SOLARES?</h1>

@@ -1,21 +1,19 @@
 import "../App.css"; 
 import Footer from "../componentes/footer";
-import componentesFotovoltaicos from '../assets/imagens/componentesFotovoltaicos.png'
-import componentesBidirecional from '../assets/imagens/componentesBidirecional.png'
-import componentesDsjuntor from '../assets/imagens/componentesDsjuntor.png'
-import componentesControladordeCarga from '../assets/imagens/componentesControladordeCarga.png'
-import componentesBaterias from '../assets/imagens/componentesBaterias.png'
-import componentesStringBox from '../assets/imagens/componentesStringBox.png'
+import componentesFotovoltaicos from '../assets/imagens/componentesFotovoltaicos.png';
+import componentesBidirecional from '../assets/imagens/componentesBidirecional.png';
+import componentesDsjuntor from '../assets/imagens/componentesDsjuntor.png';
+import componentesControladordeCarga from '../assets/imagens/componentesControladordeCarga.png';
+import componentesBaterias from '../assets/imagens/componentesBaterias.png';
+import componentesStringBox from '../assets/imagens/componentesStringBox.png';
 
-import { Link } from "react-router-dom";
+import BotaoVoltar from '../componentes/botaovoltar.jsx';
 
 export default function Componentes() {
   return (
     <>
-      
-      <Link to="/funcionamento" className="botao-voltar">
-        ⬅️ Voltar
-      </Link>
+      {/* Botão de voltar com emoji de seta */}
+      <BotaoVoltar to="/funcionamento" />
 
       <section className="componentes">
         <h1>O QUE É NECESSÁRIO</h1>
@@ -91,6 +89,7 @@ export default function Componentes() {
               </p>
             </div>
           </div>
+
           <div className="item">
             <div className="text">
               <h2>Baterias</h2>
@@ -126,7 +125,7 @@ export default function Componentes() {
           </div> 
         </div>
       </section>
-      <Footer></Footer>
+      <Footer />
     </>
   );
 }

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";   // <-- importando axios
 import "../App.css";
 
 export default function Cadastro() {
@@ -7,6 +8,8 @@ export default function Cadastro() {
   
   const [formData, setFormData] = useState({
     nome: "",
+    email: "",
+    senha: "",
     cep: "",
     bairro: "",
     rua: "",
@@ -26,14 +29,12 @@ export default function Cadastro() {
     const cepLimpo = formData.cep.replace(/\D/g, "");
     if (cepLimpo.length === 8) {
       try {
-        const resposta = await fetch(`https://viacep.com.br/ws/${cepLimpo}/json/`);
-        const dados = await resposta.json();
-
-        if (!dados.erro) {
+        const resposta = await axios.get(`https://viacep.com.br/ws/${cepLimpo}/json/`);
+        if (!resposta.data.erro) {
           setFormData((prev) => ({
             ...prev,
-            rua: dados.logradouro || "",
-            bairro: dados.bairro || "",
+            rua: resposta.data.logradouro || "",
+            bairro: resposta.data.bairro || "",
           }));
         } else {
           alert("CEP não encontrado.");
@@ -44,12 +45,32 @@ export default function Cadastro() {
     }
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Dados enviados:", formData);
     
-    // Redireciona e envia os dados para a página de usuário
-    navigate("/usuario", { state: formData });
+    try {
+      // Enviar dados para a API Flask com axios
+      const response = await axios.post("http://localhost:5000/usuarios", {
+        nome: formData.nome,
+        email: formData.email,
+        senha: formData.senha,
+        endereco_completo: `${formData.rua}, ${formData.numero} - ${formData.bairro} (${formData.complemento})`,
+        cep: formData.cep,
+      });
+
+      alert("Cadastro realizado com sucesso!");
+      navigate("/usuario", { state: response.data });
+
+    } catch (error) {
+      if (error.response) {
+        // Erro vindo do backend
+        alert("Erro: " + (error.response.data.error || "Não foi possível cadastrar"));
+      } else {
+        // Erro de rede/conexão
+        alert("Erro de conexão com o servidor");
+      }
+      console.error(error);
+    }
   };
 
   return (
@@ -64,6 +85,26 @@ export default function Cadastro() {
             id="nome"
             name="nome"
             value={formData.nome}
+            onChange={handleChange}
+            required
+          />
+
+          <label htmlFor="email">E-mail:</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
+            required
+          />
+
+          <label htmlFor="senha">Senha:</label>
+          <input
+            type="password"
+            id="senha"
+            name="senha"
+            value={formData.senha}
             onChange={handleChange}
             required
           />

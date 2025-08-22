@@ -1,5 +1,4 @@
 import React from "react";
-import { AiOutlineWhatsApp } from "react-icons/ai"; 
 
 const WhatsAppButton = () => {
   return (

@@ -4,7 +4,7 @@ from models import db, Usuario, Cliente, Produto, Carrinho, CarrinhoItem
 import re
 import datetime
 from flask import current_app
-
+import jwt
 
 api = Blueprint("api", __name__)
 

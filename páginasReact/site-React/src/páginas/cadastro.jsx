@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";   // <-- importando axios
 import "../App.css";
 
@@ -160,6 +160,7 @@ export default function Cadastro() {
           />
 
           <button type="submit">Cadastrar-se</button>
+          Já tem uma conta? faça seu login<Link to="/login.jsx">aqui!</Link>
         </form>
       </div>
     </section>

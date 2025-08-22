@@ -4,7 +4,7 @@ const ProductCard = ({ product, onClick, adicionarAoCarrinho, removerDoCarrinho}
   return (
     <div className="store-card" onClick={() => onClick && onClick(product)}>
       <img
-        src={product.image ? `images/${product.image}` : ""}
+        src={product.image}
         alt={product.name || "Produto"}
         className="store-card-img"
       />

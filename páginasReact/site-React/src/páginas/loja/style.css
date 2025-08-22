@@ -21,7 +21,7 @@
 }
 
 .store-title {
-  margin-top: 3vh;
+  margin-top: 4vh;
   font-size: 2.2vw;
 }
 
@@ -49,19 +49,19 @@
 
 .store-card-img {
   max-width: 100%;
-  height: 10vh;
+  height: 16vh;
   object-fit: contain;
 }
 
 .store-card-name {
-  font-size: 1vw;
+  font-size: 1.3vw;
   margin: 0.5vh 0;
 }
 
 .store-card-price {
   font-weight: bold;
   color: #333;
-  font-size: 0.9vw;
+  font-size: 1vw;
 }
 
 .store-card-controls {

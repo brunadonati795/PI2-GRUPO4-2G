@@ -14,6 +14,7 @@ import Cadastro from "./páginas/cadastro.jsx";
 import Componentes from "./páginas/componentes.jsx";
 import Loja from "./páginas/loja/loja.jsx";
 import Usuario from "./páginas/Usuario.jsx";
+import Login from "./páginas/login.jsx";
 
 function App() {
   useEffect(() => {
@@ -35,6 +36,7 @@ function App() {
         <Route path="/cadastro" element={<Cadastro />} />
         <Route path="/componentes" element={<Componentes />} />
         <Route path="/loja" element={<Loja />} />
+        <Route path="/login" element={<Login />} />
         <Route path="/usuario" element={<Usuario />} />
       </Routes>
       <WhatsAppButton />

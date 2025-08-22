@@ -1,20 +1,16 @@
 from flask import Blueprint, jsonify, request
 from werkzeug.security import generate_password_hash, check_password_hash
 from models import db, Usuario, Cliente, Produto, Carrinho, CarrinhoItem
+import re
+import datetime
+from flask import current_app
+
 
 api = Blueprint("api", __name__)
 
 # USUÁRIOS
 
 
-from models import db, Usuario
-import re
-import datetime
-from flask import current_app
-from werkzeug.security import check_password_hash
-from werkzeug.security import generate_password_hash
-
-api = Blueprint("api", __name__)
 
 # Listar todos os usuários
 @api.route("/usuarios", methods=["GET"])

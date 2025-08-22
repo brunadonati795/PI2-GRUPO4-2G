@@ -6,7 +6,6 @@ import componentesControladordeCarga from '../assets/imagens/componentesControla
 import componentesBaterias from '../assets/imagens/componentesBaterias.png'
 import componentesStringBox from '../assets/imagens/componentesStringBox.png'
 import imgSeta from "../assets/imagens/seta.png"
-import BotaoVoltar from '../componentes/botaovoltar.jsx';
 
 export default function Componentes() {
   return (
@@ -14,8 +13,6 @@ export default function Componentes() {
       <Link to="/funcionamento" className="botao-voltar">
         <img src={imgSeta}></img>
       </Link>
-      {/* Botão de voltar com emoji de seta */}
-      <BotaoVoltar to="/funcionamento" />
 
       <section className="componentes">
         <h1>O QUE É NECESSÁRIO</h1>

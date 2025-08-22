@@ -14,9 +14,10 @@
 
 .store-container {
   font-family: "Montserrat", sans-serif;
-  margin: 0;
-  padding: 12vh 2vw 0 2vw;
+  margin-bottom: 3vh;
+  padding: 12vh 5vw 0 5vw;
   background: #f4f4f4;
+
 }
 
 .store-title {
@@ -178,7 +179,8 @@
 }
 
 .imagem-carrinho {
-  margin:13vh 0 0;
+  width: 3.5vw;
+  margin:13vh 2vw 0;
   position: fixed;
   top: 0;
   right: 0;

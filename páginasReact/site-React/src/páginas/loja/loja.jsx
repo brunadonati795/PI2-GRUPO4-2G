@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
 import ProductCard from "./produtoCard";
 import Modal from "./modal";
-import storeData from "./storeData"; 
+import storeData from "./storeData";
+import iconedocarrinho from "../../assets/imagens/iconedocarrinho.png";
 
 const Loja = () => {
   const [selectedProduct, setSelectedProduct] = useState(null);
@@ -55,7 +56,7 @@ const Loja = () => {
       {/* Botão do carrinho */}
       {!carrinhoAberto && (
         <img
-          src="/assets/carrinho-iconedoCarrinho.png"
+          src={iconedocarrinho}
           alt="Abrir Carrinho"
           className="imagem-carrinho"
           onClick={() => setCarrinhoAberto(true)}

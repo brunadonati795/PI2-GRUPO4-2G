@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { useLocation } from "react-router-dom";
-import Footer from "../componentes/footer";
 
 export default function Usuario() {
   const location = useLocation();
@@ -129,7 +128,7 @@ export default function Usuario() {
           </ul>
         </section>
       </section>
-      <Footer />
+    
     </main>
   );
 }

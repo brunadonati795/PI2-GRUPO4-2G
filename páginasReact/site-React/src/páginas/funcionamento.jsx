@@ -3,9 +3,9 @@ import comofuncionamplacaLado1 from "../assets/imagens/comofuncionamplacaLado1.p
 import comofuncionamplacaLado2 from "../assets/imagens/comofuncionamplacaLado2.png";
 import comofuncionamplacaSustentavel from "../assets/imagens/comofuncionamplacaSustentavel.png";
 import comofuncionamODS from "../assets/imagens/comofuncionamcard7.png";
-import Footer from "../componentes/footer";
 import imgSeta from "../assets/imagens/seta.png"
 import { Link } from "react-router-dom";
+import BotaoVoltar from '../componentes/botaovoltar.jsx';
 
 export default function Funcionamento() {
   const placaEsqRef = useRef(null);
@@ -33,7 +33,6 @@ export default function Funcionamento() {
 
   return (
     <div className="Funcionamento">
-
     
       <Link to="/primeiraPagina" className="botao-voltar">
         <img src={imgSeta}></img>

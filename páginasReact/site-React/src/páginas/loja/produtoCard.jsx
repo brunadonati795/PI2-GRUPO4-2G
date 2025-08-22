@@ -1,6 +1,17 @@
+import { useState } from "react";
 import "./style.css";
 
-const ProductCard = ({ product, onClick, adicionarAoCarrinho, removerDoCarrinho}) => {
+const ProductCard = ({ product, onClick }) => {
+  const [quantidade, setQuantidade] = useState(0); // contador interno
+
+  const adicionarAoCarrinho = () => {
+    setQuantidade((prev) => prev + 1);
+  };
+
+  const removerDoCarrinho = () => {
+    setQuantidade((prev) => (prev > 0 ? prev - 1 : 0));
+  };
+
   return (
     <div className="store-card" onClick={() => onClick && onClick(product)}>
       <img
@@ -18,16 +29,19 @@ const ProductCard = ({ product, onClick, adicionarAoCarrinho, removerDoCarrinho}
           className="store-btn store-btn-left"
           onClick={(e) => {
             e.stopPropagation();
-            removerDoCarrinho && removerDoCarrinho();
+            removerDoCarrinho();
           }}
         >
           -
         </button>
+
+        <span className="store-quantity">{quantidade}</span>
+
         <button
           className="store-btn store-btn-right"
           onClick={(e) => {
             e.stopPropagation();
-            adicionarAoCarrinho && adicionarAoCarrinho();
+            adicionarAoCarrinho();
           }}
         >
           +
@@ -38,4 +52,3 @@ const ProductCard = ({ product, onClick, adicionarAoCarrinho, removerDoCarrinho}
 };
 
 export default ProductCard;
-

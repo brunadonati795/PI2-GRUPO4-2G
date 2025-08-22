@@ -4,6 +4,7 @@ import comofuncionamplacaLado2 from "../assets/imagens/comofuncionamplacaLado2.p
 import comofuncionamplacaSustentavel from "../assets/imagens/comofuncionamplacaSustentavel.png";
 import comofuncionamODS from "../assets/imagens/comofuncionamcard7.png";
 import Footer from "../componentes/footer";
+import imgSeta from "../assets/imagens/seta.png"
 import { Link } from "react-router-dom";
 
 export default function Funcionamento() {
@@ -35,7 +36,7 @@ export default function Funcionamento() {
 
     
       <Link to="/primeiraPagina" className="botao-voltar">
-        ⬅️ Voltar
+        <img src={imgSeta}></img>
       </Link>
 
       <section className="intro">
@@ -64,7 +65,6 @@ export default function Funcionamento() {
       <section className="banner-solar-container">
         <div className="solarcardEimg">
           <div className="banner-solar-card">
-            <div className="banner-solar-icon"></div>
             <div>
               <p>
                 <strong>Como sua fonte de energia é o Sol,</strong>
@@ -88,7 +88,6 @@ export default function Funcionamento() {
         </div>
 
         <div className="banner-solar-highlight-card">
-          <div className="banner-solar-check-icon"></div>
           <div>
             <p>
               <strong>As placas que oferecemos</strong> têm esses desafios
@@ -117,10 +116,9 @@ export default function Funcionamento() {
             Objetivos de Desenvolvimento Sustentável, sendo um passo importante
             para ajudar o mundo.
           </p>
-          <button><Link to="/componentes">Saiba do que precisa</Link></button>
+          <Link to="/componentes"><button>Saiba do que precisa</button></Link>
         </div>
       </section>
-      <Footer></Footer>
     </div>
   );
 }

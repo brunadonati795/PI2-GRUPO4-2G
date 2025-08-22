@@ -6,6 +6,7 @@ import componentesDsjuntor from '../assets/imagens/componentesDsjuntor.png'
 import componentesControladordeCarga from '../assets/imagens/componentesControladordeCarga.png'
 import componentesBaterias from '../assets/imagens/componentesBaterias.png'
 import componentesStringBox from '../assets/imagens/componentesStringBox.png'
+import imgSeta from "../assets/imagens/seta.png"
 
 import { Link } from "react-router-dom";
 
@@ -14,7 +15,7 @@ export default function Componentes() {
     <>
       
       <Link to="/funcionamento" className="botao-voltar">
-        ⬅️ Voltar
+        <img src={imgSeta}></img>
       </Link>
 
       <section className="componentes">
@@ -126,7 +127,6 @@ export default function Componentes() {
           </div> 
         </div>
       </section>
-      <Footer></Footer>
     </>
   );
 }

@@ -38,6 +38,7 @@ export default function Cadastro() {
         } else {
           alert("CEP não encontrado.");
         }
+      //eslint(no-used-vars)
       } catch (error) {
         alert("Erro ao buscar o CEP.");
       }

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";   // <-- importando axios
+import bgImage from "../assets/imagens/bg.jpg"
 import "../App.css";
 
 export default function Cadastro() {
@@ -39,7 +40,9 @@ export default function Cadastro() {
         } else {
           alert("CEP não encontrado.");
         }
+      //eslint(no-used-vars)
       } catch (error) {
+        console.error(error);
         alert("Erro ao buscar o CEP.");
       }
     }
@@ -74,7 +77,9 @@ export default function Cadastro() {
   };
 
   return (
-    <section className="form-container">
+    <section className="form-container"
+    style={{ backgroundImage: `url(${bgImage})` }}
+    >
       <div className="form-box">
         <h2>CADASTRO</h2>
 

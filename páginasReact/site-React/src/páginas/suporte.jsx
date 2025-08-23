@@ -21,7 +21,6 @@ const Suporte = () => {
             className="qr-code" />
         </section>
       </div>
-      <Footer></Footer>
     </div>
   );
 };

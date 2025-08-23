@@ -14,13 +14,14 @@
 
 .store-container {
   font-family: "Montserrat", sans-serif;
-  margin: 0;
-  padding: 12vh 2vw 0 2vw;
+  margin-bottom: 3vh;
+  padding: 12vh 5vw 0 5vw;
   background: #f4f4f4;
+
 }
 
 .store-title {
-  margin-top: 3vh;
+  margin-top: 4vh;
   font-size: 2.2vw;
 }
 
@@ -48,19 +49,19 @@
 
 .store-card-img {
   max-width: 100%;
-  height: 10vh;
+  height: 16vh;
   object-fit: contain;
 }
 
 .store-card-name {
-  font-size: 1vw;
+  font-size: 1.3vw;
   margin: 0.5vh 0;
 }
 
 .store-card-price {
   font-weight: bold;
   color: #333;
-  font-size: 0.9vw;
+  font-size: 1vw;
 }
 
 .store-card-controls {
@@ -178,7 +179,8 @@
 }
 
 .imagem-carrinho {
-  margin:13vh 0 0;
+  width: 3.5vw;
+  margin:13vh 2vw 0;
   position: fixed;
   top: 0;
   right: 0;
@@ -290,5 +292,20 @@
 
 .finalizar-btn:hover {
   background: #218838;
+}
+
+/*contador*/
+.store-card-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px; /* espaçamento entre os botões e o contador */
+}
+
+.store-quantity {
+  font-size: 16px;
+  font-weight: bold;
+  min-width: 20px;
+  text-align: center;
 }
 

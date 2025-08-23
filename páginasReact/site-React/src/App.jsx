@@ -2,7 +2,7 @@ import { Routes, Route } from "react-router-dom";
 import { useEffect } from "react";
 import Header from "./componentes/header";
 import Footer from "./componentes/footer";
-import WhatsAppButton from "./componentes/botaowhats.jsx"; 
+import WhatsAppButton from "./componentes/whatsButton.jsx"; 
 
 import PrimeiraPagina from "./index.jsx";
 import ConfirmacaodePagamento from "./páginas/confirmacaodepagamento";
@@ -14,6 +14,7 @@ import Cadastro from "./páginas/cadastro.jsx";
 import Componentes from "./páginas/componentes.jsx";
 import Loja from "./páginas/loja/loja.jsx";
 import Usuario from "./páginas/Usuario.jsx";
+import Login from "./páginas/login.jsx";
 
 function App() {
   useEffect(() => {
@@ -35,12 +36,11 @@ function App() {
         <Route path="/cadastro" element={<Cadastro />} />
         <Route path="/componentes" element={<Componentes />} />
         <Route path="/loja" element={<Loja />} />
-        <Route path="/usuario" element={<Usuario />} /> {/* Escolha uma das versões */}
+        <Route path="/login" element={<Login />} />
+        <Route path="/usuario" element={<Usuario />} />
       </Routes>
-
-      <Footer />
-
       <WhatsAppButton />
+      <Footer />
     </>
   );
 }

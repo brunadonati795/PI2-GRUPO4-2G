@@ -1,10 +1,11 @@
 import "./style.css";
 
-const ProductCard = ({ product, onClick, adicionarAoCarrinho, removerDoCarrinho}) => {
+const ProductCard = ({ product, onClick, adicionarAoCarrinho, removerDoCarrinho }) => {
+
   return (
     <div className="store-card" onClick={() => onClick && onClick(product)}>
       <img
-        src={product.image ? `images/${product.image}` : ""}
+        src={product.image}
         alt={product.name || "Produto"}
         className="store-card-img"
       />
@@ -23,6 +24,9 @@ const ProductCard = ({ product, onClick, adicionarAoCarrinho, removerDoCarrinho}
         >
           -
         </button>
+
+        <span className="store-quantity">{product.quantidade || 0}</span>
+
         <button
           className="store-btn store-btn-right"
           onClick={(e) => {
@@ -38,4 +42,3 @@ const ProductCard = ({ product, onClick, adicionarAoCarrinho, removerDoCarrinho}
 };
 
 export default ProductCard;
-

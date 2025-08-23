@@ -26,7 +26,6 @@ const Descarte = () => {
       <div className="botao-formulario">
         <button className="btn-formulario">Acessar Formulário</button>
       </div>
-    <Footer></Footer>
     </div>
   );
 };

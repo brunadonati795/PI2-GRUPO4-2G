@@ -1,16 +1,6 @@
-import { useState } from "react";
 import "./style.css";
 
-const ProductCard = ({ product, onClick }) => {
-  const [quantidade, setQuantidade] = useState(0); // contador interno
-
-  const adicionarAoCarrinho = () => {
-    setQuantidade((prev) => prev + 1);
-  };
-
-  const removerDoCarrinho = () => {
-    setQuantidade((prev) => (prev > 0 ? prev - 1 : 0));
-  };
+const ProductCard = ({ product, onClick, adicionarAoCarrinho, removerDoCarrinho }) => {
 
   return (
     <div className="store-card" onClick={() => onClick && onClick(product)}>
@@ -29,19 +19,19 @@ const ProductCard = ({ product, onClick }) => {
           className="store-btn store-btn-left"
           onClick={(e) => {
             e.stopPropagation();
-            removerDoCarrinho();
+            removerDoCarrinho && removerDoCarrinho();
           }}
         >
           -
         </button>
 
-        <span className="store-quantity">{quantidade}</span>
+        <span className="store-quantity">{product.quantidade || 0}</span>
 
         <button
           className="store-btn store-btn-right"
           onClick={(e) => {
             e.stopPropagation();
-            adicionarAoCarrinho();
+            adicionarAoCarrinho && adicionarAoCarrinho();
           }}
         >
           +

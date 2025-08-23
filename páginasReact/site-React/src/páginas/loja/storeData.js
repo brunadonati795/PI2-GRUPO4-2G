@@ -6,7 +6,6 @@ import lojafixadorgrampo from "../../assets/imagens/lojafixadorgrampo.webp";
 import lojagrampoplaca from "../../assets/imagens/lojagrampoplaca.webp";
 import lojajuncao from "../../assets/imagens/lojajuncao.webp";
 import lojajuncaoemu from "../../assets/imagens/lojajuncaoemu.webp";
-import lojaplacasparapiscina from "../../assets/imagens/lojaplacasparapiscina.webp";
 import lojasuportecentral from "../../assets/imagens/lojasuportecentral.webp";
 import DSSC from "../../assets/imagens/DSSC.png";
 import perovskita from "../../assets/imagens/perovskita.png";
@@ -20,12 +19,11 @@ const storeData = [
   { id: 5, name: "Conector em grampo", category: "loja", image: lojagrampoplaca, preco: 12.5 },
   { id: 6, name: "Junção", category: "loja", image: lojajuncao, preco: 15.0 },
   { id: 7, name: "Junção em U", category: "loja", image: lojajuncaoemu, preco: 18.0 },
-  { id: 8, name: "Placas para piscina", category: "loja", image: lojaplacasparapiscina, preco: 80.0 },
-  { id: 9, name: "Suporte central", category: "loja", image: lojasuportecentral, preco: 22.0 },
-  { id: 10, name: "Braçadeira", category: "loja", image: lojabracadeira, preco: 8.0 },
-  { id: 11, name: "Orgânicos", category: "placas", image: organicos, preco: 120.0 },
-  { id: 12, name: "Perovskita", category: "placas", image: perovskita, preco: 150.0 },
-  { id: 13, name: "DSSC", category: "placas", image: DSSC, preco: 130.0 },
+  { id: 8, name: "Suporte central", category: "loja", image: lojasuportecentral, preco: 22.0 },
+  { id: 9, name: "Braçadeira", category: "loja", image: lojabracadeira, preco: 8.0 },
+  { id: 10, name: "Placa Orgânica", category: "placas", image: organicos, preco: 120.0 },
+  { id: 11, name: "Placa de perovskita", category: "placas", image: perovskita, preco: 150.0 },
+  { id: 12, name: "Placa DSSC", category: "placas", image: DSSC, preco: 130.0 },
 ];
 
 export default storeData;

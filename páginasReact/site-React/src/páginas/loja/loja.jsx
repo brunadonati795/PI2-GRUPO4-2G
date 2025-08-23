@@ -111,7 +111,10 @@ const Loja = () => {
           {placas.map(product => (
             <ProductCard
               key={product.id}
-              product={product}
+              product={{
+              ...product,
+              quantidade: itensDoCarrinho.find(item => item.id === product.id)?.quantidade || 0
+            }}
               onClick={setSelectedProduct}
               adicionarAoCarrinho={() => adicionarAoCarrinho(product)}
               removerDoCarrinho={() => removerDoCarrinho(product.id)}
@@ -124,7 +127,10 @@ const Loja = () => {
           {loja.map(product => (
             <ProductCard
               key={product.id}
-              product={product}
+              product={{
+              ...product,
+              quantidade: itensDoCarrinho.find(item => item.id === product.id)?.quantidade || 0
+            }}
               onClick={setSelectedProduct}
               adicionarAoCarrinho={() => adicionarAoCarrinho(product)}
               removerDoCarrinho={() => removerDoCarrinho(product.id)}

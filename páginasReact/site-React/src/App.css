@@ -242,7 +242,7 @@ body {
 }
 
 .link-ajuda {
-  margin-top: 15svh;
+  margin-top: 7svh;
   font-size: larger;
 }
 
@@ -270,6 +270,7 @@ body {
 
 .vantagens p {
   margin-top: -3vh;
+  font-size: 1.2rem;
 }
 
 .cards-grid {
@@ -285,13 +286,13 @@ body {
 .vantagem-card {
   background: var(--amareloFundo);
   border-radius: 3vh;
-  padding: 2vh;
+  padding: 1.5vh;
   box-shadow: 0 8px 20px rgba(197, 197, 197, 0.548);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   opacity: 0;
   transform: translateY(40px);
   animation: fadeUp 1s ease forwards;
-  height: 25vh;
+  height: 26vh;
   width: 20vw;
   text-align: center;
   border-bottom: 1.5vh solid var(--azulEscuro);
@@ -304,14 +305,14 @@ body {
 
 .vantagem-card h3 {
   color: var(--azulEscuro);
-  font-size: 1.2rem;
+  font-size: 1.6rem;
   margin-bottom: 10px;
 }
 
 .vantagem-card p {
-  font-size: 0.95rem;
+  font-size: 1.2rem;
   color: #333;
-  margin-top: 2vh;
+  margin-top: 1.5vh;
 }
 
 @keyframes fadeUp {
@@ -383,8 +384,12 @@ body {
 }
 
 .fundo-arredondado p {
-  font-size: larger;
+  font-size: 1.7rem;
   margin-bottom: 20px;
+}
+
+.fundo-arredondado strong {
+  font-size: 1.7rem
 }
 
 .btn-atendimento {
@@ -868,7 +873,7 @@ select {
 
 .intro-conteudo p {
   flex: 1;
-  font-size: 1.1rem;
+  font-size: 1.4rem;
   line-height: 1.6;
   max-width: 30vw;
   text-align: justify;
@@ -884,7 +889,6 @@ select {
   align-items: center;
   gap: 10vh;
   height: 100vh;
-  border-top-left-radius: 10vh;
   border-bottom-right-radius: 10vh;
 }
 
@@ -958,6 +962,7 @@ select {
 
 .banner-solar-highlight-card strong {
   font-weight: bold;
+  font-size: 2.4vh;
 }
 .banner-solar-highlight-card p {
   font-size: 2.4vh;
@@ -1123,17 +1128,15 @@ button:hover {
 /* ====COMPONENTES===== */
 .componentes {
   max-width: 100%;
-  /* margin: auto; */
-  padding: 12vh 4vw 2vh 4vw;
+  padding: 5vh 4vw 7vh 4vw;
   text-align: center;
   background-color: var(--azulEscuro);
   height: 100%;
-  margin-bottom: -5vh;
 }
 
 .subtitle {
-  font-size: 1.2rem;
   margin-bottom: 5vh;
+  font-size: 3vh;
   margin-top: -3vh;
   color: #d0f0ff;
 }
@@ -1149,6 +1152,10 @@ button:hover {
   display: flex;
   justify-content: right;
   gap: 20px;
+}
+
+.item p, .item strong, .item h2 {
+  font-size: 2.5vh;
 }
 
 #Fotovoltaicos{
@@ -1178,11 +1185,6 @@ button:hover {
   font-size: 4vh;
   color: white;
 }
-
-.subtitle {
-    font-size: 3vh;
-}
-
 #Controlador-de-Carga {
   height: 200px;
   width: 350px;
@@ -1208,6 +1210,7 @@ button:hover {
 
 * {
   box-sizing: border-box;
+  font-size: 2vh;
 }
 
 body {
@@ -1352,4 +1355,65 @@ body {
 
 .botao-voltar img {
   width: 3vw;
+}
+
+
+/* LOGIN */
+.containerlogin {
+  width: 100%;
+  height: 100vh;
+  margin: 0 auto;
+}
+.login {
+  width: 35vw;
+  margin: 10vh auto;
+  padding: 5vh 3vw;
+  background-color: var(--azulEscuro);
+  border-radius: 1.5vh;
+  box-shadow: 0 0 2vh rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+.login h2 {
+  font-size: 3vh;
+  color: var(--amareloFundo);
+  margin-bottom: 4vh;
+  font-weight: bold;
+}
+
+.login-label {
+  display: block;
+  text-align: left;
+  margin-bottom: 2vh;
+  font-size: 2vh;
+  font-weight: bold;
+  color: var(--amareloFundo);
+}
+
+.login-input {
+  width: 100%;
+  padding: 1.5vh 1vw;
+  border: none;
+  border-radius: 5vh;
+  font-size: 2vh;
+  margin-top: 0.5vh;
+  outline: none;
+}
+
+.login-button {
+  width: 100%;
+  padding: 1.5vh 1vw;
+  margin-top: 3vh;
+  border: none;
+  border-radius: 5vh;
+  font-size: 2vh;
+  font-weight: bold;
+  background-color: #28a745; /* verde */
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.login-button:hover {
+  background-color: #218838;
 }

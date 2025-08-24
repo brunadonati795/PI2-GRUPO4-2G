@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import axios from "axios";   // <-- importando axios
 import bgImage from "../assets/imagens/bg.jpg"
 import "../App.css";
@@ -40,7 +40,6 @@ export default function Cadastro() {
         } else {
           alert("CEP não encontrado.");
         }
-      //eslint(no-used-vars)
       } catch (error) {
         console.error(error);
         alert("Erro ao buscar o CEP.");
@@ -165,7 +164,7 @@ export default function Cadastro() {
           />
 
           <button type="submit">Cadastrar-se</button>
-          Já tem uma conta? faça seu login<Link to="/login.jsx">aqui!</Link>
+          <p>Já tem uma conta? <Link to="/login">Clique aqui!</Link></p>
         </form>
       </div>
     </section>

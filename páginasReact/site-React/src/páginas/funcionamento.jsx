@@ -3,8 +3,10 @@ import comofuncionamplacaLado1 from "../assets/imagens/comofuncionamplacaLado1.p
 import comofuncionamplacaLado2 from "../assets/imagens/comofuncionamplacaLado2.png";
 import comofuncionamplacaSustentavel from "../assets/imagens/comofuncionamplacaSustentavel.png";
 import comofuncionamODS from "../assets/imagens/comofuncionamcard7.png";
-import imgSeta from "../assets/imagens/seta.png"
+import imgSeta from "../assets/imagens/seta.png";
+import Componentes from "./componentes";
 import { Link } from "react-router-dom";
+
 export default function Funcionamento() {
   const placaEsqRef = useRef(null);
   const placaDirRef = useRef(null);
@@ -59,6 +61,8 @@ export default function Funcionamento() {
         </div>
       </section>
 
+      <Componentes></Componentes>
+
       <section className="banner-solar-container">
         <div className="solarcardEimg">
           <div className="banner-solar-card">
@@ -88,10 +92,8 @@ export default function Funcionamento() {
           <div>
             <p>
               <strong>As placas que oferecemos</strong> têm esses desafios
-              diminuídos ao máximo, por serem{" "}
-              <span className="banner-solar-text-highlight">
-                extremamente sustentáveis
-              </span>
+              diminuídos ao máximo, por serem       <strong>extremamente sustentáveis</strong>
+                
               . Assim, não causam efeitos negativos no meio ambiente. Além
               disso, são extremamente econômicas, fazendo você gastar menos
               dinheiro!
@@ -113,7 +115,7 @@ export default function Funcionamento() {
             Objetivos de Desenvolvimento Sustentável, sendo um passo importante
             para ajudar o mundo.
           </p>
-          <Link to="/componentes"><button>Saiba do que precisa</button></Link>
+          <Link to="/loja"><button>Faça sua parte!</button></Link>
         </div>
       </section>
     </div>

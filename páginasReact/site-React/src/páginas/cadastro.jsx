@@ -165,7 +165,7 @@ export default function Cadastro() {
           />
 
           <button type="submit">Cadastrar-se</button>
-          Já tem uma conta? faça seu login<Link to="/login.jsx">aqui!</Link>
+          Já tem uma conta? faça seu login<Link to="/login">aqui!</Link>
         </form>
       </div>
     </section>

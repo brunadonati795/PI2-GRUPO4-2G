@@ -5,6 +5,7 @@ import comofuncionamplacaSustentavel from "../assets/imagens/comofuncionamplacaS
 import comofuncionamODS from "../assets/imagens/comofuncionamcard7.png";
 import imgSeta from "../assets/imagens/seta.png"
 import { Link } from "react-router-dom";
+
 export default function Funcionamento() {
   const placaEsqRef = useRef(null);
   const placaDirRef = useRef(null);

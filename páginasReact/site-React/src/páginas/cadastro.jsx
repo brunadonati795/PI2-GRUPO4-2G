@@ -163,7 +163,7 @@ export default function Cadastro() {
             onChange={handleChange}
           />
 
-          <button type="submit">Cadastrar-se</button>
+          <Link to="/usuario"><button type="submit">Cadastrar-se</button></Link>
           <p>Já tem uma conta? <Link to="/login">Clique aqui!</Link></p>
         </form>
       </div>

@@ -3,6 +3,7 @@ import ProductCard from "./produtoCard";
 import Modal from "./modal";
 import storeData from "./storeData";
 import iconedocarrinho from "../../assets/imagens/iconedocarrinho.png";
+import { Link } from "react-router-dom";
 
 const Loja = () => {
   const [selectedProduct, setSelectedProduct] = useState(null);
@@ -97,7 +98,7 @@ const Loja = () => {
 
               <div className="carrinho-total">
                 <h3>Total da Compra: R$ {totalGeral.toFixed(2)}</h3>
-                <button className="finalizar-btn">Finalizar Compra</button>
+                <Link to="/cadastro"><button className="finalizar-btn">Finalizar Compra</button></Link>
               </div>
             </>
           )}

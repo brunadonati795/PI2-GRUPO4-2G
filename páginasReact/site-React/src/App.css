@@ -1198,19 +1198,19 @@ button:hover {
 /* Pagina de usuarios*/
 :root {
   --bg: #f4f6f8;
-  --card: #ffffff;
+  --card: #f4f6f8;
   --accent:  #003B57;
   --muted: #6b7280;
   --success: #16a34a;
   --warning: #f59e0b;
   --radius: 1.5vw;
   --shadow: 0 0.6vh 1.8vh rgba(2, 6, 23, 0.08);
-  font-family: Inter, sans-serif;
 }
 
 * {
   box-sizing: border-box;
   font-size: 2vh;
+  font-family: 'Montserrat', sans-serif;
 }
 
 body {
@@ -1221,13 +1221,12 @@ body {
 .container {
   min-height: calc(100vh - 10vh - 15vh);
   margin: 0 auto;
-  padding-top: 10vh;
+  padding: 12vh 5vh 0 5vh;
 }
 
 .profile-card {
   background: var(--card);
   border-radius: var(--radius);
-  box-shadow: var(--shadow);
  
 }
 
@@ -1299,7 +1298,7 @@ body {
 
 .orders-list {
   list-style: none;
-  padding: 0;
+  padding: 3vh;
   margin-top: 1.5vh;
 }
 

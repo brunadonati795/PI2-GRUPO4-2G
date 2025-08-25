@@ -1,10 +1,10 @@
 import { useEffect, useRef } from "react";
-import comofuncionamplacaLado1 from "../assets/imagens/comofuncionamplacaLado1.png";
-import comofuncionamplacaLado2 from "../assets/imagens/comofuncionamplacaLado2.png";
-import comofuncionamplacaSustentavel from "../assets/imagens/comofuncionamplacaSustentavel.png";
-import comofuncionamODS from "../assets/imagens/comofuncionamcard7.png";
-import imgSeta from "../assets/imagens/seta.png"
-import { Link } from "react-router-dom";
+import Header from "../componentes/header";
+//import placalado1 from "../assets/imagens/comofuncionam-placaLado1";
+//import placalado2 from "../assets/imagens/comofuncionam-placaLado2";
+//import placasustentavel from  "../assets/imagens/comofuncionam-placaSustentavel.png";
+//import todasasplacas from '../assets/imagens/comofuncionam-todas-as-placas.png';
+//import card7 from "../assets/imagens/comofuncionam-card7.png";
 
 export default function Funcionamento() {
   const placaEsqRef = useRef(null);
@@ -31,90 +31,74 @@ export default function Funcionamento() {
   }, []);
 
   return (
-    <div className="Funcionamento">
-    
-      <Link to="/primeiraPagina" className="botao-voltar">
-        <img src={imgSeta}></img>
-      </Link>
-
+    <div>
+        <Header/>
       <section className="intro">
-        <h1>O QUE SÃO AS PLACAS SOLARES?</h1>
+        <h1>O que são placas solares?</h1>
         <div className="intro-conteudo">
           <img
-            src={comofuncionamplacaLado1}
+            ref={placaEsqRef}
+            src={placalado1}
             alt="Placa solar esquerda"
           />
           <p>
-            As placas solares, ou módulos fotovoltaicos, são uma tecnologia que
+            As placas solares, ou módulos fotovoltaicos, são a tecnologia que
             permite converter a luz solar em energia elétrica por efeito
             fotovoltaico, que consiste no surgimento de uma corrente elétrica
-            dentro da estrutura de um material semicondutor quando este é
-            exposto à partículas de energia chamadas de radiação eletromagnética
-            (luz).
+            dentro da estrutura de um material semicondutor quando este é exposto
+            a partículas de energia chamadas de radiação eletromagnética (luz).
           </p>
           <img
             ref={placaDirRef}
-            src={comofuncionamplacaLado2}
+            src={placalado2}
             alt="Placa solar direita"
           />
         </div>
       </section>
 
-      <section className="banner-solar-container">
-        <div className="solarcardEimg">
-          <div className="banner-solar-card">
-            <div>
-              <p>
-                <strong>Como sua fonte de energia é o Sol,</strong>
-              </p>
-              <p>
-                a energia fotovoltaica é considerada limpa, sustentável e
-                renovável. Porém, no fim da sua vida útil ela enfrenta alguns
-                desafios, com os materiais utilizados nas células fotovoltaicas
-                sendo, em muitos casos, difíceis de reciclar e descartar sem
-                gerar ao meio ambiente.
-              </p>
-            </div>
-          </div>
+      <section className="secao-amarela">
+        <div className="bloco-texto">
+          <p>
+            Como sua fonte de energia é o Sol, a energia fotovoltaica é considerada
+            limpa, sustentável e renovável. Porém, no fim da sua vida útil ela
+            enfrenta alguns desafios, com os materiais utilizados nas células
+            fotovoltaicas sendo, em muitos casos, difíceis de reciclar e descartar
+            sem gerar danos ao meio ambiente.
+          </p>
           <img
-            ref={placaEsqRef}
-            src={comofuncionamplacaSustentavel}
-            className="placaSustentavel"
-            style={{ width: "min-content" }}
-            alt="Placa sustentável"
+            src={placasustentavel}
+            alt="Placa com grama"
           />
         </div>
 
-        <div className="banner-solar-highlight-card">
-          <div>
-            <p>
-              <strong>As placas que oferecemos</strong> têm esses desafios
-              diminuídos ao máximo, por serem{" "}
-              <span className="banner-solar-text-highlight">
-                extremamente sustentáveis
-              </span>
-              . Assim, não causam efeitos negativos no meio ambiente. Além
-              disso, são extremamente econômicas, fazendo você gastar menos
-              dinheiro!
-            </p>
-          </div>
+        <div className="bloco-texto">
+          <img
+            src={todasasplacas}
+            alt="Placas com lixo"
+          />
+          <p>
+            As placas que oferecemos têm esses desafios diminuídos ao máximo, por
+            serem extremamente sustentáveis. Assim, não causam efeitos negativos no
+            meio ambiente. Além disso, são extremamente econômicas, fazendo você
+            gastar menos dinheiro!
+          </p>
         </div>
       </section>
 
       <section className="objetivo">
         <div className="box-ods">
           <img
-            src={comofuncionamODS}
+            src={card7}
             alt="ODS 7 - Energia Acessível e Limpa"
           />
         </div>
         <div className="texto-ods">
           <p>
             Comprando nossas placas, você está contribuindo para atingir um dos
-            Objetivos de Desenvolvimento Sustentável, sendo um passo importante
-            para ajudar o mundo.
+            Objetivos de Desenvolvimento Sustentável, sendo um passo importante para
+            ajudar o mundo.
           </p>
-          <Link to="/componentes"><button>Saiba do que precisa</button></Link>
+          <button>Saiba do que precisa</button>
         </div>
       </section>
     </div>

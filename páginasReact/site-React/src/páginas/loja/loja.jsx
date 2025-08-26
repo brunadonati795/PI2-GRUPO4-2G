@@ -5,6 +5,8 @@ import storeData from "./storeData";
 import iconedocarrinho from "../../assets/imagens/iconedocarrinho.png";
 import { Link } from "react-router-dom";
 
+
+
 const Loja = () => {
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [carrinhoAberto, setCarrinhoAberto] = useState(false);
@@ -30,7 +32,7 @@ const Loja = () => {
     });
   };
 
-  // Remover 1 unidade ou todo o produto
+  // Remover produto do carrinho
   const removerDoCarrinho = (produtoId) => {
     setItensDoCarrinho(prevItens =>
       prevItens
@@ -43,10 +45,10 @@ const Loja = () => {
     );
   };
 
-  // Atualiza total geral automaticamente
+  // Atualiza total
   useEffect(() => {
     const novoTotal = itensDoCarrinho.reduce(
-      (acc, item) => acc + item.preco * item.quantidade,
+      (acc, item) => acc + parseFloat(item.price) * item.quantidade,
       0
     );
     setTotalGeral(novoTotal);
@@ -84,13 +86,13 @@ const Loja = () => {
                     <img src={item.image} alt={item.name} className="carrinho-img" />
                     <div className="carrinho-info">
                       <h3>{item.name}</h3>
-                      <p>Preço: R$ {item.preco.toFixed(2)}</p>
+                      <p>Preço: R$ {item.price}</p>
                       <div className="carrinho-controles">
                         <button onClick={() => removerDoCarrinho(item.id)}>-</button>
                         <span>{item.quantidade}</span>
                         <button onClick={() => adicionarAoCarrinho(item)}>+</button>
                       </div>
-                      <p>Subtotal: R$ {(item.preco * item.quantidade).toFixed(2)}</p>
+                      <p>Subtotal: R$ {(parseFloat(item.price) * item.quantidade).toFixed(2)}</p>
                     </div>
                   </li>
                 ))}
@@ -105,7 +107,7 @@ const Loja = () => {
         </div>
       )}
 
-      {/* Conteúdo da loja */}
+      {/* Produtos */}
       <div className="store-container">
         <h1 className="store-title">LOJA - PLACAS SOLARES</h1>
         <div className="store-grid">
@@ -113,9 +115,9 @@ const Loja = () => {
             <ProductCard
               key={product.id}
               product={{
-              ...product,
-              quantidade: itensDoCarrinho.find(item => item.id === product.id)?.quantidade || 0
-            }}
+                ...product,
+                quantidade: itensDoCarrinho.find(item => item.id === product.id)?.quantidade || 0
+              }}
               onClick={setSelectedProduct}
               adicionarAoCarrinho={() => adicionarAoCarrinho(product)}
               removerDoCarrinho={() => removerDoCarrinho(product.id)}
@@ -129,9 +131,9 @@ const Loja = () => {
             <ProductCard
               key={product.id}
               product={{
-              ...product,
-              quantidade: itensDoCarrinho.find(item => item.id === product.id)?.quantidade || 0
-            }}
+                ...product,
+                quantidade: itensDoCarrinho.find(item => item.id === product.id)?.quantidade || 0
+              }}
               onClick={setSelectedProduct}
               adicionarAoCarrinho={() => adicionarAoCarrinho(product)}
               removerDoCarrinho={() => removerDoCarrinho(product.id)}

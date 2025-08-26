@@ -2,19 +2,19 @@ import { Routes, Route } from "react-router-dom";
 import { useEffect } from "react";
 import Header from "./componentes/header";
 import Footer from "./componentes/footer";
-import WhatsAppButton from "./componentes/whatsButton.jsx"; 
+import WhatsAppButton from "./componentes/whatsButton"; 
 
-import PrimeiraPagina from "./index.jsx";
+import PrimeiraPagina from "./index";
 import ConfirmacaodePagamento from "./páginas/confirmacaodepagamento";
 import Descarte from "./páginas/descarte";
 import Funcionamento from "./páginas/funcionamento";
 import Suporte from "./páginas/suporte";
-import Opcoes from "./páginas/opcoes.jsx";
-import Cadastro from "./páginas/cadastro.jsx";
-import Componentes from "./páginas/componentes.jsx";
-import Loja from "./páginas/loja/loja.jsx";
-import Usuario from "./páginas/Usuario.jsx";
-import Login from "./páginas/login.jsx";
+import Opcoes from "./páginas/opcoes";
+import Cadastro from "./páginas/cadastro";
+import Componentes from "./páginas/componentes";
+import Loja from "./páginas/loja/loja";
+import Usuario from "./páginas/Usuario";
+import Login from "./páginas/login";
 
 function App() {
   useEffect(() => {

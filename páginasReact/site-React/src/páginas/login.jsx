@@ -22,47 +22,28 @@ export default function Login() {
     }
   };
 
-  return (
-<<<<<<< HEAD
+return (
     <div className="login-box">
       <h2>Login</h2>
-      <form onSubmit={submit}>
+      <form onSubmit={handleLogin}>
         <label>Email:</label>
-        <input name="email" value={form.email} onChange={change} required />
+        <input
+          type="email"
+          name="email"
+          value={form.email}
+          onChange={change}
+          required
+        />
         <label>Senha:</label>
-        <input name="senha" type="password" value={form.senha} onChange={change} required />
+        <input
+          type="password"
+          name="senha"
+          value={form.senha}
+          onChange={change}
+          required
+        />
         <button type="submit">Entrar</button>
       </form>
     </div>
-=======
-    <div className="containerlogin">
-      <div className="login">
-        <h2>Login</h2>
-        <form onSubmit={handleLogin} className="login-form">
-          <label className="login-label">
-            Nome completo:
-            <input
-              type="text"
-              value={fullName}
-              onChange={(e) => setFullName(e.target.value)}
-              className="login-input"
-              required
-            />
-          </label>
-          <label className="login-label" required>
-            Senha:
-            <input
-              type="password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              className="login-input"
-              required
-            />
-          </label>
-          <button type="submit" className="login-button">Entrar</button>
-        </form>
-    </div></div>
-
->>>>>>> 640672c5d677970c76fb64f24d304206cf2cd715
   );
 }

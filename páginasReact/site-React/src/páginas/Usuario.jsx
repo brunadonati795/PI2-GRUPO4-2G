@@ -12,6 +12,7 @@ export default function Usuario() {
   const [rua, setRua] = useState(cadastroData.rua || "");
   const [numero, setNumero] = useState(cadastroData.numero || "");
   const [complemento, setComplemento] = useState(cadastroData.complemento || "");
+  const [email] = useState(cadastroData.email || ""); // ID lógico do usuário
 
   const [isEditing, setIsEditing] = useState(false);
 
@@ -20,9 +21,37 @@ export default function Usuario() {
     { id: 1235, status: "Pendente", date: "05/08/2025", value: "R$ 249,90" },
   ]);
 
-  const handleSave = () => {
+  const handleSave = async () => {
     setIsEditing(false);
-    // aqui você pode salvar no backend ou localStorage
+
+    try {
+      const response = await fetch("http://127.0.0.1:5000/usuarios/update", {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          email, // identificador
+          nome,
+          cep,
+          bairro,
+          rua,
+          numero,
+          complemento,
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error("Erro ao atualizar usuário");
+      }
+
+      const data = await response.json();
+      console.log("Usuário atualizado:", data);
+      alert("Dados salvos com sucesso!");
+    } catch (err) {
+      console.error(err);
+      alert("Erro ao salvar no servidor!");
+    }
   };
 
   return (
@@ -128,7 +157,6 @@ export default function Usuario() {
           </ul>
         </section>
       </section>
-    
     </main>
   );
 }

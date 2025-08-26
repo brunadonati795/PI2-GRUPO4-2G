@@ -354,6 +354,7 @@
 
   /* Carrinho responsivo: ocupa toda a tela */
 .carrinho {
+  margin-left: auto;
     position: fixed;
     top: 0;
     right: 0;
@@ -369,19 +370,19 @@
   }
 
   .fechar-carrinho {
-    position: absolute;
-    top: 2vh;
-    right: 1vw;
-    font-size: 2vh;
-    padding: 1.5vh 2.5vh;
-    background-color: var(--amareloFundo);
-    color: #333;
-    border-radius: 50%;
-    border: none;
-    cursor: pointer;
-    box-shadow: 0 0 6px rgba(0,0,0,0.2);
-    z-index: 1300;
-    transition: background-color 0.3s ease;
+.fechar-carrinho {
+  align-self: flex-end; /* joga o botão pro lado direito */
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #333;
+  background-color: var(--amareloFundo);
+  border-radius: 50%;
+  padding: 0.5rem 0.7rem;
+  margin-bottom: 1rem;
+}
+
   }
 
   .fechar-carrinho:hover {

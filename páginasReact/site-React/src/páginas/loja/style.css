@@ -308,4 +308,163 @@
   min-width: 20px;
   text-align: center;
 }
+/* =====================
+   Responsividade Mobile
+   ===================== */
+@media (max-width: 768px) {
+  .store-container {
+    padding: 8vh 3vw;
+  }
 
+  .store-title {
+    font-size: 7vw; /* maior */
+    text-align: center;
+  }
+
+  .store-grid {
+    flex-direction: column;
+    align-items: center;
+    gap: 3vh;
+  }
+
+  .store-card {
+    width: 85%; /* menor */
+    padding: 1.5vh;
+    border-radius: 1vh;
+  }
+
+  .store-card-img {
+    max-height: 25vh;
+  }
+
+  .store-card-name {
+    font-size: 3.8vw; /* um pouco menor */
+  }
+
+  .store-card-price {
+    font-size: 3vw; /* um pouco menor */
+  }
+
+  .store-btn {
+    font-size: 3vw;
+    padding: 1vh 3vw;
+    border-radius: 10px;
+  }
+
+  .store-modal {
+    width: 90%;
+    padding: 3vh 4vw;
+  }
+
+  .store-modal-title {
+    font-size: 5vw;
+  }
+
+  .store-modal-description,
+  .store-modal-price {
+    font-size: 3.5vw;
+  }
+
+  .carrinho {
+    width: 95vw; /* maior */
+    font-size: 4vw; /* textos maiores */
+  }
+
+  .carrinho h2 {
+    font-size: 5vw; /* título maior */
+  }
+
+  .carrinho-img {
+    width: 14vw;
+    height: 14vw;
+  }
+
+  .imagem-botao {
+    width: 10vw;
+    right: 10px;
+  }
+}
+
+/* =====================
+   Responsividade Tablet
+   ===================== */
+@media (min-width: 769px) and (max-width: 1024px) {
+  /* Container */
+  .store-container {
+    padding: 8vh 4vw;
+  }
+
+  /* Título da loja */
+  .store-title {
+    font-size: 3vw; /* menor e proporcional */
+    text-align: center;
+  }
+
+  /* Grid de cards */
+  .store-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 2vw;
+  }
+
+  /* Cards */
+  .store-card {
+    width: 30%; /* menor para caber 2–3 por linha */
+    padding: 1.5vh 1vw;
+    border-radius: 1vh;
+  }
+
+  .store-card-img {
+    height: 15vh; /* menor */
+    object-fit: contain;
+  }
+
+  .store-card-name {
+    font-size: 1.8vw; /* menor */
+  }
+
+  .store-card-price {
+    font-size: 1.5vw; /* menor */
+  }
+
+  .store-btn {
+    font-size: 1.5vw;
+    padding: 0.8vh 1.5vw;
+  }
+
+  /* Modal */
+  .store-modal {
+    width: 30%;  /* bem menor e compacto */
+    padding: 1.5vh 1.5vw;
+  }
+
+  .store-modal-title {
+    font-size: 1.8vw;
+  }
+
+  .store-modal-description,
+  .store-modal-price {
+    font-size: 1.4vw;
+  }
+
+  /* Carrinho */
+  .carrinho {
+    width: 60vw;
+    font-size: 1.8vw;
+  }
+
+  .carrinho h2 {
+    font-size: 2.2vw;
+  }
+
+  .carrinho-img {
+    width: 8vw;
+    height: 8vw;
+  }
+
+  /* Botão do carrinho */
+  .imagem-botao {
+    width: 5vw;
+  }
+}

@@ -308,4 +308,215 @@
   min-width: 20px;
   text-align: center;
 }
+/* =====================
+   Responsividade Mobile
+   ===================== */
+@media (max-width: 768px) {
+  .store-container {
+    padding: 8vh 3vw;
+  }
 
+  .store-title {
+    font-size: 7vw;
+    text-align: center;
+  }
+
+  .store-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3vh;
+    justify-items: center; /* centraliza os cards */
+  }
+
+  .store-card {
+    width: 90%;
+    padding: 1.5vh;
+    border-radius: 1vh;
+  }
+
+  .store-card-img {
+    max-height: 25vh;
+  }
+
+  .store-card-name {
+    font-size: 3.8vw;
+  }
+
+  .store-card-price {
+    font-size: 3vw;
+  }
+
+  .store-btn {
+    font-size: 3vw;
+    padding: 1.5vh 3vw;
+    border-radius: 10px;
+  }
+
+  /* Carrinho responsivo: ocupa toda a tela */
+.carrinho {
+  margin-left: auto;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 90vw; /* ocupa 90% da largura da tela */
+    height: 100vh;
+    background: white;
+    box-shadow: -2px 0 8px rgba(0, 0, 0, 0.3);
+    z-index: 1200;
+    padding: 2vh 3vw;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .fechar-carrinho {
+.fechar-carrinho {
+  align-self: flex-end; /* joga o botão pro lado direito */
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #333;
+  background-color: var(--amareloFundo);
+  border-radius: 50%;
+  padding: 0.5rem 0.7rem;
+  margin-bottom: 1rem;
+}
+
+  }
+
+  .fechar-carrinho:hover {
+    background-color: #d6b138;
+  }
+
+  .carrinho h2 {
+    font-size: 6vw;
+    margin-top: 12vw;
+    text-align: center;
+  }
+
+  .carrinho-img {
+    width: 18vw;
+    height: 18vw;
+  }
+
+  .imagem-carrinho {
+    width: 10vw;
+    position: fixed;
+    top: 2vw;
+    right: 2vw;
+    z-index: 1001;
+  }
+
+  /* Modal responsivo */
+  .store-modal {
+    width: 90%;
+    padding: 4vh 4vw;
+    font-size: 4vw;
+  }
+
+  .store-modal-title {
+    font-size: 5vw;
+  }
+
+  .store-modal-description,
+  .store-modal-price {
+    font-size: 4vw;
+  }
+
+  /* Botão X do modal (caso use algo como .modal-close ou botão dentro do Modal) */
+  .store-modal button {
+    font-size: 8vw;
+    position: absolute;
+    top: 2vw;
+    right: 2vw;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+}
+
+
+/* =====================
+   Responsividade Tablet
+   ===================== */
+@media (min-width: 769px) and (max-width: 1024px) {
+  /* Container */
+  .store-container {
+    padding: 8vh 4vw;
+  }
+
+  /* Título da loja */
+  .store-title {
+    font-size: 3vw; /* menor e proporcional */
+    text-align: center;
+  }
+
+  /* Grid de cards */
+  .store-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 2vw;
+  }
+
+  /* Cards */
+  .store-card {
+    width: 30%; /* menor para caber 2–3 por linha */
+    padding: 1.5vh 1vw;
+    border-radius: 1vh;
+  }
+
+  .store-card-img {
+    height: 15vh; /* menor */
+    object-fit: contain;
+  }
+
+  .store-card-name {
+    font-size: 1.8vw; /* menor */
+  }
+
+  .store-card-price {
+    font-size: 1.5vw; /* menor */
+  }
+
+  .store-btn {
+    font-size: 1.5vw;
+    padding: 0.8vh 1.5vw;
+  }
+
+  /* Modal */
+  .store-modal {
+    width: 30%;  /* bem menor e compacto */
+    padding: 1.5vh 1.5vw;
+  }
+
+  .store-modal-title {
+    font-size: 1.8vw;
+  }
+
+  .store-modal-description,
+  .store-modal-price {
+    font-size: 1.4vw;
+  }
+
+  /* Carrinho */
+  .carrinho {
+    width: 60vw;
+    font-size: 1.8vw;
+  }
+
+  .carrinho h2 {
+    font-size: 2.2vw;
+  }
+
+  .carrinho-img {
+    width: 8vw;
+    height: 8vw;
+  }
+
+  /* Botão do carrinho */
+  .imagem-botao {
+    width: 5vw;
+  }
+}

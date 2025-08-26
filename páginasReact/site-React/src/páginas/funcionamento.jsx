@@ -1,10 +1,11 @@
-import { useEffect, useRef } from "react";
-import Header from "../componentes/header";
-//import placalado1 from "../assets/imagens/comofuncionam-placaLado1";
-//import placalado2 from "../assets/imagens/comofuncionam-placaLado2";
-//import placasustentavel from  "../assets/imagens/comofuncionam-placaSustentavel.png";
-//import todasasplacas from '../assets/imagens/comofuncionam-todas-as-placas.png';
-//import card7 from "../assets/imagens/comofuncionam-card7.png";
+import {useEffect, useRef } from "react";
+import imgSeta from "../assets/imagens/seta.png";
+import Componentes from "./componentes";
+import { Link } from "react-router-dom";
+import placaLado1 from "../assets/imagens/comofuncionamplacaLado1.png";
+import placaLado2 from "../assets/imagens/comofuncionamplacaLado2.png";
+import placasustentavel from  "../assets/imagens/comofuncionamplacaSustentavel.png";
+import card7 from "../assets/imagens/comofuncionamcard7.png";
 
 export default function Funcionamento() {
   const placaEsqRef = useRef(null);
@@ -32,14 +33,17 @@ export default function Funcionamento() {
 
   return (
     <div>
-        <Header/>
+      <Link to="/primeiraPagina" className="botao-voltar">
+        <img src={imgSeta}></img>
+      </Link>
       <section className="intro">
         <h1>O que são placas solares?</h1>
         <div className="intro-conteudo">
           <img
             ref={placaEsqRef}
-            src={placalado1}
+            src={placaLado1}
             alt="Placa solar esquerda"
+            className="esquerda"
           />
           <p>
             As placas solares, ou módulos fotovoltaicos, são a tecnologia que
@@ -50,39 +54,48 @@ export default function Funcionamento() {
           </p>
           <img
             ref={placaDirRef}
-            src={placalado2}
+            src={placaLado2}
             alt="Placa solar direita"
+            className="direita"
           />
         </div>
       </section>
 
-      <section className="secao-amarela">
-        <div className="bloco-texto">
-          <p>
-            Como sua fonte de energia é o Sol, a energia fotovoltaica é considerada
-            limpa, sustentável e renovável. Porém, no fim da sua vida útil ela
-            enfrenta alguns desafios, com os materiais utilizados nas células
-            fotovoltaicas sendo, em muitos casos, difíceis de reciclar e descartar
-            sem gerar danos ao meio ambiente.
-          </p>
+      <Componentes></Componentes>
+
+      <section className="banner-solar-container">
+        <div className="solarcardEimg">
+          <div className="banner-solar-card">
+            <div>
+              <p>
+                <strong>Como sua fonte de energia é o Sol,</strong>
+              </p>
+              <p>
+                a energia fotovoltaica é considerada limpa, sustentável e
+                renovável. Porém, no fim da sua vida útil ela enfrenta alguns
+                desafios, com os materiais utilizados nas células fotovoltaicas
+                sendo, em muitos casos, difíceis de reciclar e descartar sem
+                gerar ao meio ambiente.
+              </p>
+            </div>
+          </div>
           <img
             src={placasustentavel}
             alt="Placa com grama"
           />
         </div>
 
-        <div className="bloco-texto">
-          <img
-            src={todasasplacas}
-            alt="Placas com lixo"
-          />
-          <p>
-            As placas que oferecemos têm esses desafios diminuídos ao máximo, por
-            serem extremamente sustentáveis. Assim, não causam efeitos negativos no
-            meio ambiente. Além disso, são extremamente econômicas, fazendo você
-            gastar menos dinheiro!
-          </p>
-        </div>
+        <div className="banner-solar-highlight-card">
+          <div>
+            <p>
+              <strong>As placas que oferecemos</strong> têm esses desafios
+              diminuídos ao máximo, por serem       <strong>extremamente sustentáveis</strong>
+                
+              . Assim, não causam efeitos negativos no meio ambiente. Além
+              disso, são extremamente econômicas, fazendo você gastar menos
+              dinheiro!
+            </p>
+        </div> </div>
       </section>
 
       <section className="objetivo">
@@ -98,7 +111,8 @@ export default function Funcionamento() {
             Objetivos de Desenvolvimento Sustentável, sendo um passo importante para
             ajudar o mundo.
           </p>
-          <button>Saiba do que precisa</button>
+          <Link to="/loja"><button>Faça sua parte!</button></Link>
+
         </div>
       </section>
     </div>

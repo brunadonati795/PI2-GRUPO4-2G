@@ -2,6 +2,9 @@ import Header from "./componentes/header";
 import logoColorida from "../src/assets/imagens/logoAzul.png";
 import casaPlaca from "../src/assets/imagens/primeirapg-casa.png";
 import { Link } from "react-router-dom";
+import PlacaOrg from "./assets/imagens/primeirapg-organica.png";
+import PlacaPeroviskta from  "./assets/imagens/primeirapg-peroviskita.png";
+import PlacaDSSC from "./assets/imagens/primeirapg-dssc.png";
 
 export default function PrimeiraPagina() {
   return (
@@ -35,7 +38,7 @@ export default function PrimeiraPagina() {
         <div className="produtos-container">
           <div className="card-produto">
             <h3>Placas orgânicas</h3>
-            <img src="placa-organica.jpg" alt="Placa orgânica" />
+            <img src={PlacaOrg} alt="Placa orgânica" />
             <p>
               Utilizam polímeros semicondutores. São leves, flexíveis e de
               baixo custo.
@@ -44,7 +47,7 @@ export default function PrimeiraPagina() {
 
           <div className="card-produto">
             <h3>Placas de perovskita</h3>
-            <img src="img/perovskita.png" alt="Placa de perovskita" />
+            <img src={PlacaPeroviskta} alt="Placa de perovskita" />
             <p>
               Alta eficiência e baixo custo. Ainda enfrentam desafios quanto à
               durabilidade.
@@ -53,7 +56,7 @@ export default function PrimeiraPagina() {
 
           <div className="card-produto">
             <h3>Placas DSSC</h3>
-            <img src="img/dssc.png" alt="Placa DSSC" />
+            <img src={PlacaDSSC} alt="Placa DSSC" />
             <p>
               Inspiradas na fotossíntese. Funcionam bem em ambientes com baixa
               luz.
@@ -80,8 +83,7 @@ export default function PrimeiraPagina() {
           <div className="vantagem-card" style={{ animationDelay: "0.1s" }}>
             <h3>Redução da conta de energia</h3>
             <p>
-              Os custos com energia diminuem bastante, podendo até gerar crédito
-              com a concessionária.
+              Os custos com energia diminuem bastante.
             </p>
           </div>
           <div className="vantagem-card" style={{ animationDelay: "0.2s" }}>

@@ -23,6 +23,7 @@ export default function Login() {
   };
 
   return (
+<<<<<<< HEAD
     <div className="login-box">
       <h2>Login</h2>
       <form onSubmit={submit}>
@@ -33,5 +34,35 @@ export default function Login() {
         <button type="submit">Entrar</button>
       </form>
     </div>
+=======
+    <div className="containerlogin">
+      <div className="login">
+        <h2>Login</h2>
+        <form onSubmit={handleLogin} className="login-form">
+          <label className="login-label">
+            Nome completo:
+            <input
+              type="text"
+              value={fullName}
+              onChange={(e) => setFullName(e.target.value)}
+              className="login-input"
+              required
+            />
+          </label>
+          <label className="login-label" required>
+            Senha:
+            <input
+              type="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              className="login-input"
+              required
+            />
+          </label>
+          <button type="submit" className="login-button">Entrar</button>
+        </form>
+    </div></div>
+
+>>>>>>> 640672c5d677970c76fb64f24d304206cf2cd715
   );
 }

@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import "../App.css";
 import logoAmarela from '../assets/imagens/logoAmarela.png'
+
 import Funcionamento from "../páginas/funcionamento";
 import Suporte from "../páginas/suporte";
 import Descarte from "../páginas/descarte";
@@ -23,14 +24,7 @@ export default function Header() {
       <div className="links">
         <Link to="/">Nossa Empresa</Link>
         <Link to="/opcoes">Opções</Link>
-        <div className="menu-com-submenu">
-          <Link to="#">Informativo</Link>
-          <div className="submenu">
-            <Link to="/funcionamento">Como funcionam?</Link>
-            <Link to="/componentes">Componentes</Link>
-          </div>
-        </div>
-
+        <Link to="/funcionamento">O que são?</Link>
         {/* <Link to="/api">Cálculo</Link> */}
         <Link to="/loja">Loja</Link>
         <Link to="/suporte">Suporte</Link>

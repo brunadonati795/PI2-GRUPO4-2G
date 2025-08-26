@@ -9,9 +9,8 @@ const Descarte = () => {
       <div className="info-container">
         <div className="textoDescarte">
           <p>
-            Nós, da Renassol, ajudamos você a descartar suas placas solares e realizamos sua reciclagem,
-            garantindo o destino correto para elas.<br /><br />
-            Informe-nos seu endereço para buscarmos suas placas.
+            Nós da Renassol, ajudamos você a descartar suas placas solares e realizamos sua reciclagem,
+            garantindo o destino correto para elas. <strong>Informe-nos seu endereço para buscarmos suas placas.</strong>
           </p>
         </div>
 

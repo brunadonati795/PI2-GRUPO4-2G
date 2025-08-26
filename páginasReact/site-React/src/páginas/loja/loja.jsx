@@ -4,8 +4,6 @@ import Modal from "./modal";
 import storeData from "./storeData";
 import iconedocarrinho from "../../assets/imagens/iconedocarrinho.png";
 
-
-
 const Loja = () => {
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [carrinhoAberto, setCarrinhoAberto] = useState(false);
@@ -31,7 +29,7 @@ const Loja = () => {
     });
   };
 
-  // Remover produto do carrinho
+  // Remover 1 unidade ou todo o produto
   const removerDoCarrinho = (produtoId) => {
     setItensDoCarrinho(prevItens =>
       prevItens
@@ -44,10 +42,10 @@ const Loja = () => {
     );
   };
 
-  // Atualiza total
+  // Atualiza total geral automaticamente
   useEffect(() => {
     const novoTotal = itensDoCarrinho.reduce(
-      (acc, item) => acc + parseFloat(item.price) * item.quantidade,
+      (acc, item) => acc + item.preco * item.quantidade,
       0
     );
     setTotalGeral(novoTotal);
@@ -85,13 +83,13 @@ const Loja = () => {
                     <img src={item.image} alt={item.name} className="carrinho-img" />
                     <div className="carrinho-info">
                       <h3>{item.name}</h3>
-                      <p>Preço: R$ {item.price}</p>
+                      <p>Preço: R$ {item.preco.toFixed(2)}</p>
                       <div className="carrinho-controles">
                         <button onClick={() => removerDoCarrinho(item.id)}>-</button>
                         <span>{item.quantidade}</span>
                         <button onClick={() => adicionarAoCarrinho(item)}>+</button>
                       </div>
-                      <p>Subtotal: R$ {(parseFloat(item.price) * item.quantidade).toFixed(2)}</p>
+                      <p>Subtotal: R$ {(item.preco * item.quantidade).toFixed(2)}</p>
                     </div>
                   </li>
                 ))}
@@ -106,7 +104,7 @@ const Loja = () => {
         </div>
       )}
 
-      {/* Produtos */}
+      {/* Conteúdo da loja */}
       <div className="store-container">
         <h1 className="store-title">LOJA - PLACAS SOLARES</h1>
         <div className="store-grid">
@@ -114,9 +112,9 @@ const Loja = () => {
             <ProductCard
               key={product.id}
               product={{
-                ...product,
-                quantidade: itensDoCarrinho.find(item => item.id === product.id)?.quantidade || 0
-              }}
+              ...product,
+              quantidade: itensDoCarrinho.find(item => item.id === product.id)?.quantidade || 0
+            }}
               onClick={setSelectedProduct}
               adicionarAoCarrinho={() => adicionarAoCarrinho(product)}
               removerDoCarrinho={() => removerDoCarrinho(product.id)}
@@ -130,9 +128,9 @@ const Loja = () => {
             <ProductCard
               key={product.id}
               product={{
-                ...product,
-                quantidade: itensDoCarrinho.find(item => item.id === product.id)?.quantidade || 0
-              }}
+              ...product,
+              quantidade: itensDoCarrinho.find(item => item.id === product.id)?.quantidade || 0
+            }}
               onClick={setSelectedProduct}
               adicionarAoCarrinho={() => adicionarAoCarrinho(product)}
               removerDoCarrinho={() => removerDoCarrinho(product.id)}

@@ -1,7 +1,8 @@
 import "./style.css";
 
-const ProductCard = ({ product, onClick, adicionarAoCarrinho, removerDoCarrinho }) => {
+import React from "react";
 
+const ProductCard = ({ product, onClick, adicionarAoCarrinho, removerDoCarrinho }) => {
   return (
     <div className="store-card" onClick={() => onClick && onClick(product)}>
       <img
@@ -18,7 +19,7 @@ const ProductCard = ({ product, onClick, adicionarAoCarrinho, removerDoCarrinho 
         <button
           className="store-btn store-btn-left"
           onClick={(e) => {
-            e.stopPropagation();
+            e.stopPropagation(); // evita que abra o modal ao clicar no botão
             removerDoCarrinho && removerDoCarrinho();
           }}
         >
@@ -30,7 +31,7 @@ const ProductCard = ({ product, onClick, adicionarAoCarrinho, removerDoCarrinho 
         <button
           className="store-btn store-btn-right"
           onClick={(e) => {
-            e.stopPropagation();
+            e.stopPropagation(); // evita que abra o modal ao clicar no botão
             adicionarAoCarrinho && adicionarAoCarrinho();
           }}
         >

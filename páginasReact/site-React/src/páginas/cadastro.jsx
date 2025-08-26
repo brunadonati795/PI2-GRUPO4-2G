@@ -1,8 +1,6 @@
 import { useState } from "react";
 
-import { Link, useNavigate } from "react-router-dom";
-import axios from "axios";
-import bgImage from "../assets/imagens/bg.jpg";
+
 import { useNavigate, Link } from "react-router-dom";
 import axios from "axios";   // <-- importando axios
 import bgImage from "../assets/imagens/bg.jpg"

@@ -371,8 +371,8 @@
   .fechar-carrinho {
     position: absolute;
     top: 2vh;
-    right: 2vw;
-    font-size: 5vh;
+    right: 1vw;
+    font-size: 2vh;
     padding: 1.5vh 2.5vh;
     background-color: var(--amareloFundo);
     color: #333;

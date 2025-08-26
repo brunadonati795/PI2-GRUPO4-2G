@@ -317,18 +317,19 @@
   }
 
   .store-title {
-    font-size: 7vw; /* maior */
+    font-size: 7vw;
     text-align: center;
   }
 
   .store-grid {
-    flex-direction: column;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 3vh;
+    justify-items: center; /* centraliza os cards */
   }
 
   .store-card {
-    width: 85%; /* menor */
+    width: 90%;
     padding: 1.5vh;
     border-radius: 1vh;
   }
@@ -338,22 +339,79 @@
   }
 
   .store-card-name {
-    font-size: 3.8vw; /* um pouco menor */
+    font-size: 3.8vw;
   }
 
   .store-card-price {
-    font-size: 3vw; /* um pouco menor */
+    font-size: 3vw;
   }
 
   .store-btn {
     font-size: 3vw;
-    padding: 1vh 3vw;
+    padding: 1.5vh 3vw;
     border-radius: 10px;
   }
 
+  /* Carrinho responsivo: ocupa toda a tela */
+.carrinho {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 90vw; /* ocupa 90% da largura da tela */
+    height: 100vh;
+    background: white;
+    box-shadow: -2px 0 8px rgba(0, 0, 0, 0.3);
+    z-index: 1200;
+    padding: 2vh 3vw;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .fechar-carrinho {
+    position: absolute;
+    top: 2vh;
+    right: 2vw;
+    font-size: 5vh;
+    padding: 1.5vh 2.5vh;
+    background-color: var(--amareloFundo);
+    color: #333;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 0 6px rgba(0,0,0,0.2);
+    z-index: 1300;
+    transition: background-color 0.3s ease;
+  }
+
+  .fechar-carrinho:hover {
+    background-color: #d6b138;
+  }
+
+  .carrinho h2 {
+    font-size: 6vw;
+    margin-top: 12vw;
+    text-align: center;
+  }
+
+  .carrinho-img {
+    width: 18vw;
+    height: 18vw;
+  }
+
+  .imagem-carrinho {
+    width: 10vw;
+    position: fixed;
+    top: 2vw;
+    right: 2vw;
+    z-index: 1001;
+  }
+
+  /* Modal responsivo */
   .store-modal {
     width: 90%;
-    padding: 3vh 4vw;
+    padding: 4vh 4vw;
+    font-size: 4vw;
   }
 
   .store-modal-title {
@@ -362,28 +420,21 @@
 
   .store-modal-description,
   .store-modal-price {
-    font-size: 3.5vw;
+    font-size: 4vw;
   }
 
-  .carrinho {
-    width: 95vw; /* maior */
-    font-size: 4vw; /* textos maiores */
-  }
-
-  .carrinho h2 {
-    font-size: 5vw; /* título maior */
-  }
-
-  .carrinho-img {
-    width: 14vw;
-    height: 14vw;
-  }
-
-  .imagem-botao {
-    width: 10vw;
-    right: 10px;
+  /* Botão X do modal (caso use algo como .modal-close ou botão dentro do Modal) */
+  .store-modal button {
+    font-size: 8vw;
+    position: absolute;
+    top: 2vw;
+    right: 2vw;
+    background: none;
+    border: none;
+    cursor: pointer;
   }
 }
+
 
 /* =====================
    Responsividade Tablet

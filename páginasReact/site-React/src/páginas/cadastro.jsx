@@ -51,14 +51,17 @@ export default function Cadastro() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     
+const handleSubmit = async (e) => {
+  e.preventDefault();
+  
     try {
-      // Enviar dados para a API Flask com axios
       const response = await axios.post("http://localhost:5000/usuarios", {
         nome: formData.nome,
         email: formData.email,
         senha: formData.senha,
-        endereco_completo: `${formData.rua}, ${formData.numero} - ${formData.bairro} (${formData.complemento})`,
         cep: formData.cep,
+        rua: formData.rua,
+        numero: formData.numero,
       });
 
       alert("Cadastro realizado com sucesso!");
@@ -66,14 +69,14 @@ export default function Cadastro() {
 
     } catch (error) {
       if (error.response) {
-        // Erro vindo do backend
         alert("Erro: " + (error.response.data.error || "Não foi possível cadastrar"));
       } else {
-        // Erro de rede/conexão
         alert("Erro de conexão com o servidor");
       }
       console.error(error);
     }
+  };
+
   };
 
   return (

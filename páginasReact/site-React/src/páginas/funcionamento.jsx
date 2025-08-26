@@ -2,10 +2,10 @@ import { useEffect, useRef } from "react";
 import imgSeta from "../assets/imagens/seta.png";
 import Componentes from "./componentes";
 import { Link } from "react-router-dom";
-import placalado1 from "../assets/imagens/comofuncionam-placaLado1";
-import placalado2 from "../assets/imagens/comofuncionam-placaLado2";
-import placasustentavel from  "../assets/imagens/comofuncionam-placaSustentavel.png";
-import card7 from "../assets/imagens/comofuncionam-card7.png";
+import placaLado1 from "../assets/imagens/comofuncionamplacaLado1.png";
+import placalado2 from "../assets/imagens/comofuncionamplacaLado2.png";
+import placasustentavel from  "../assets/imagens/comofuncionamplacaSustentavel.png";
+import card7 from "../assets/imagens/comofuncionamcard7.png";
 
 export default function Funcionamento() {
   const placaEsqRef = useRef(null);
@@ -41,7 +41,7 @@ export default function Funcionamento() {
         <div className="intro-conteudo">
           <img
             ref={placaEsqRef}
-            src={placalado1}
+            src={placaLado1}
             alt="Placa solar esquerda"
           />
           <p>

@@ -24,7 +24,7 @@ export default function Header() {
       <div className="links">
         <Link to="/">Nossa Empresa</Link>
         <Link to="/opcoes">Opções</Link>
-        <Link to="/funcionamento">Como funcionam?</Link>
+        <Link to="/funcionamento">O que são?</Link>
         {/* <Link to="/api">Cálculo</Link> */}
         <Link to="/loja">Loja</Link>
         <Link to="/suporte">Suporte</Link>

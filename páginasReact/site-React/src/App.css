@@ -1845,23 +1845,21 @@ button:hover {
   align-items: center;
   min-height: 100vh;
   background-color: #f0f2f5;
-  padding: 20px;
   box-sizing: border-box;
+  margin-top: 15vh;
 }
 
 .login-form {
-  background-color: #ffffff;
   padding: 40px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 5vh;
   width: 100%;
-  max-width: 400px;
+  max-width: 40vw;
   text-align: center;
   box-sizing: border-box;
 }
 
 .login-form h2 {
-  margin-bottom: 20px;
+  margin-bottom: 3vh;
   color: #333333;
   font-size: 24px;
 }
@@ -2481,7 +2479,7 @@ button:hover {
 
 .login {
   width: 35vw;
-  margin: 10vh auto;
+  margin: 23vh auto;
   padding: 5vh 3vw;
   background-color: var(--azulEscuro);
   border-radius: 1.5vh;

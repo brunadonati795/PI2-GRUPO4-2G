@@ -1287,7 +1287,7 @@ select {
 }
 
 /* ===== COMO FUNCIONAM? ===== */
-.Funcionamento {
+body {
   overflow-x: hidden;
   overflow-y: auto;
 }
@@ -1314,30 +1314,15 @@ select {
   max-width: 100vw;
   margin: 7vh 0 0 0;
 }
-
-.intro-conteudo img {
-  width: 25vw;
-  max-width: 30%;
-  height: auto;
-}
-
-.intro-conteudo img:first-of-type {
-  transform: translateX(-100%);
-  opacity: 0;
+.intro-conteudo img.esquerda{
   animation: slideFromLeft 1s ease-out forwards;
 }
 
-.intro-conteudo img:last-of-type {
-  transform: translateX(100%);
-  opacity: 0;
+.intro-conteudo img.direita {
   animation: slideFromRight 1s ease-out forwards;
 }
 
 @keyframes slideFromLeft {
-  0% {
-    transform: translateX(-100%);
-    opacity: 0;
-  }
   100% {
     transform: translateX(0);
     opacity: 1;
@@ -1345,14 +1330,16 @@ select {
 }
 
 @keyframes slideFromRight {
-  0% {
-    transform: translateX(100%);
-    opacity: 0;
-  }
+
   100% {
     transform: translateX(0);
     opacity: 1;
   }
+}
+.intro-conteudo img {
+  width: 25vw;
+  max-width: 30%;
+  height: auto;
 }
 
 .intro-conteudo p {
@@ -1499,7 +1486,7 @@ section {
 .box-ods img {
   width: 40vw;  
   height: auto;
-  margin-left: -30vh;
+  margin-left: 0;
 }
 
 .icone-sol {
@@ -1612,12 +1599,10 @@ button:hover {
 /* ====COMPONENTES===== */
 .componentes {
   max-width: 100%;
-  /* margin: auto; */
-  padding: 12vh 4vw 2vh 4vw;
+  padding: 12vh 4vw 6vh 4vw;
   text-align: center;
   background-color: var(--azulEscuro);
   height: 100%;
-  margin-bottom: -5vh;
 }
 
 .subtitle {
@@ -1838,13 +1823,12 @@ button:hover {
   width: 3vw;
 }
 
-/* Estilos para o container de login */
 .login-container {
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-color: #f0f2f5;
+  background-image: url("./assets/imagens/fundologin.jpg");
   box-sizing: border-box;
   margin-top: 15vh;
 }
@@ -1990,7 +1974,6 @@ button:hover {
   align-items: center;
   gap: 10vh;
   height: 100vh;
-  border-bottom-right-radius: 10vh;
 }
 
 .banner-solar-card {
@@ -2160,7 +2143,7 @@ button:hover {
   padding: 2vh 3vh;
   margin-top: 1vh;
   font-size: 3.5vh;
-  border-radius: 2vh;
+  border-radius: 10vh;
   cursor: pointer;
   font-family: "Montserrat", sans-serif;
   box-shadow: 0 0.5vh 1vh rgba(0, 0, 0, 0.278);

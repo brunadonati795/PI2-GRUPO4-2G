@@ -1,9 +1,9 @@
-import { useEffect, useRef } from "react";
+import {useEffect, useRef } from "react";
 import imgSeta from "../assets/imagens/seta.png";
 import Componentes from "./componentes";
 import { Link } from "react-router-dom";
 import placaLado1 from "../assets/imagens/comofuncionamplacaLado1.png";
-import placalado2 from "../assets/imagens/comofuncionamplacaLado2.png";
+import placaLado2 from "../assets/imagens/comofuncionamplacaLado2.png";
 import placasustentavel from  "../assets/imagens/comofuncionamplacaSustentavel.png";
 import card7 from "../assets/imagens/comofuncionamcard7.png";
 
@@ -43,6 +43,7 @@ export default function Funcionamento() {
             ref={placaEsqRef}
             src={placaLado1}
             alt="Placa solar esquerda"
+            className="esquerda"
           />
           <p>
             As placas solares, ou módulos fotovoltaicos, são a tecnologia que
@@ -53,8 +54,9 @@ export default function Funcionamento() {
           </p>
           <img
             ref={placaDirRef}
-            src={placalado2}
+            src={placaLado2}
             alt="Placa solar direita"
+            className="direita"
           />
         </div>
       </section>

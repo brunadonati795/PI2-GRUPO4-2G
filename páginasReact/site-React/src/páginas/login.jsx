@@ -19,32 +19,34 @@ const Login = () => {
   };
 
   return (
-    <div className="login-container">
-      <div className="login-form">
+    <div className="containerlogin">
+      <div className="login">
         <h2>Login</h2>
-        <form onSubmit={handleLogin}>
-          <label>
+        <form onSubmit={handleLogin} className="login-form">
+          <label className="login-label">
             Nome completo:
             <input
               type="text"
               value={fullName}
               onChange={(e) => setFullName(e.target.value)}
+              className="login-input"
               required
             />
           </label>
-          <label>
+          <label className="login-label" required>
             Senha:
             <input
               type="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
+              className="login-input"
               required
             />
           </label>
-          <button type="submit">Entrar</button>
+          <button type="submit" className="login-button">Entrar</button>
         </form>
-      </div>
-    </div>
+    </div></div>
+
   );
 };
 

@@ -5,15 +5,10 @@ import componentesDsjuntor from '../assets/imagens/componentesDsjuntor.png'
 import componentesControladordeCarga from '../assets/imagens/componentesControladordeCarga.png'
 import componentesBaterias from '../assets/imagens/componentesBaterias.png'
 import componentesStringBox from '../assets/imagens/componentesStringBox.png'
-import imgSeta from "../assets/imagens/seta.png"
 
 export default function Componentes() {
   return (
-    <>      
-      <Link to="/funcionamento" className="botao-voltar">
-        <img src={imgSeta}></img>
-      </Link>
-
+    <>
       <section className="componentes">
         <h1>O QUE É NECESSÁRIO</h1>
         <p className="subtitle">Para pôr em casa?</p>
@@ -23,7 +18,7 @@ export default function Componentes() {
             <div className="text">
               <h2>Módulos Fotovoltaicos</h2>
               <p>
-                <strong>Função:</strong> Captam a luz do sol e a convertem em energia elétrica (corrente contínua CC).
+                <strong>Função:</strong> Captam a luz do sol e a convertem em energia elétrica.
               </p>
               <p>
                 <strong>Importância:</strong> Elemento central do sistema. Sem eles, não há geração de energia.
@@ -55,9 +50,6 @@ export default function Componentes() {
           <div className="item">
             <div className="text">
               <h2>Disjuntor</h2>
-              <p>
-                <strong>Incluem:</strong> Disjuntores, fusíveis, DPS (Dispositivos de Proteção contra Surtos).
-              </p>
               <p>
                 <strong>Função:</strong> Garantem segurança contra curtos-circuitos, surtos e sobrecargas.
               </p>

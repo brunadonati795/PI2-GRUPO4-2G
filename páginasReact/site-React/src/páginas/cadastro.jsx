@@ -95,17 +95,6 @@ export default function Cadastro() {
 
           <input type="text" id="numero" name="numero" value={formData.numero} onChange={handleChange} required />
 
-          <button type="submit">Cadastrar-se</button>
-          <p>Já tem uma conta? faça seu login <Link to="/login">aqui!</Link></p>
-          <input
-            type="text"
-            id="numero"
-            name="numero"
-            value={formData.numero}
-            onChange={handleChange}
-            required
-          />
-
           <label htmlFor="complemento">Complemento:</label>
           <input
             type="text"

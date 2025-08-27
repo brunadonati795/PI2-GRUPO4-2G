@@ -741,7 +741,7 @@ select {
 }
 
 .link-ajuda {
-  margin-top: 15svh;
+  margin-top: 10svh;
   font-size: larger;
 }
 
@@ -882,8 +882,11 @@ select {
 }
 
 .fundo-arredondado p {
-  font-size: larger;
+  font-size: 3vh;
   margin-bottom: 20px;
+}
+.fundo-arredondado strong {
+  font-size: 3vh;
 }
 
 .btn-atendimento {
@@ -1814,7 +1817,7 @@ button:hover {
   position: fixed;
   background-color: var(--amareloFundo); 
   color: var(--azulEscuro); 
-  height: 10vh;
+  height: 9vh;
   border: none;
   padding: 1vh;
   border-radius: 50%;
@@ -1822,7 +1825,7 @@ button:hover {
   transition: background 0.3s, transform 0.2s;
   display: inline-block;
   margin: 14vh 0 0 5vw;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 1vh 1vh rgba(61, 61, 61, 0.3);
 }
 
 .botao-voltar:hover {

@@ -1209,7 +1209,6 @@ select {
 /* ====SUPORTE==== */
 .Suporte {
   max-width: 100vw;
-  margin: 0 auto;
   background-image: url(./assets/imagens/fundoRenassol.png);
 }
 .support-section {

@@ -410,21 +410,27 @@ body {
 }
 
 /* confirmação de pagamento */
-
+.confirmacao {
+  display: flex;
+  flex-direction: column;
+  padding-top: 12vh;
+  margin-bottom: 10vh;
+}
 .pagamento-bloco {
   background-color: #fff;
-  padding: 2vh 2vw;
-  margin-bottom: 2vh;
-  border-radius: 1vh;
+  padding: 2vh ;
+  border-radius: 2vh;
+  margin: 2vh 7vw 0vh 7vw;
+  max-height: 20vh;
 }
 
 .opcao-entrega {
   display: flex;
   justify-content: space-between;
-  border: 0.1vh solid #222;
+  border: 0.1vh solid var(--azulEscuro);
   padding: 1vh 1vw;
   margin-top: 1vh;
-  border-radius: 0.5vh;
+  border-radius: 5vh;
 }
 
 .valor-preco {
@@ -446,9 +452,13 @@ select {
 
 .secao-chave-pix .pix-detalhes {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   margin-top: 1vh;
+}
+
+.confirmacao .botao-voltar {
+  margin-top: 2vh;
 }
 
 .itens-mostruario-principal {
@@ -1362,7 +1372,6 @@ body {
   align-items: center;
   gap: 10vh;
   height: 100vh;
-  border-top-left-radius: 10vh;
   border-bottom-right-radius: 10vh;
 }
 

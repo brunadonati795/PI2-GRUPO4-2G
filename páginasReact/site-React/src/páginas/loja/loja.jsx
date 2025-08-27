@@ -98,7 +98,7 @@ const Loja = () => {
 
               <div className="carrinho-total">
                 <h3>Total da Compra: R$ {totalGeral.toFixed(2)}</h3>
-                <Link to="/cadastro"><button className="finalizar-btn">Finalizar Compra</button></Link>
+                <Link to="/confirmacaodepagamento"><button className="finalizar-btn">Finalizar Compra</button></Link>
               </div>
             </>
           )}

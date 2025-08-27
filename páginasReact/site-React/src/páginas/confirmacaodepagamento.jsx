@@ -1,10 +1,16 @@
+import "../App.css";
+import imgSeta from "../assets/imagens/seta.png";
+import { Link } from "react-router-dom";
 
 let diaEntrega = "00/00/0000";
 let valor = 0.0;
 
 function ConfirmacaodePagamento() {
   return (
-    <main>
+    <div className="confirmacao">
+      <Link to="/loja" className="botao-voltar">
+        <img src={imgSeta}></img>
+      </Link>
       <section className="pagamento-bloco">
         <p><strong>Endereço:</strong><br />
         Rua: Valdir Staggmeier 224-casa 89680-000 Irani SC</p>
@@ -49,7 +55,7 @@ function ConfirmacaodePagamento() {
           />
         </div>
       </section>
-    </main>
+    </div>
   );
 }
 

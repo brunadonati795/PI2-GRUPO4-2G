@@ -24,7 +24,6 @@ const Footer = () => {
       <div className="ftr_colunaDois">
         <Link to="/cadastro">Cadastro</Link>
         <Link to="/loja">Loja</Link>
-        <Link to="/carrinho">Carrinho</Link>
         <Link to="/api">API</Link>
       </div>
     </footer>

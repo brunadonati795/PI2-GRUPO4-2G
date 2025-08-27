@@ -1,7 +1,7 @@
-from flask import Blueprint, jsonify, request
+from flask import jsonify, request
+from main import app
 from models import db, Usuario
 
-api = Blueprint("api", __name__)
 
 def usuario_to_dict(u):
     return {
@@ -15,32 +15,34 @@ def usuario_to_dict(u):
         "numero": u.numero
     }
 
+
 # Listar todos os usuários
-@api.route("/usuarios", methods=["GET"])
+@app.route("/usuarios", methods=["GET"])
 def listar_usuarios():
     usuarios = Usuario.query.all()
     return jsonify([usuario_to_dict(u) for u in usuarios])
 
+
 # Obter usuário por ID
-@api.route("/usuarios/<int:user_id>", methods=["GET"])
+@app.route("/usuarios/<int:user_id>", methods=["GET"])
 def obter_usuario(user_id):
     user = Usuario.query.get(user_id)
     if not user:
         return jsonify({"error": "Usuário não encontrado"}), 404
     return jsonify(usuario_to_dict(user))
 
+
 # Criar usuário
-@api.route("/usuarios", methods=["POST"])
+@app.route("/usuarios", methods=["POST"])
 def criar_usuario():
     data = request.get_json() or {}
-    # mínimos
+
     nome = data.get("nome")
     email = data.get("email")
     senha = data.get("senha")
     if not (nome and email and senha):
         return jsonify({"error": "nome, email e senha são obrigatórios"}), 400
 
-    # evita duplicidade de email simples
     if Usuario.query.filter_by(email=email).first():
         return jsonify({"error": "Email já cadastrado"}), 400
 
@@ -62,8 +64,9 @@ def criar_usuario():
 
     return jsonify({"message": "Usuário criado com sucesso", "id": usuario.id}), 201
 
+
 # Atualizar usuário
-@api.route("/usuarios/<int:user_id>", methods=["PUT"])
+@app.route("/usuarios/<int:user_id>", methods=["PUT"])
 def atualizar_usuario(user_id):
     user = Usuario.query.get(user_id)
     if not user:
@@ -86,8 +89,9 @@ def atualizar_usuario(user_id):
 
     return jsonify({"message": "Usuário atualizado com sucesso"})
 
+
 # Deletar usuário
-@api.route("/usuarios/<int:user_id>", methods=["DELETE"])
+@app.route("/usuarios/<int:user_id>", methods=["DELETE"])
 def deletar_usuario(user_id):
     user = Usuario.query.get(user_id)
     if not user:
@@ -102,36 +106,24 @@ def deletar_usuario(user_id):
 
     return jsonify({"message": "Usuário deletado com sucesso"})
 
-# Login simples (sem token) — só pra protótipo
-@api.route("/login", methods=["POST"])
-def login():
-    data = request.get_json() or {}
-    email = data.get("email")
-    senha = data.get("senha")
-
-    if not (email and senha):
-        return jsonify({"error": "Email e senha obrigatórios"}), 400
-
-    user = Usuario.query.filter_by(email=email).first()
-    if not user or user.senha != senha:
-        return jsonify({"error": "Credenciais inválidas"}), 401
-
-    return jsonify(usuario_to_dict(user))
 
 
-@api.route("/usuarios/update", methods=["PUT"])
+
+@app.route("/usuarios/update", methods=["PUT"])
 def update_usuario():
     data = request.json
     usuario = Usuario.query.filter_by(email=data["email"]).first()
     if not usuario:
         return jsonify({"error": "Usuário não encontrado"}), 404
 
-    usuario.nome = data["nome"]
     usuario.cep = data["cep"]
-    usuario.bairro = data["bairro"]
-    usuario.rua = data["rua"]
+    usuario.cidade = data["cidade"]
+    usuario.email = data["email"]
+    usuario.nome = data["nome"]
     usuario.numero = data["numero"]
-    usuario.complemento = data["complemento"]
+    usuario.rua = data["rua"]
+    usuario.senha = data["senha"]
+
 
     db.session.commit()
     return jsonify({"message": "Usuário atualizado com sucesso!"})

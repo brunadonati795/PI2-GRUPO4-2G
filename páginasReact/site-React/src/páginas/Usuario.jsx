@@ -1,18 +1,17 @@
-import { useState } from "react";
-import { useLocation } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
 
 export default function Usuario() {
-  const location = useLocation();
-  const cadastroData = location.state || {}; // dados enviados do cadastro
+  const { id } = useParams(); // pega o id da URL /usuario
 
   // estados para os campos do usuário
-  const [nome, setNome] = useState(cadastroData.nome || "Nome Completo");
-  const [cep, setCep] = useState(cadastroData.cep || "");
-  const [bairro, setBairro] = useState(cadastroData.bairro || "");
-  const [rua, setRua] = useState(cadastroData.rua || "");
-  const [numero, setNumero] = useState(cadastroData.numero || "");
-  const [complemento, setComplemento] = useState(cadastroData.complemento || "");
-  const [email] = useState(cadastroData.email || ""); // ID lógico do usuário
+  const [cep, setCep] = useState("");
+  const [nome, setNome] = useState("");
+  const [bairro, setBairro] = useState("");
+  const [rua, setRua] = useState("");
+  const [numero, setNumero] = useState("");
+  const [complemento, setComplemento] = useState("");
+  const [cidade, setCidade] = useState("");
 
   const [isEditing, setIsEditing] = useState(false);
 
@@ -21,36 +20,52 @@ export default function Usuario() {
     { id: 1235, status: "Pendente", date: "05/08/2025", value: "R$ 249,90" },
   ]);
 
-  const handleSave = async () => {
-    setIsEditing(false);
+  // Buscar dados do usuário no back
+  useEffect(() => {
+    async function fetchUser() {
+      try {
+        const response = await fetch(`http://localhost:5000/usuarios`);
+        if (!response.ok) throw new Error("Erro ao buscar usuário");
+        const data = await response.json();
 
+        setNome(data.nome || "");
+        setCep(data.cep || "");
+        setBairro(data.bairro || "");
+        setRua(data.rua || "");
+        setNumero(data.numero || "");
+        setComplemento(data.complemento || "");
+        setCidade(data.cidade || "");
+      } catch (err) {
+        console.error(err);
+        alert("Erro ao carregar dados do usuário.");
+      }
+    }
+    fetchUser();
+  }, [id]);
+
+  // Salvar no back
+  const handleSave = async () => {
     try {
-      const response = await fetch("http://127.0.0.1:5000/usuarios/update", {
+      const response = await fetch(`http://localhost:5000/usuarios`, {
         method: "PUT",
-        headers: {
-          "Content-Type": "application/json",
-        },
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          email, // identificador
           nome,
           cep,
           bairro,
           rua,
           numero,
           complemento,
+          cidade,
         }),
       });
 
-      if (!response.ok) {
-        throw new Error("Erro ao atualizar usuário");
-      }
-
-      const data = await response.json();
-      console.log("Usuário atualizado:", data);
-      alert("Dados salvos com sucesso!");
+      if (!response.ok) throw new Error("Erro ao salvar dados");
+      alert("Dados atualizados com sucesso!");
+      setIsEditing(false);
     } catch (err) {
       console.error(err);
-      alert("Erro ao salvar no servidor!");
+      alert("Erro ao salvar no servidor.");
     }
   };
 
@@ -60,7 +75,7 @@ export default function Usuario() {
         <div className="profile-top">
           <div className="avatar-wrap">
             <img
-              src="https://via.placeholder.com/160"
+              src="https://placehold.co/184x184"
               alt="Foto de perfil"
               className="avatar"
             />
@@ -105,6 +120,12 @@ export default function Usuario() {
                   onChange={(e) => setComplemento(e.target.value)}
                   placeholder="Complemento"
                 />
+                <input
+                  type="text"
+                  value={cidade}
+                  onChange={(e) => setCidade(e.target.value)}
+                  placeholder="Cidade"
+                />
                 <button className="btn-small" onClick={handleSave}>
                   Salvar
                 </button>
@@ -117,6 +138,7 @@ export default function Usuario() {
                 <p className="highlight"><strong>Rua:</strong> {rua}</p>
                 <p className="highlight"><strong>Número:</strong> {numero}</p>
                 <p className="highlight"><strong>Complemento:</strong> {complemento}</p>
+                <p className="highlight"><strong>Cidade:</strong> {cidade}</p>
                 <button
                   className="btn-small"
                   onClick={() => setIsEditing(true)}

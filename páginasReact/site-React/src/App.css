@@ -2545,3 +2545,167 @@ button:hover {
   box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
   transform: translateY(-5px);
 }
+
+/*responsividade navbar*/
+.czh_cabecalho {
+    background-color: var(--azulEscuro);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1vh 3vh;
+    width: 100vw;
+    position: fixed;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+    margin-top: 0;
+}
+
+.lg_amarela {
+    height: 9vh;
+    cursor: pointer;
+}
+
+.lk_grupo {
+    display: flex;
+    gap: 4vh;
+    align-items: center;
+}
+
+.lk_grupo a {
+    color: white;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.9vh;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.lk_grupo a:hover {
+    color: var(--amareloFundo); 
+}
+
+.mn_subholder {
+    position: relative;
+    display: inline-block;
+}
+
+.mn_subholder a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.9vh;
+    transition: color 0.3s ease;
+}
+
+.mn_subholder:hover > a {
+    color: var(--amareloFundo); 
+}
+
+.sb_oculto {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #f1f1f1;
+    border-radius: 2vh;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 1vh 1.5vh;
+    z-index: 10;
+    min-width: 180px;
+}
+
+.mn_subholder:hover .sb_oculto {
+    display: block;
+}
+
+.sb_oculto a {
+    color: #222;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    display: block;
+    padding: 6px 0;
+    font-size: 1.2vh;
+    white-space: nowrap;
+    transition: background-color 0.2s ease;
+}
+
+.sb_oculto a:hover {
+    text-decoration: underline;
+    background-color: #eaeaea;
+    border-radius: 5px;
+}
+
+.us_ico img {
+    width: 2vw;
+    border-radius: 50vh;
+    background-color: #f9f9f9; 
+    object-fit: cover;
+    padding: 5px;
+    margin-right: 5vw;
+}
+
+/* Estilo do ícone do menu hamburguer */
+.mn_trigger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: 2vw;
+}
+
+.mn_trigger .br {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px 0;
+    transition: 0.4s;
+}
+
+/* Responsivo para mobile */
+@media (max-width: 768px) {
+    .lk_grupo {
+        display: none;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background-color: var(--azulEscuro);
+        flex-direction: column;
+        width: 60vw;
+        padding: 2vh;
+        border-radius: 0 0 8px 8px;
+    }
+
+    .lk_grupo.ativo {
+        display: flex;
+    }
+
+    .mn_trigger {
+        display: flex;
+    }
+
+    .us_ico {
+        display: none;
+    }
+}
+
+/* Tablets */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .lk_grupo a {
+        font-size: 1.6vh;
+        gap: 2vh;
+    }
+}
+
+/* Laptops */
+@media (min-width: 1025px) and (max-width: 1440px) {
+    .lk_grupo a {
+        font-size: 1.9vh;
+    }
+}
+
+/* Desktops grandes */
+@media (min-width: 1441px) {
+    .lk_grupo a {
+        font-size: 2vh;
+    }
+}
+

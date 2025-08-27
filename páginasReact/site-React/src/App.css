@@ -878,15 +878,17 @@ select {
 
 .btn-atendimento {
   display: inline-block;
+  padding: 3vh 5vw;
+  margin-left: 7vw;
+  border-radius: 5vw;
+
   background-color: var(--amareloFundo);
   color: var(--azulEscuro);
-  padding: 3vh 5vw;
-  text-decoration: none;
   font-weight: bold;
   font-size: x-large;
-  border-radius: 5vw;
-  transition: background 0.3s ease;
-  margin-left: 7vw;
+  text-decoration: none;
+
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
 }
 
 .btn-atendimento:hover {

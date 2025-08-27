@@ -1299,7 +1299,7 @@ select {
 
 
 
-/* Para tablets (768px ou menos) */
+
 @media (max-width: 768px) {
     .intro-conteudo {
         flex-direction: column;
@@ -1308,17 +1308,18 @@ select {
     }
 
     .intro-conteudo img {
-        width: 40vw;
-        max-width: 50%;
+        width: 50vw;
+        max-width: 300px;
     }
 
     .intro-conteudo p {
-        max-width: 80vw;
+        max-width: 90%;
         font-size: 1rem;
+        margin: 0 auto;
     }
 
     .banner-solar-container {
-        padding: 5vh;
+        padding: 5vh 2vw;
         gap: 5vh;
     }
 
@@ -1326,20 +1327,21 @@ select {
         flex-direction: column;
         align-items: center;
         max-height: none;
+        gap: 3vh;
     }
 
     .banner-solar-card {
-        width: 80vw;
-        margin: 0;
+        width: 90%;
+        margin: 0 auto;
     }
 
     .placaSustentavel {
-        width: 60vw;
+        width: 70%;
         margin-top: 3vh;
     }
 
     .banner-solar-highlight-card {
-        width: 80vw;
+        width: 90%;
         height: auto;
         padding: 3vh;
     }
@@ -1351,47 +1353,71 @@ select {
     }
 
     .box-ods img {
-        width: 60vw;
+        width: 70%;
+        max-width: 250px;
     }
 
     .texto-ods p {
-        width: 80vw;
-        font-size: 3vh;
+        width: 90%;
+        font-size: 2.7vh;
+        margin: 0 auto;
     }
 }
 
-/* Para celulares (480px ou menos) */
+
 @media (max-width: 480px) {
     .intro h1 {
-        font-size: 4vh;
+        font-size: 3.5vh;
+        line-height: 1.2;
+        padding: 0 2vw;
     }
 
     .intro-conteudo img {
-        width: 50vw;
+        width: 70%;
+        max-width: 220px;
     }
 
     .intro-conteudo p {
         font-size: 0.9rem;
+        width: 95%;
+        margin: 0 auto;
+    }
+
+    .banner-solar-card {
+        width: 95%;
+        padding: 2vh;
     }
 
     .banner-solar-card p,
     .banner-solar-card strong {
-        font-size: 2vh;
+        font-size: 1rem;
+    }
+
+    .banner-solar-highlight-card {
+        width: 95%;
+        padding: 2vh;
     }
 
     .banner-solar-highlight-card p {
-        font-size: 2vh;
+        font-size: 1rem;
     }
 
     .texto-ods p {
-        font-size: 2.5vh;
+        font-size: 1rem;
+        line-height: 1.4;
     }
 
     .texto-ods button {
-        font-size: 3vh;
-        padding: 1.5vh 2.5vh;
+        font-size: 1rem;
+        padding: 1vh 2vh;
+    }
+
+    
+    body {
+        overflow-x: hidden;
     }
 }
+
 
 /* =====CADASTRO ===== */
 .form-container {

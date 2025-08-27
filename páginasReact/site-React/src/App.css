@@ -881,18 +881,18 @@ select {
   padding: 3vh 5vw;
   margin-left: 7vw;
   border-radius: 5vw;
-
   background-color: var(--amareloFundo);
   color: var(--azulEscuro);
   font-weight: bold;
   font-size: x-large;
   text-decoration: none;
-
   transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
 }
 
 .btn-atendimento:hover {
   background-color: #f7c500;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
+  transform: translateY(-5px);
 }
 
 /* confirmação de pagamento */
@@ -2519,4 +2519,20 @@ button:hover {
 .login-form form button {
     padding: 10px 15px;
     margin-top: 10px;
+}
+
+.btn-faca-sua-parte {
+  background-color: var(--amareloFundo);
+  color: var(--azulEscuro);
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.btn-faca-sua-parte:hover {
+  background-color: #f7c500;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
+  transform: translateY(-5px);
 }

@@ -1752,66 +1752,73 @@ button:hover {
   width: 3vw;
 }
 
+/* LOGIN */
 .login-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
-  background-image: url("./assets/imagens/fundologin.jpg");
-  box-sizing: border-box;
-  margin-top: 15vh;
+  height: 100vh; 
+  width: 100vw; 
+  background-image: url(./assets/imagens/bg.jpg);
 }
 
 .login-form {
-  padding: 40px;
-  border-radius: 5vh;
-  width: 100%;
-  max-width: 40vw;
+  background-color: var(--azulEscuro);
+  padding: 5vh 4vw;
+  border-radius: 2vw;
+  box-shadow: 0 1vh 2vw rgba(0, 0, 0, 0.3);
+  width: 40vw;   
+  max-width: 90vw;
   text-align: center;
-  box-sizing: border-box;
 }
 
 .login-form h2 {
+  color: var(--amareloFundo); 
+  font-size: 3vh;
   margin-bottom: 3vh;
-  color: #333333;
-  font-size: 24px;
+  text-transform: uppercase;
 }
 
-.login-form form label {
+.login-form label {
   display: block;
-  margin-bottom: 15px;
   text-align: left;
-  color: #555555;
-  font-size: 16px;
+  color: var(--amareloFundo);
+  font-weight: bold;
+  margin: 1.5vh 0 0.5vh;
+  font-size: 1.8vh;
 }
 
-.login-form form input[type="text"],
-.login-form form input[type="password"] {
+.login-form input {
   width: 100%;
-  padding: 12px;
-  margin-top: 5px;
-  border: 1px solid #dddddd;
-  border-radius: 4px;
-  box-sizing: border-box;
-  font-size: 16px;
-}
-
-.login-form form button {
-  background-color: #007bff;
-  color: white;
-  padding: 12px 20px;
+  padding: 1.5vh 1vw;
+  margin-bottom: 2vh;
+  border-radius: 1.5vw;
   border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 16px;
-  margin-top: 20px;
-  width: 100%;
-  transition: background-color 0.3s ease;
+  outline: none;
+  font-size: 2vh;
 }
 
-.login-form form button:hover {
-  background-color: #0056b3;
+.login-form input:focus {
+  border: 0.3vh solid var(--amareloFundo);
 }
+
+.login-form button {
+  background-color: #10B328;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 2vw;
+  padding: 1.8vh 0;
+  width: 100%;
+  font-size: 2.2vh;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.login-form button:hover {
+  background-color: #119825;
+}
+
 /* Responsividade pg Descarte*/
 @media (max-width: 480px) {
   .tituloDescarte {
@@ -2296,21 +2303,17 @@ button:hover {
 }
 
 * {
-  box-sizing: border-box;
   font-size: 2vh;
   font-family: 'Montserrat', sans-serif;
 }
 
-.container {
-  min-height: calc(100vh - 10vh - 15vh);
-  margin: 0 auto;
-  padding: 12vh 5vh 0 5vh;
+.container-us {
+  padding: 15vh 5vh 0 5vh;
+  width: 100vw;
 }
 
 .profile-card {
-  background: var(--card);
   border-radius: var(--radius);
- 
 }
 
 .profile-top {

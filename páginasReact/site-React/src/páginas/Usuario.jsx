@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 
 export default function Usuario() {
   const { id } = useParams(); // pega o id da URL /usuario
@@ -70,7 +70,7 @@ export default function Usuario() {
   };
 
   return (
-    <main className="container">
+    <main className="container-us">
       <section className="profile-card">
         <div className="profile-top">
           <div className="avatar-wrap">
@@ -153,7 +153,7 @@ export default function Usuario() {
         <section className="orders">
           <header className="orders-header">
             <h2>Pedidos</h2>
-            <button className="btn-small">Novo pedido</button>
+            <Link to="/loja"><button className="btn-small">Novo pedido</button></Link>
           </header>
 
           <ul className="orders-list">

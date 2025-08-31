@@ -94,7 +94,7 @@ export default function Cadastro() {
           <label htmlFor="numero">Número:</label>
 
           <input type="text" id="numero" name="numero" value={formData.numero} onChange={handleChange} required />
-
+          
           <label htmlFor="complemento">Complemento:</label>
           <input
             type="text"
@@ -105,7 +105,6 @@ export default function Cadastro() {
           />
           <Link to="/usuario"><button type="submit">Cadastrar-se</button></Link>
           <p>Já tem uma conta? <Link to="/login">Clique aqui!</Link></p>
-
 
         </form>
       </div>

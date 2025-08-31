@@ -1,32 +1,30 @@
-import {useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import imgSeta from "../assets/imagens/seta.png";
 import Componentes from "./componentes";
 import { Link } from "react-router-dom";
 import placaLado1 from "../assets/imagens/comofuncionamplacaLado1.png";
-import placaLado2 from "../assets/imagens/comofuncionamplacaLado2.png";
-import placasustentavel from  "../assets/imagens/comofuncionamplacaSustentavel.png";
+import placasustentavel from "../assets/imagens/comofuncionamplacaSustentavel.png";
 import card7 from "../assets/imagens/comofuncionamcard7.png";
 
 export default function Funcionamento() {
   const placaEsqRef = useRef(null);
-  const placaDirRef = useRef(null);
 
   useEffect(() => {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          if (entry.target === placaEsqRef.current) {
-            entry.target.classList.add("animate-left");
-          } else if (entry.target === placaDirRef.current) {
-            entry.target.classList.add("animate-right");
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            if (entry.target === placaEsqRef.current) {
+              entry.target.classList.add("animate-left");
+            }
+            observer.unobserve(entry.target);
           }
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.2 });
+        });
+      },
+      { threshold: 0.2 }
+    );
 
     if (placaEsqRef.current) observer.observe(placaEsqRef.current);
-    if (placaDirRef.current) observer.observe(placaDirRef.current);
 
     return () => observer.disconnect();
   }, []);
@@ -34,8 +32,9 @@ export default function Funcionamento() {
   return (
     <div>
       <Link to="/primeiraPagina" className="botao-voltar">
-        <img src={imgSeta}></img>
+        <img src={imgSeta} alt="Voltar" />
       </Link>
+
       <section className="intro">
         <h1>O que são placas solares?</h1>
         <div className="intro-conteudo">
@@ -52,16 +51,10 @@ export default function Funcionamento() {
             dentro da estrutura de um material semicondutor quando este é exposto
             a partículas de energia chamadas de radiação eletromagnética (luz).
           </p>
-          <img
-            ref={placaDirRef}
-            src={placaLado2}
-            alt="Placa solar direita"
-            className="direita"
-          />
         </div>
       </section>
 
-      <Componentes></Componentes>
+      <Componentes />
 
       <section className="banner-solar-container">
         <div className="solarcardEimg">
@@ -79,40 +72,35 @@ export default function Funcionamento() {
               </p>
             </div>
           </div>
-          <img
-            src={placasustentavel}
-            alt="Placa com grama"
-          />
+          <img src={placasustentavel} alt="Placa com grama" />
         </div>
 
         <div className="banner-solar-highlight-card">
           <div>
             <p>
               <strong>As placas que oferecemos</strong> têm esses desafios
-              diminuídos ao máximo, por serem       <strong>extremamente sustentáveis</strong>
-                
-              . Assim, não causam efeitos negativos no meio ambiente. Além
-              disso, são extremamente econômicas, fazendo você gastar menos
-              dinheiro!
+              diminuídos ao máximo, por serem{" "}
+              <strong>extremamente sustentáveis</strong>. Assim, não causam
+              efeitos negativos no meio ambiente. Além disso, são extremamente
+              econômicas, fazendo você gastar menos dinheiro!
             </p>
-        </div> </div>
+          </div>
+        </div>
       </section>
 
       <section className="objetivo">
         <div className="box-ods">
-          <img
-            src={card7}
-            alt="ODS 7 - Energia Acessível e Limpa"
-          />
+          <img src={card7} alt="ODS 7 - Energia Acessível e Limpa" />
         </div>
         <div className="texto-ods">
           <p>
             Comprando nossas placas, você está contribuindo para atingir um dos
-            Objetivos de Desenvolvimento Sustentável, sendo um passo importante para
-            ajudar o mundo.
+            Objetivos de Desenvolvimento Sustentável, sendo um passo importante
+            para ajudar o mundo.
           </p>
-          <Link to="/loja"><button>Faça sua parte!</button></Link>
-
+          <Link to="/loja">
+            <button>Faça sua parte!</button>
+          </Link>
         </div>
       </section>
     </div>

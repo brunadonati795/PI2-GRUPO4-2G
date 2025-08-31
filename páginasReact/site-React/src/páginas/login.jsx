@@ -1,49 +1,68 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import axios from "axios";
+import "../App.css";
 
-export default function Login() {
+const Login = () => {
+  const [email, setEmail] = useState("");
+  const [senha, setSenha] = useState("");
   const navigate = useNavigate();
-  const [form, setForm] = useState({ email: "", senha: "" });
-
-  const change = (e) => setForm(prev => ({ ...prev, [e.target.name]: e.target.value }));
 
   const submit = async (e) => {
     e.preventDefault();
+
     try {
-      const res = await axios.post("http://localhost:5000/login", form);
-      console.log("Login ok:", res.data);
-      // navegar pra página de usuário ou dashboard
-      navigate("/usuario", { state: res.data });
+      const response = await fetch("http://localhost:5000/usuarios");
+      if (!response.ok) {
+        throw new Error("Erro ao buscar usuários");
+      }
+
+      const usuarios = await response.json();
+
+      // verifica se existe algum usuário com email e senha iguais
+      const usuarioValido = usuarios.find(
+        (u) => u.email === email && u.senha === senha
+      );
+
+      if (usuarioValido) {
+        alert(`Login bem-sucedido! Bem-vindo, ${usuarioValido.email}`);
+        navigate("/usuario");
+      } else {
+        alert("E-mail ou senha incorretos!");
+      }
     } catch (err) {
       console.error(err);
-      if (err.response) alert("Erro: " + (err.response.data.error || "Credenciais inválidas"));
-      else alert("Erro de conexão");
+      alert("Erro ao conectar com o servidor.");
     }
   };
 
-return (
-    <div className="login-box">
-      <h2>Login</h2>
-      <form onSubmit={handleLogin}>
-        <label>Email:</label>
-        <input
-          type="email"
-          name="email"
-          value={form.email}
-          onChange={change}
-          required
-        />
-        <label>Senha:</label>
-        <input
-          type="password"
-          name="senha"
-          value={form.senha}
-          onChange={change}
-          required
-        />
-        <button type="submit">Entrar</button>
-      </form>
+  return (
+    <div className="login-container">
+      <div className="login-form">
+        <h2>Login</h2>
+        <form onSubmit={submit}>
+          <label>
+            E-mail:
+            <input
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+            />
+          </label>
+          <label>
+            Senha:
+            <input
+              type="password"
+              value={senha}
+              onChange={(e) => setSenha(e.target.value)}
+              required
+            />
+          </label>
+          <button type="submit">Entrar</button>
+        </form>
+      </div>
     </div>
   );
-}
+};
+
+export default Login;

@@ -14,7 +14,7 @@ function ConfirmacaodePagamento() {
       <section className="pagamento-bloco">
         <p><strong>Endereço:</strong><br />
         Rua: Valdir Staggmeier 224-casa 89680-000 Irani SC</p>
-        <a href="#">editar meu endereço</a>
+        <a href="/Usuario">editar meu endereço</a>
       </section>
 
       <section className="pagamento-bloco">

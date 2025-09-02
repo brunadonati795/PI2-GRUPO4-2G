@@ -1,18 +1,23 @@
 import { useState, useEffect } from "react";
 import ProductCard from "./produtoCard";
 import Modal from "./modal";
-import storeData from "./storeData";
 import iconedocarrinho from "../../assets/imagens/iconedocarrinho.png";
 import { Link } from "react-router-dom";
 
 const Loja = () => {
+  const [produtos, setProdutos] = useState([]);
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [carrinhoAberto, setCarrinhoAberto] = useState(false);
   const [itensDoCarrinho, setItensDoCarrinho] = useState([]);
   const [totalGeral, setTotalGeral] = useState(0);
 
-  const loja = storeData.filter(p => p.category === "loja");
-  const placas = storeData.filter(p => p.category === "placas");
+  // Busca produtos do back-end
+  useEffect(() => {
+    fetch("http://localhost:5000/produtos")
+      .then(res => res.json())
+      .then(data => setProdutos(data))
+      .catch(err => console.error("Erro ao carregar produtos:", err));
+  }, []);
 
   // Adicionar produto ao carrinho
   const adicionarAoCarrinho = (produto) => {
@@ -30,7 +35,7 @@ const Loja = () => {
     });
   };
 
-  // Remover 1 unidade ou todo o produto
+  // Remover produto do carrinho
   const removerDoCarrinho = (produtoId) => {
     setItensDoCarrinho(prevItens =>
       prevItens
@@ -43,7 +48,7 @@ const Loja = () => {
     );
   };
 
-  // Atualiza total geral automaticamente
+  // Atualiza total automaticamente
   useEffect(() => {
     const novoTotal = itensDoCarrinho.reduce(
       (acc, item) => acc + item.preco * item.quantidade,
@@ -51,6 +56,10 @@ const Loja = () => {
     );
     setTotalGeral(novoTotal);
   }, [itensDoCarrinho]);
+
+  // Separando categorias dinamicamente
+  const placas = produtos.filter(p => p.categoria === "placas");
+  const loja = produtos.filter(p => p.categoria === "loja");
 
   return (
     <>
@@ -81,9 +90,9 @@ const Loja = () => {
               <ul className="carrinho-lista">
                 {itensDoCarrinho.map((item) => (
                   <li key={item.id} className="carrinho-item">
-                    <img src={item.image} alt={item.name} className="carrinho-img" />
+                    <img src={item.imagem_url} alt={item.nome} className="carrinho-img" />
                     <div className="carrinho-info">
-                      <h3>{item.name}</h3>
+                      <h3>{item.nome}</h3>
                       <p>Preço: R$ {item.preco.toFixed(2)}</p>
                       <div className="carrinho-controles">
                         <button onClick={() => removerDoCarrinho(item.id)}>-</button>
@@ -98,7 +107,9 @@ const Loja = () => {
 
               <div className="carrinho-total">
                 <h3>Total da Compra: R$ {totalGeral.toFixed(2)}</h3>
-                <Link to="/confirmacaodepagamento"><button className="finalizar-btn">Finalizar Compra</button></Link>
+                <Link to="/confirmacaodepagamento">
+                  <button className="finalizar-btn">Finalizar Compra</button>
+                </Link>
               </div>
             </>
           )}
@@ -113,9 +124,11 @@ const Loja = () => {
             <ProductCard
               key={product.id}
               product={{
-              ...product,
-              quantidade: itensDoCarrinho.find(item => item.id === product.id)?.quantidade || 0
-            }}
+                ...product,
+                name: product.nome,
+                image: product.imagem_url,  
+                quantidade: itensDoCarrinho.find(item => item.id === product.id)?.quantidade || 0
+              }}
               onClick={setSelectedProduct}
               adicionarAoCarrinho={() => adicionarAoCarrinho(product)}
               removerDoCarrinho={() => removerDoCarrinho(product.id)}
@@ -129,9 +142,11 @@ const Loja = () => {
             <ProductCard
               key={product.id}
               product={{
-              ...product,
-              quantidade: itensDoCarrinho.find(item => item.id === product.id)?.quantidade || 0
-            }}
+                ...product,
+                name: product.nome,
+                image: product.imagem_url,  
+                quantidade: itensDoCarrinho.find(item => item.id === product.id)?.quantidade || 0
+              }}
               onClick={setSelectedProduct}
               adicionarAoCarrinho={() => adicionarAoCarrinho(product)}
               removerDoCarrinho={() => removerDoCarrinho(product.id)}

@@ -9,6 +9,7 @@ import "../App.css";
 
 export default function Cadastro() {
   const navigate = useNavigate();
+  
 
   const [formData, setFormData] = useState({
     nome: "",
@@ -55,8 +56,8 @@ export default function Cadastro() {
       const response = await axios.post("http://localhost:5000/usuarios", formData);
       console.log("Resposta do back:", response.data);
       alert("Cadastro realizado com sucesso!");
-      // opcional: buscar o usuário recém-criado ou navegar pra página do usuário
       navigate("/usuario", { state: { id: response.data.id, nome: formData.nome, email: formData.email } });
+      localStorage.setItem("usuarioId", user.id);
     } catch (error) {
       console.error(error);
       if (error.response) {
@@ -105,6 +106,7 @@ export default function Cadastro() {
           />
           <button type="submit">Cadastrar-se</button>
           <p>Já tem uma conta? <Link to="/login">Clique aqui!</Link></p>
+          
 
         </form>
       </div>

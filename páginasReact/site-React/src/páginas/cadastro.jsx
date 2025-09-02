@@ -103,7 +103,7 @@ export default function Cadastro() {
             value={formData.complemento}
             onChange={handleChange}
           />
-          <Link to="/usuario"><button type="submit">Cadastrar-se</button></Link>
+          <button type="submit">Cadastrar-se</button>
           <p>Já tem uma conta? <Link to="/login">Clique aqui!</Link></p>
 
         </form>

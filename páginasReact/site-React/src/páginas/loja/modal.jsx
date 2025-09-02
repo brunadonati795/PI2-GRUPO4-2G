@@ -8,14 +8,14 @@ const Modal = ({ product, onClose }) => {
       <div className="store-modal" onClick={e => e.stopPropagation()}>
         <button className="store-close-btn" onClick={onClose}>×</button>
 
-        <h2 className="store-modal-title">{product.name}</h2>
+        <h2 className="store-modal-title">{product.nome}</h2>
 
-        <img src={product.image} alt={product.name} className="store-modal-img" />
+        <img src={product.imagem_url} alt={product.nome} className="store-modal-img" />
 
-        {/* Se storeData tiver descrição, use product.description */}
-        <p className="store-modal-description">{product.description || "Sem descrição disponível"}</p>
+        <p className="store-modal-description">
+          {product.descricao || "Sem descrição disponível"}
+        </p>
 
-        {/* Preço real do produto */}
         <p className="store-modal-price">
           <strong>Preço:</strong> R$ {product.preco.toFixed(2)}
         </p>
@@ -23,6 +23,5 @@ const Modal = ({ product, onClose }) => {
     </div>
   );
 };
-
 
 export default Modal;

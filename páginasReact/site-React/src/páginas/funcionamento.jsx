@@ -1,33 +1,13 @@
-import { useEffect, useRef } from "react";
 import imgSeta from "../assets/imagens/seta.png";
 import Componentes from "./componentes";
 import { Link } from "react-router-dom";
 import placaLado1 from "../assets/imagens/comofuncionamplacaLado1.png";
+import placaLado2 from "../assets/imagens/comofuncionamplacaLado2.png";
+
 import placasustentavel from "../assets/imagens/comofuncionamplacaSustentavel.png";
 import card7 from "../assets/imagens/comofuncionamcard7.png";
 
 export default function Funcionamento() {
-  const placaEsqRef = useRef(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            if (entry.target === placaEsqRef.current) {
-              entry.target.classList.add("animate-left");
-            }
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.2 }
-    );
-
-    if (placaEsqRef.current) observer.observe(placaEsqRef.current);
-
-    return () => observer.disconnect();
-  }, []);
 
   return (
     <div>
@@ -39,7 +19,6 @@ export default function Funcionamento() {
         <h1>O que são placas solares?</h1>
         <div className="intro-conteudo">
           <img
-            ref={placaEsqRef}
             src={placaLado1}
             alt="Placa solar esquerda"
             className="esquerda"
@@ -51,6 +30,11 @@ export default function Funcionamento() {
             dentro da estrutura de um material semicondutor quando este é exposto
             a partículas de energia chamadas de radiação eletromagnética (luz).
           </p>
+          <img
+            src={placaLado2}
+            alt="Placa solar direita"
+            className="esquerda"
+          />
         </div>
       </section>
 

@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 
 export default function Usuario() {
-  const { id } = useParams(); // pega o id da URL /usuario
+  const { id } = useParams(); // pega o id da URL /usuario/:id
 
   // estados para os campos do usuário
   const [cep, setCep] = useState("");
@@ -18,23 +18,31 @@ export default function Usuario() {
   const [orders] = useState([
     { id: 1234, status: "Entregue", date: "08/08/2025", value: "R$ 120,00" },
     { id: 1235, status: "Pendente", date: "05/08/2025", value: "R$ 249,90" },
+    { id: 6740, status: "Verificando Pagamento", date: "03/09/2025", value: "R$ 308,00" },
   ]);
 
   // Buscar dados do usuário no back
   useEffect(() => {
     async function fetchUser() {
       try {
-        const response = await fetch(`http://localhost:5000/usuarios`);
-        if (!response.ok) throw new Error("Erro ao buscar usuário");
+        const response = await fetch("http://localhost:5000/usuarios");
+        if (!response.ok) throw new Error("Erro ao buscar usuários");
         const data = await response.json();
 
-        setNome(data.nome || "");
-        setCep(data.cep || "");
-        setBairro(data.bairro || "");
-        setRua(data.rua || "");
-        setNumero(data.numero || "");
-        setComplemento(data.complemento || "");
-        setCidade(data.cidade || "");
+        // procura pelo usuário com id da URL
+        const usuarioEncontrado = data.find((u) => String(u.id) === String(id));
+
+        if (usuarioEncontrado) {
+          setNome(usuarioEncontrado.nome || "");
+          setCep(usuarioEncontrado.cep || "");
+          setBairro(usuarioEncontrado.bairro || "");
+          setRua(usuarioEncontrado.rua || "");
+          setNumero(usuarioEncontrado.numero || "");
+          setComplemento(usuarioEncontrado.complemento || "");
+          setCidade(usuarioEncontrado.cidade || "");
+        } else {
+          alert("Usuário não encontrado!");
+        }
       } catch (err) {
         console.error(err);
         alert("Erro ao carregar dados do usuário.");
@@ -46,7 +54,7 @@ export default function Usuario() {
   // Salvar no back
   const handleSave = async () => {
     try {
-      const response = await fetch(`http://localhost:5000/usuarios`, {
+      const response = await fetch(`http://localhost:5000/usuarios/${id}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({

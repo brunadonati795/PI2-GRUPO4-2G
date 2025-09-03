@@ -13,20 +13,21 @@ function ConfirmacaodePagamento() {
       </Link>
       <section className="pagamento-bloco">
         <p><strong>Endereço:</strong><br />
-        Rua: Valdir Staggmeier 224-casa 89680-000 Irani SC</p>
+        Rua: Elbert Ebert 108 99960-000 Charrua RS</p>
         <a href="/Usuario">editar meu endereço</a>
       </section>
 
+
       <section className="pagamento-bloco">
-        <p><strong>Escolha quando sua compra chegará:</strong></p>
-        <div className="opcao-entrega">
-          <span><strong><em>FULL:</em></strong> {diaEntrega}</span>
-          <span className="valor-preco">{valor}</span>
-        </div>
-        <div className="opcao-entrega">
-          <span><strong><em>NORMAL:</em></strong> {diaEntrega}</span>
-          <span className="valor-gratis">GRÁTIS</span>
-        </div>
+        <p><strong>Escolha qual frete você deseja:</strong></p>
+      <div className="opcao-entrega">
+        <label htmlFor="pagamento"><strong>Forma de pagamento:</strong></label><br />
+        <select id="pagamento">
+          <option>NORMAL: GRÁTIS; Data prevista: 16 dias úteis</option>
+          <option>FULL: 54,00; Data prevista: 8 dias úteis</option>
+
+        </select>
+      </div>
       </section>
 
       <section className="pagamento-bloco">
@@ -40,9 +41,9 @@ function ConfirmacaodePagamento() {
 
       <section className="pagamento-bloco">
         <p><strong>Preços:</strong></p>
-        <p><strong>Produto:</strong> <span className="valor-preco">R$ XX,XX</span></p>
+        <p><strong>Produto:</strong> <span className="valor-preco">R$ 308,00</span></p>
         <p><strong>Frete:</strong> <span className="valor-gratis">GRÁTIS</span></p>
-        <p><strong><em>TOTAL:</em></strong> <span className="valor-preco">R$ XX,XX</span></p>
+        <p><strong><em>TOTAL:</em></strong> <span className="valor-preco">R$ 308,00</span></p>
       </section>
 
       <section className="pagamento-bloco secao-chave-pix">

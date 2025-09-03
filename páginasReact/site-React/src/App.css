@@ -2565,12 +2565,13 @@ button:hover {
 }
 
 .us_ico img {
-    width: 2vw;
-    border-radius: 50vh;
-    background-color: #f9f9f9; 
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #f9f9f9;
     object-fit: cover;
     padding: 5px;
-    margin-right: 5vw;
+    margin-right: 30px;
 }
 
 /* Estilo do ícone do menu hamburguer */
@@ -2612,14 +2613,6 @@ button:hover {
         display: flex;
     }
 
-    .us_ico img {
-    width: 5.2vw;
-    border-radius: 50vh;
-    background-color: #f9f9f9; 
-    object-fit: cover;
-    padding: 5px;
-    margin-right: 5vw;
-    }
 }
 
 /* Tablets */
@@ -2629,15 +2622,6 @@ button:hover {
         gap: 2vh;
     }
 
-    .us_ico img {
-    width: 4vw;
-    border-radius: 50vh;
-    background-color: #f9f9f9; 
-    object-fit: cover;
-    padding: 5px;
-    margin-right: 5vw;
-    margin-left: 2vw;
-    }
 }
 
 /* Laptops */
@@ -2646,29 +2630,12 @@ button:hover {
         font-size: 1.9vh;
     }
 
-    .us_ico img {
-    width: 3vw;
-    border-radius: 50vh;
-    background-color: #f9f9f9; 
-    object-fit: cover;
-    padding: 5px;
-    margin-right: 5vw;
-    }
 }
 
 /* Desktops grandes */
 @media (min-width: 1441px) {
     .lk_grupo a {
         font-size: 2vh;
-    }
-
-    .us_ico img {
-    width: 2.6vw;
-    border-radius: 50vh;
-    background-color: #f9f9f9; 
-    object-fit: cover;
-    padding: 5px;
-    margin-right: 5vw;
     }
 }
 

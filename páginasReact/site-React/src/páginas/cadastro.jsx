@@ -68,6 +68,8 @@ export default function Cadastro() {
     }
   };
 
+  
+
   return (
     <section className="form-container" style={{ backgroundImage: `url(${bgImage})` }}>
       <div className="form-box">
@@ -87,7 +89,7 @@ export default function Cadastro() {
           <input type="text" id="cep" name="cep" value={formData.cep} onChange={handleChange} onBlur={handleCepBlur} required />
 
           <label htmlFor="cidade">Cidade:</label>
-          <input type="text" id="cidade" name="cidade" value={formData.cidade} onChange={handleChange} required />
+          <input type="text" id="cidade" name="cidade" value={formData.cidade} onChange={handleChange} required z/>
 
           <label htmlFor="rua">Rua:</label>
           <input type="text" id="rua" name="rua" value={formData.rua} onChange={handleChange} required />

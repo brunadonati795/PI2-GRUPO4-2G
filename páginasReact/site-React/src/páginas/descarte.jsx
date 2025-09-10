@@ -24,6 +24,7 @@ const Descarte = () => {
 
       <div className="botao-formulario">
         <button className="btn-formulario">Acessar Formulário</button>
+        <a href="URL_DE_DESTINO"><iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdMQdX301I2T7vZiBLj0BnhRnIssApu_-lPbOzPwnBghlAdcQ/viewform?embedded=true" width="640" height="422" frameborder="0" marginheight="0" marginwidth="0">Carregando…</iframe></a>
       </div>
     </div>
   );

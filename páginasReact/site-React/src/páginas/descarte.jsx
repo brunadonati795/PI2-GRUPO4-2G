@@ -23,7 +23,7 @@ const Descarte = () => {
       </div>
 
       <div className="botao-formulario">
-        <button className="btn-formulario">Acessar Formulário</button>
+          <button className='btn-formulario' onClick={() => handleClick("/cadastro")}>Suporte</button>
       </div>
     </div>
   );

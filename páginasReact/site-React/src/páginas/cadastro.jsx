@@ -1,5 +1,27 @@
 import { useState } from "react";
+import React, { useState, useEffect } from 'react';
 
+function Perfil() {
+  const [userName, setUserName] = useState('');
+  const [userEmail, setUserEmail] = useState('');
+
+  useEffect(() => {
+    const storedUserName = localStorage.getItem('userName');
+    const storedUserEmail = localStorage.getItem('userEmail');
+    setUserName(storedUserName || '');
+    setUserEmail(storedUserEmail || '');
+  }, []); 
+
+  return (
+    <div>
+      <h2>Detalhes do Usuário</h2>
+      <p>Nome: {userName}</p>
+      <p>Email: {userEmail}</p>
+    </div>
+  );
+}
+
+export default Perfil;
 
 import { useNavigate, Link } from "react-router-dom";
 import axios from "axios";   // <-- importando axios

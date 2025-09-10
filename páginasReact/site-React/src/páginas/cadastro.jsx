@@ -66,6 +66,17 @@ export default function Cadastro() {
         alert("Erro de conexão com o servidor");
       }
     }
+    const handleZipCode = (event) => {
+  let input = event.target
+  input.value = zipCodeMask(input.value)
+}
+
+const zipCodeMask = (value) => {
+  if (!value) return ""
+  value = value.replace(/\D/g,'')
+  value = value.replace(/(\d{5})(\d)/,'$1-$2')
+  return value
+}
   };
 
   
@@ -86,7 +97,7 @@ export default function Cadastro() {
           <input type="password" id="senha" name="senha" value={formData.senha} onChange={handleChange} required />
 
           <label htmlFor="cep">CEP:</label>
-          <input type="text" id="cep" name="cep" value={formData.cep} onChange={handleChange} onBlur={handleCepBlur} required />
+          <input type="text" maxlength="9" onkeyup="handleZipCode(event)" id="cep" name="cep" value={formData.cep} onChange={handleChange} onBlur={handleCepBlur} required />
 
           <label htmlFor="cidade">Cidade:</label>
           <input type="text" id="cidade" name="cidade" value={formData.cidade} onChange={handleChange} required z/>

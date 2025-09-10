@@ -1,7 +1,13 @@
 import descarte from '../assets/imagens/descarte-imagem.png';
-import Footer from '../componentes/footer';
+import { useNavigate } from "react-router-dom";
 
 const Descarte = () => {
+  const navigate = useNavigate();
+
+  const handleClick = (rota) => {
+    navigate(rota);
+  };
+
   return (
     <div className="Descarte">
       <h1 className="tituloDescarte">Descarte de Placas Solares</h1>
@@ -23,7 +29,7 @@ const Descarte = () => {
       </div>
 
       <div className="botao-formulario">
-          <button className='btn-formulario' onClick={() => handleClick("/cadastro")}>Suporte</button>
+          <button className='btn-formulario' onClick={() => handleClick("/cadastro")}>Cadastro</button>
       </div>
     </div>
   );
